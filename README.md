@@ -3,6 +3,10 @@ This API is currently in development. As such, some information may be incomplet
 
 I'm not currently planning on rate limiting or otherwise restricting access to the API, so please use it respectfully. This is a hobby project that I'm maintaining out of my own pocket, and I'd like to keep it as open as possible.
 
+## Table of Contents
+- [Available Endpoints](#available-endpoints)
+- [Searching the API](https://github.com/LartTyler/MHWDB-Docs/blob/master/Searching.md)
+
 ## Available Endpoints
 The base domain for the API is <http://mhw-db.com>.
 
