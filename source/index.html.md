@@ -9,6 +9,7 @@ toc_footers:
 
 includes:
   - data_types
+  - deprecations
   - errors
 
 search: true

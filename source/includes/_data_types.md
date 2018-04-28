@@ -463,7 +463,3 @@ item | [Item](#item-objects) | The item to be consumed during crafting
 Field | Type | Description
 ----- | ---- | -----------
 rank | Integer | The rank of the slot
-
-# Deprecation Schedule
-Below you can find a list of deprecated API features, as well as the information on when those features will be removed
-from the API. Since we follow semantic versioning for the API, only major releases will include breaking changes.
