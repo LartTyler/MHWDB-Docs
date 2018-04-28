@@ -21,6 +21,7 @@ and may change slightly. It should be used by you, the developer, to help debug 
 ## Error Codes
 Code | Description
 ---- | -----------
+not_found | No object could be found with the ID or slug provided
 search.malformed_query | Your query object was invalid; check your syntax and try again
 search.empty_params | Your search query must include at least one field to search by
 search.error | An unhandled error occurred while executing your search
