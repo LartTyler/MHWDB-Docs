@@ -9,6 +9,9 @@ toc_footers:
   - <a href='https://github.com/lord/slate'>Documentation Powered by Slate</a>
 
 includes:
+  - searching
+  - endpoints_armor
+  - endpoints_armor_sets
   - data_types
   - deprecations
   - errors
