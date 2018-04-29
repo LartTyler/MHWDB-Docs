@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -o errexit
+
 bundle exec middleman build --clean
 
 prev_branch=`git rev-parse --abbrev-ref HEAD`
@@ -13,7 +15,7 @@ if git ls-remote --exit-code "${repo}" "refs/heads/${deploy_branch}"; then
     git fetch --force "${repo}" "${deploy_branch}:${deploy_branch}"
 fi
 
-if git show-ref --verify --quiet "refs/heads/${deploy_branch}" then
+if git show-ref --verify --quiet "refs/heads/${deploy_branch}"; then
     deploy_incremental
 else
     deploy_initial
