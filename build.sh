@@ -68,8 +68,7 @@ deploy_incremental() {
 
 commit() {
     git --work-tree "${build_dir}" commit -m "Publish updated docs"
-
-    echo "Ready to push."
+    git push --quiet "${repo}" "${deploy_branch}"
 }
 
 main
