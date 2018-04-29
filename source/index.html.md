@@ -12,6 +12,7 @@ includes:
   - searching
   - endpoints_armor
   - endpoints_armor_sets
+  - endpoints_charms
   - data_types
   - deprecations
   - errors
