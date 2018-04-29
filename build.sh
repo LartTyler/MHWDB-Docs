@@ -2,32 +2,34 @@
 
 set -o errexit
 
-bundle exec middleman build --clean
-
-prev_branch=`git rev-parse --abbrev-ref HEAD`
-commit_hash=`git log -n 1 --format="%H" HEAD`
-
 repo="origin"
 build_dir="build"
 deploy_branch="gh-pages"
 
-if git ls-remote --exit-code "${repo}" "refs/heads/${deploy_branch}"; then
-    git fetch --force "${repo}" "${deploy_branch}:${deploy_branch}"
-fi
+main() {
+    bundle exec middleman build --clean
 
-if git show-ref --verify --quiet "refs/heads/${deploy_branch}"; then
-    deploy_incremental
-else
-    deploy_initial
-fi
+    prev_branch=`git rev-parse --abbrev-ref HEAD`
+    commit_hash=`git log -n 1 --format="%H" HEAD`
 
-if [[ "${pre_branch}" = "HEAD" ]]; then
-    git update-ref --no-deref HEAD "${commit_hash}" "${deploy_branch}"
-else
-    git symbolic-ref HEAD "refs/heads/${prev_branch}"
-fi
+    if git ls-remote --exit-code "${repo}" "refs/heads/${deploy_branch}"; then
+        git fetch --force "${repo}" "${deploy_branch}:${deploy_branch}"
+    fi
 
-git reset --mixed
+    if git show-ref --verify --quiet "refs/heads/${deploy_branch}"; then
+        deploy_incremental
+    else
+        deploy_initial
+    fi
+
+    if [[ "${pre_branch}" = "HEAD" ]]; then
+        git update-ref --no-deref HEAD "${commit_hash}" "${deploy_branch}"
+    else
+        git symbolic-ref HEAD "refs/heads/${prev_branch}"
+    fi
+
+    git reset --mixed
+}
 
 deploy_initial() {
     git --work-tree "${build_dir}" checkout --orphan "${deploy_branch}"
@@ -69,3 +71,5 @@ commit() {
 
     echo "Ready to push."
 }
+
+main()
