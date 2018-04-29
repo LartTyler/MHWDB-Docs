@@ -9,7 +9,6 @@ toc_footers:
   - <a href='https://github.com/lord/slate'>Documentation Powered by Slate</a>
 
 includes:
-  - searching
   - endpoints_armor
   - endpoints_armor_sets
   - endpoints_charms
@@ -18,6 +17,7 @@ includes:
   - endpoints_skills
   - endpoints_weapons
   - data_types
+  - searching
   - deprecations
   - errors
 
