@@ -94,8 +94,8 @@ This endpoint retrieves a specific decoration.
 `GET https://mhw-db.com/decorations/<idOrSlug>`
 
 ### Path Parameters
-Parameter | Required | Description
---------- | -------- | -----------
+Parameter | Type | Description
+--------- | ---- | -----------
 idOrSlug | Integer &#124; String | The ID or slug of the decoration to retrieve
 
 ### Response

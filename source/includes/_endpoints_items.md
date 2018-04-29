@@ -74,8 +74,8 @@ This endpoint retrieves a specific item.
 `GET https://mhw-db.com/items/<id>`
 
 ### Path Parameters
-Parameter | Required | Description
---------- | -------- | -----------
+Parameter | Type | Description
+--------- | ---- | -----------
 id | Integer | The ID of the item to retrieve
 
 ### Response

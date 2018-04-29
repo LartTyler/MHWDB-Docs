@@ -92,8 +92,8 @@ This endpoint retrieves a specific charm and it's ranks.
 `GET https://mhw-db.com/charms/<idOrSlug>`
 
 ### Path Parameters
-Parameter | Required | Description
---------- | -------- | -----------
+Parameter | Type | Description
+--------- | ---- | -----------
 idOrSlug | Integer &#124; String | The ID or slug of the charm to retrieve
 
 ### Response

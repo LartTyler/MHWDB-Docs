@@ -119,8 +119,8 @@ This endpoint retrieves a specific armor set by it's ID.
 `GET https://mhw-db.com/armor/sets/<id>
 
 ### Path Parameters
-Parameter | Required | Description
---------- | -------- | -----------
+Parameter | Type | Description
+--------- | ---- | -----------
 id | Integer | The ID of the armor set to retrieve
 
 ### Response
