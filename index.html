@@ -1,0 +1,3054 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;,&quot;javascript&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+              <a href="#" data-language-name="javascript">javascript</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#armor" class="toc-h1 toc-link" data-title="armor">Armor</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-armor-pieces" class="toc-h2 toc-link" data-title="get-all-armor-pieces">Get All Armor Pieces</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-armor-piece" class="toc-h2 toc-link" data-title="get-a-specific-armor-piece">Get a Specific Armor Piece</a>
+                  </li>
+                  <li>
+                    <a href="#armor-fields" class="toc-h2 toc-link" data-title="armor-fields">Armor Fields</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#armor-sets" class="toc-h1 toc-link" data-title="armor-sets">Armor Sets</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-armor-sets" class="toc-h2 toc-link" data-title="get-all-armor-sets">Get All Armor Sets</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-armor-set" class="toc-h2 toc-link" data-title="get-a-specific-armor-set">Get a Specific Armor Set</a>
+                  </li>
+                  <li>
+                    <a href="#armorset-fields" class="toc-h2 toc-link" data-title="armorset-fields">ArmorSet Fields</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#charms" class="toc-h1 toc-link" data-title="charms">Charms</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-charms" class="toc-h2 toc-link" data-title="get-all-charms">Get All Charms</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-charm" class="toc-h2 toc-link" data-title="get-a-specific-charm">Get a Specific Charm</a>
+                  </li>
+                  <li>
+                    <a href="#charm-fields" class="toc-h2 toc-link" data-title="charm-fields">Charm Fields</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#decorations" class="toc-h1 toc-link" data-title="decorations">Decorations</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-decorations" class="toc-h2 toc-link" data-title="get-all-decorations">Get All Decorations</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-decoration" class="toc-h2 toc-link" data-title="get-a-specific-decoration">Get a Specific Decoration</a>
+                  </li>
+                  <li>
+                    <a href="#decoration-fields" class="toc-h2 toc-link" data-title="decoration-fields">Decoration Fields</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#items" class="toc-h1 toc-link" data-title="items">Items</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-items" class="toc-h2 toc-link" data-title="get-all-items">Get All Items</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-item" class="toc-h2 toc-link" data-title="get-a-specific-item">Get a Specific Item</a>
+                  </li>
+                  <li>
+                    <a href="#item-fields" class="toc-h2 toc-link" data-title="item-fields">Item Fields</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#skills" class="toc-h1 toc-link" data-title="skills">Skills</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-skills" class="toc-h2 toc-link" data-title="get-all-skills">Get All Skills</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-skill" class="toc-h2 toc-link" data-title="get-a-specific-skill">Get a Specific Skill</a>
+                  </li>
+                  <li>
+                    <a href="#skill-fields" class="toc-h2 toc-link" data-title="skill-fields">Skill Fields</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#weapons" class="toc-h1 toc-link" data-title="weapons">Weapons</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-weapons" class="toc-h2 toc-link" data-title="get-all-weapons">Get All Weapons</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-weapon" class="toc-h2 toc-link" data-title="get-a-specific-weapon">Get a Specific Weapon</a>
+                  </li>
+                  <li>
+                    <a href="#weapon-fields" class="toc-h2 toc-link" data-title="weapon-fields">Weapon Fields</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#data-types" class="toc-h1 toc-link" data-title="data-types">Data Types</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#scalar-data-types" class="toc-h2 toc-link" data-title="scalar-data-types">Scalar Data Types</a>
+                  </li>
+                  <li>
+                    <a href="#element-types" class="toc-h2 toc-link" data-title="element-types">Element Types</a>
+                  </li>
+                  <li>
+                    <a href="#craftingcost-objects" class="toc-h2 toc-link" data-title="craftingcost-objects">CraftingCost Objects</a>
+                  </li>
+                  <li>
+                    <a href="#slot-objects" class="toc-h2 toc-link" data-title="slot-objects">Slot Objects</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#searching-the-api" class="toc-h1 toc-link" data-title="searching-the-api">Searching the API</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#query-document" class="toc-h2 toc-link" data-title="query-document">Query Document</a>
+                  </li>
+                  <li>
+                    <a href="#related-objects" class="toc-h2 toc-link" data-title="related-objects">Related Objects</a>
+                  </li>
+                  <li>
+                    <a href="#operators" class="toc-h2 toc-link" data-title="operators">Operators</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#deprecation-schedule" class="toc-h1 toc-link" data-title="deprecation-schedule">Deprecation Schedule</a>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="errors">Errors</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#error-codes" class="toc-h2 toc-link" data-title="error-codes">Error Codes</a>
+                  </li>
+              </ul>
+          </li>
+      </div>
+        <ul class="toc-footer">
+            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>Welcome to the REST API docs for <a href="https://mhw-db.com">https://mhw-db.com</a>.</p>
+<h1 id='armor'>Armor</h1><h2 id='get-all-armor-pieces'>Get All Armor Pieces</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/armor"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/armor'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">armorPieces</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// your code here</span>
+    <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns an array of <a href="#armor-fields"><code>Armor</code></a> objects. Some fields have been truncated for brevity.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"leather-headgear"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Leather Headgear"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"head"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="s2">"low"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"defense"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"base"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"max"</span><span class="p">:</span><span class="w"> </span><span class="mi">38</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"augmented"</span><span class="p">:</span><span class="w"> </span><span class="mi">68</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"resistances"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"fire"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"water"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"thunder"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"dragon"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"slots"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
+    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">},</span><span class="w">
+    </span><span class="s2">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
+    </span><span class="s2">"armorSet"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Leather"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="s2">"low"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"pieces"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"imageMale"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://assets.mhw-db.com/armor/..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"imageFemale"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://assets.mhw-db.com/armor/..."</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all armor pieces.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://mhw-db.com/armor</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>q</td>
+<td>No</td>
+<td>See the <a href="#searching-the-api">Searching the API</a> section</td>
+</tr>
+</tbody></table>
+<h3 id='response'>Response</h3>
+<p>This endpoint returns an array of armor pieces. For field information, see the <a href="#armor-fields">Armor Fields</a> section.</p>
+<h2 id='get-a-specific-armor-piece'>Get a Specific Armor Piece</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/armor/1"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/armor/1'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">armor</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// your code here</span>
+    <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns a single <a href="#armor-fields"><code>Armor</code></a> object. Some fields have been truncated for brevity.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"leather-headgear"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Leather Headgear"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"head"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="s2">"low"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"defense"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"base"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"max"</span><span class="p">:</span><span class="w"> </span><span class="mi">38</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"augmented"</span><span class="p">:</span><span class="w"> </span><span class="mi">68</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"resistances"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"fire"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"water"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"thunder"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"dragon"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"slots"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
+  </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">},</span><span class="w">
+  </span><span class="s2">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
+  </span><span class="s2">"armorSet"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Leather"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="s2">"low"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"pieces"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"imageMale"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://assets.mhw-db.com/armor/..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"imageFemale"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://assets.mhw-db.com/armor/..."</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves an armor piece by it&#39;s ID or slug.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://mhw-db.com/armor/&lt;idOrSlug&gt;</code></p>
+<h3 id='path-parameters'>Path Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>idOrSlug</td>
+<td>Integer &#124; String</td>
+<td>The ID or slug of the armor piece to retrieve</td>
+</tr>
+</tbody></table>
+<h3 id='response-2'>Response</h3>
+<p>This endpoint returns a single armor piece. For field information, see the <a href="#armor-fields">Armor Fields</a> section.</p>
+<h2 id='armor-fields'>Armor Fields</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">159</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"leather-headgear-beta"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Leather Headgear Beta"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"head"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="s2">"high"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"defense"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"base"</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"max"</span><span class="p">:</span><span class="w"> </span><span class="mi">54</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"augmented"</span><span class="p">:</span><span class="w"> </span><span class="mi">70</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"resistances"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"fire"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"water"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"thunder"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"dragon"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"slots"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"defense"</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"slotsRank1"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"resistFire"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">207</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hunger-resistance-rank-1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"level"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Extends the time until ..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"modifiers"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+      </span><span class="s2">"skill"</span><span class="p">:</span><span class="w"> </span><span class="mi">67</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"skillName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hunger Resistance"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"armorSet"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">35</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Leather Beta"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="s2">"high"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"pieces"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="mi">159</span><span class="p">,</span><span class="w">
+      </span><span class="mi">160</span><span class="p">,</span><span class="w">
+      </span><span class="mi">161</span><span class="p">,</span><span class="w">
+      </span><span class="mi">162</span><span class="p">,</span><span class="w">
+      </span><span class="mi">163</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"imageMale"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://assets.mhw-db.com/armor/..."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"imageFemale"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://assets.mhw-db.com/armor/..."</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>A sample <code>Armor</code> object.</p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>The ID of the armor piece</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>String</td>
+<td>A human readable unique identifier</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>The name of the armor piece</td>
+</tr>
+<tr>
+<td>type</td>
+<td><a href="#armor-types">ArmorType</a></td>
+<td>The slot the armor piece fits in</td>
+</tr>
+<tr>
+<td>rank</td>
+<td><a href="#armor-ranks">ArmorRank</a></td>
+<td>The rank of the armor piece</td>
+</tr>
+<tr>
+<td>rarity</td>
+<td>Integer</td>
+<td>The rarity of the armor piece</td>
+</tr>
+<tr>
+<td>defense</td>
+<td><a href="#defense-objects">Defense</a></td>
+<td>Contains information about the defense values of the armor piece</td>
+</tr>
+<tr>
+<td>resistances</td>
+<td><a href="#armor-resistances">Resistances</a></td>
+<td>Contains information about elemental resistances</td>
+</tr>
+<tr>
+<td>slots</td>
+<td>Array&lt;<a href="#slot-objects">Slot</a>&gt;</td>
+<td>An array decoration slot information, containing between 0 and 3 items</td>
+</tr>
+<tr>
+<td>skills</td>
+<td>Array&lt;<a href="#skillrank-objects">SkillRank</a>&gt;</td>
+<td>An array of skill ranks granted by the armor</td>
+</tr>
+<tr>
+<td>armorSet</td>
+<td><a href="#set-info">SetInfo</a></td>
+<td>Contains information about the set that the armor piece belongs to</td>
+</tr>
+<tr>
+<td>assets</td>
+<td><a href="#armor-assets">ArmorAssets</a></td>
+<td>Contains information about armor UI assets (such as preview images)</td>
+</tr>
+<tr>
+<td>attributes</td>
+<td><a href="#armor-attributes">ArmorAttributes</a></td>
+<td>See <a href="#armor-attributes">ArmorAttributes</a> for more information</td>
+</tr>
+</tbody></table>
+<h3 id='armor-ranks'>Armor Ranks</h3>
+<p>An armor&#39;s rank can be one of the following values:</p>
+
+<ul>
+<li>low</li>
+<li>high</li>
+</ul>
+<h3 id='armor-types'>Armor Types</h3>
+<p>An armor&#39;s type is one of the following values:</p>
+
+<ul>
+<li>head</li>
+<li>chest</li>
+<li>gloves</li>
+<li>waist</li>
+<li>legs</li>
+</ul>
+<h3 id='defense-objects'>Defense Objects</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>base</td>
+<td>Integer</td>
+<td>The armor&#39;s base defense value</td>
+</tr>
+<tr>
+<td>max</td>
+<td>Integer</td>
+<td>The armor&#39;s defense value at max level</td>
+</tr>
+<tr>
+<td>augmented</td>
+<td>Integer</td>
+<td>The armor&#39;s defense value when augmented\</td>
+</tr>
+</tbody></table>
+<h3 id='armor-resistances'>Armor Resistances</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>fire</td>
+<td>Integer</td>
+<td>The armor&#39;s fire resistance</td>
+</tr>
+<tr>
+<td>water</td>
+<td>Integer</td>
+<td>The armor&#39;s water resistance</td>
+</tr>
+<tr>
+<td>ice</td>
+<td>Integer</td>
+<td>The armor&#39;s ice resistance</td>
+</tr>
+<tr>
+<td>thunder</td>
+<td>Integer</td>
+<td>The armor&#39;s thunder resistance</td>
+</tr>
+<tr>
+<td>dragon</td>
+<td>Integer</td>
+<td>The armor&#39;s dragon resistance</td>
+</tr>
+</tbody></table>
+<h3 id='set-info'>Set Info</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>The ID of the armor set</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>The name of the armor set</td>
+</tr>
+<tr>
+<td>rank</td>
+<td><a href="#armor-ranks">ArmorRank</a></td>
+<td>The rank of the armor set</td>
+</tr>
+<tr>
+<td>pieces</td>
+<td>Array&lt;Integer&gt;</td>
+<td>An array of IDs of all armor pieces in the set</td>
+</tr>
+</tbody></table>
+<h3 id='armor-assets'>Armor Assets</h3>
+<p><strong>Please note</strong> that some assets may be missing or incorrect. This is due to some sources (such as Kiranico or the
+Fextralife wiki) also having incomplete information. Please verify that the asset is not also incorrect on those two
+sites before reporting issues with image assets.</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>imageMale</td>
+<td>String</td>
+<td>URL to the male preview image, or <code>null</code> if one does not exist</td>
+</tr>
+<tr>
+<td>imageFemale</td>
+<td>String</td>
+<td>URL to the female preview image, or <code>null</code> if one does not exist</td>
+</tr>
+</tbody></table>
+<h3 id='armor-attributes'>Armor Attributes</h3>
+<p>The <code>ArmorAttributes</code> is a dictionary of attribute modifiers attached to the armor piece. These fields are planned to be
+slowly phased out over several releases, and instead provided by specialized fields (such as <code>resistances</code>).</p>
+
+<p>Possible attribute keys are listed below.</p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>requiredGender</td>
+<td>Enum(&quot;male&quot;, &quot;female&quot;)</td>
+<td>If present, identifies the only gender that may equip the armor piece</td>
+</tr>
+<tr>
+<td>slotsRank1</td>
+<td>Integer</td>
+<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) The number of rank 1 slots available on the armor piece</td>
+</tr>
+<tr>
+<td>slotsRank2</td>
+<td>Integer</td>
+<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) The number of rank 2 slots available on the armor piece</td>
+</tr>
+<tr>
+<td>slotsRank3</td>
+<td>Integer</td>
+<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) The number of rank 3 slots available on the armor piece</td>
+</tr>
+</tbody></table>
+<h1 id='armor-sets'>Armor Sets</h1><h2 id='get-all-armor-sets'>Get All Armor Sets</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/armor/sets"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/armor/sets'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">sets</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// your code here</span>
+    <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The command above returns an array of <a href="#armorset-fields"><code>ArmorSet</code></a> object. Some fields have been truncated for brevity.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Leather"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="s2">"low"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"pieces"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"leather-headgear"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Leather Headgear"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"head"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="s2">"low"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"armorSet"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">},</span><span class="w">
+        </span><span class="s2">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
+        </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"imageMale"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://assets.mhw-db.com/armor/..."</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"imageFemale"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://assets.mhw-db.com/armor/..."</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"bonus"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all armor sets.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://mhw-db.com/armor/sets</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>q</td>
+<td>No</td>
+<td>See the <a href="#searching-the-api">Searching the API</a> section</td>
+</tr>
+</tbody></table>
+<h3 id='response'>Response</h3>
+<p>This endpoint returns an array of armor sets. For field information, see the <a href="#armorset-fields">ArmorSet Fields</a> section.</p>
+<h2 id='get-a-specific-armor-set'>Get a Specific Armor Set</h2><pre class="highlight shell tab-shell"><code>curl https://mhw-db.com/armor/sets/20
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/armor/sets/20'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">set</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// your code here</span>
+    <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The command above returns a single <a href="#armorset-fields"><code>ArmorSet</code></a> object. Some fields have been truncated for brevity.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Anja"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="s2">"low"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"pieces"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">84</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"anja-helm"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Anja Helm"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"head"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="s2">"low"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"armorSet"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">},</span><span class="w">
+      </span><span class="s2">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
+      </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"imageMale"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://assets.mhw-db.com/armor/..."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"imageFemale"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://assets.mhw-db.com/armor/..."</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"bonus"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Anjanath Power"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ranks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"pieces"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"skill"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">311</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"adrenaline-rank-1"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"level"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Temporarily reduces stamina ..."</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"modifiers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
+          </span><span class="s2">"skill"</span><span class="p">:</span><span class="w"> </span><span class="mi">112</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"skillName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Adrenaline"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific armor set by it&#39;s ID.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p>`GET https://mhw-db.com/armor/sets/<id></p>
+<h3 id='path-parameters'>Path Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>The ID of the armor set to retrieve</td>
+</tr>
+</tbody></table>
+<h3 id='response-2'>Response</h3>
+<p>This endpoint returns a single armor set. For field information, see the <a href="#armorset-fields">ArmorSet Fields</a> section.</p>
+<h2 id='armorset-fields'>ArmorSet Fields</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Anja"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="s2">"low"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"pieces"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">84</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"anja-helm"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Anja Helm"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"head"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="s2">"low"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"armorSet"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"defense"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"resistFire"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"resistWater"</span><span class="p">:</span><span class="w"> </span><span class="mi">-3</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"resistThunder"</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"resistIce"</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fire-attack-rank-1"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"level"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fire attack +30"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"modifiers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"damageFire"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="s2">"skill"</span><span class="p">:</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"skillName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fire Attack"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"imageMale"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://assets.mhw-db.com/armor/..."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"imageFemale"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://assets.mhw-db.com/armor/..."</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"bonus"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Anjanath Power"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ranks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"pieces"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"skill"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">311</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"adrenaline-rank-1"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"level"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Temporarily reduces stamina depletion ..."</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"modifiers"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+          </span><span class="s2">"skill"</span><span class="p">:</span><span class="w"> </span><span class="mi">112</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"skillName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Adrenaline"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>A sample <code>ArmorSet</code> object. Some fields have been truncated for brevity.</p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>The ID of the armor set</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>The name of the armor set</td>
+</tr>
+<tr>
+<td>rank</td>
+<td><a href="#armor-ranks">ArmorRank</a></td>
+<td>The rank of the armor set</td>
+</tr>
+<tr>
+<td>pieces</td>
+<td>Array&lt;<a href="#armor-fields">Armor</a>&gt;</td>
+<td>An array of armor pieces that are part of the set</td>
+</tr>
+<tr>
+<td>bonus</td>
+<td><a href="#armorset-bonus">ArmorSetBonus</a></td>
+<td>Either an object describing armor set bonus information, or <code>null</code></td>
+</tr>
+</tbody></table>
+<h3 id='armorset-bonus'>ArmorSet Bonus</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>The ID of the bonus</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>The name of the bonus</td>
+</tr>
+<tr>
+<td>ranks</td>
+<td>Array&lt;<a href="#armorset-bonus-rank">ArmorSetBonusRank</a>&gt;</td>
+<td>An array of the different ranks of the bonus</td>
+</tr>
+</tbody></table>
+<h3 id='armorset-bonus-rank'>ArmorSet Bonus Rank</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pieces</td>
+<td>Integer</td>
+<td>The minium number of armor pieces that must be equipped to trigger this level of the bonus</td>
+</tr>
+<tr>
+<td>skill</td>
+<td><a href="#skillrank-fields">SkillRank</a></td>
+<td>The skill rank provided by this tier of the armor set bonus</td>
+</tr>
+</tbody></table>
+<h1 id='charms'>Charms</h1>
+<p>The API splits charms up into two different objects. The <code>Charm</code> object, which is essentially a group of the different levels a charm can be, and the <code>CharmRank</code> object, which represents a charm at a particular step in it&#39;s upgrade tree. All charms are represented this way, even charms that can&#39;t be upgraded.</p>
+<h2 id='get-all-charms'>Get All Charms</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/charms"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/charms'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">charms</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// your code here</span>
+    <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The command above returns an array of <a href="#charm-fields"><code>Charm</code></a> objects. Some fields have been truncated for brevity.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">234</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"poison-charm"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Poison Charm"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ranks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Poison Charm 1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"level"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
+        </span><span class="s2">"crafting"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"craftable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"materials"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all charms.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://mhw-db.com/charms</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>q</td>
+<td>No</td>
+<td>See the <a href="#searching-the-api">Searching the API</a></td>
+</tr>
+</tbody></table>
+<h3 id='response'>Response</h3>
+<p>This endpoint returns an array of charms. For field information, see the <a href="#charm-fields">Charm Fields</a> section.</p>
+<h2 id='get-a-specific-charm'>Get a Specific Charm</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/charms/234
+</span></code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/charms/234'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">charm</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// your code here</span>
+    <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns a single <a href="#charm-fields"><code>Charm</code></a> object. Some fields have been truncated for brevity.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">234</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"poison-charm"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Poison Charm"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ranks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Poison Charm 1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"level"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
+      </span><span class="s2">"crafting"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"craftable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"materials"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific charm and it&#39;s ranks.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://mhw-db.com/charms/&lt;idOrSlug&gt;</code></p>
+<h3 id='path-parameters'>Path Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>idOrSlug</td>
+<td>Integer &#124; String</td>
+<td>The ID or slug of the charm to retrieve</td>
+</tr>
+</tbody></table>
+<h3 id='response-2'>Response</h3>
+<p>This endpoint returns a single charm and all of it&#39;s ranks. For field information, see the <a href="#charm-fields">Charm Fields</a> section.</p>
+<h2 id='charm-fields'>Charm Fields</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">234</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"poison-charm"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Poison Charm"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ranks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Poison Charm 1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"level"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"poison-resistance-rank-1"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"level"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Reduces the duration of poison by 30%."</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"skill"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"skillName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Poison Resistance"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"modifiers"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="s2">"crafting"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"craftable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"materials"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+              </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">231</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pukei-Pukei Sac"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pukei-Pukei material. Obtained by ..."</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"carryLimit"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"sellPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"buyPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>A sample <code>Charm</code> object. Some fields have been truncated for brevity.</p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>The ID of the charm</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>String</td>
+<td>A human readable unique identifier</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>The name of the charm</td>
+</tr>
+<tr>
+<td>ranks</td>
+<td>Array&lt;<a href="#charmrank-fields">CharmRank</a>&gt;</td>
+<td>An array of the different ranks of the charm</td>
+</tr>
+</tbody></table>
+<h3 id='charmrank-fields'>CharmRank Fields</h3>
+<p>CharmRank objects represent the actual in-game equipment. Since most charms can be upgraded to higher levels, they&#39;re
+represented as ranks under a <a href="#charm-fields">Charm</a> object, which groups them together.</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>The name of the charm rank (includes level)</td>
+</tr>
+<tr>
+<td>level</td>
+<td>Integer</td>
+<td>The level of the charm rank</td>
+</tr>
+<tr>
+<td>rarity</td>
+<td>Integer</td>
+<td>The rarity of the charm rank</td>
+</tr>
+<tr>
+<td>skills</td>
+<td>Array&lt;<a href="#skillrank-fields">SkillRank</a>&gt;</td>
+<td>An array of skill ranks provided by the charm</td>
+</tr>
+<tr>
+<td>crafting</td>
+<td><a href="#charmrank-crafting-fields">CharmRank Crafting</a></td>
+<td>An object describing crafting info for the charm</td>
+</tr>
+</tbody></table>
+<h3 id='charmrank-crafting-fields'>CharmRank Crafting Fields</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>craftable</td>
+<td>Boolean</td>
+<td>Indicates whether or not the charm rank is directly craftable; if false, it must be upgraded from the previous level</td>
+</tr>
+<tr>
+<td>materials</td>
+<td>Array&lt;<a href="#craftingcost-objects">CraftingCost</a>&gt;</td>
+<td>An array of crafting material costs</td>
+</tr>
+</tbody></table>
+<h1 id='decorations'>Decorations</h1><h2 id='get-all-decorations'>Get All Decorations</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/decorations"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/decorations'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">decorations</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// your code here</span>
+    <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns an array of <a href="#decoration-fields"><code>Decoration</code></a> objects.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"antidote-jewel-1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Antidote Jewel 1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"poison-resistance-rank-1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Reduces the duration of poison by 30%."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"level"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"skill"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"skillName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Poison Resistance"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modifiers"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"slot"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"skill"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all decorations.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://mhw-db.com/decorations</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>q</td>
+<td>No</td>
+<td>See the <a href="#searching-the-api">Searching the API</a> section</td>
+</tr>
+</tbody></table>
+<h3 id='response'>Response</h3>
+<p>This endpoint returns an array of decorations. For field information, see the <a href="#decoration-fields">Decoration Fields</a> section.</p>
+<h2 id='get-a-specific-decoration'>Get a Specific Decoration</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/decorations/1"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/decorations/1'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">decoration</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// your code here</span>
+    <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns a single <a href="#decoration-fields"><code>Decoration</code></a> object.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"antidote-jewel-1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Antidote Jewel 1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"poison-resistance-rank-1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Reduces the duration of poison by 30%."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"level"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"skill"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"skillName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Poison Resistance"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"modifiers"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"slot"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"skill"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific decoration.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://mhw-db.com/decorations/&lt;idOrSlug&gt;</code></p>
+<h3 id='path-parameters'>Path Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>idOrSlug</td>
+<td>Integer &#124; String</td>
+<td>The ID or slug of the decoration to retrieve</td>
+</tr>
+</tbody></table>
+<h3 id='response-2'>Response</h3>
+<p>This endpoint returns a single decoration. For field information, see the <a href="#decoration-fields">Decoration Fields</a> section.</p>
+<h2 id='decoration-fields'>Decoration Fields</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"antidote-jewel-1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Antidote Jewel 1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"poison-resistance-rank-1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Reduces the duration of poison by 30%."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"level"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"skill"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"skillName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Poison Resistance"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"modifiers"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"slot"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"skill"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>A sample <code>Decoration</code> object.</p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>The ID of the decoration</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>String</td>
+<td>A humand readable unique identifier</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>The name of the decoration</td>
+</tr>
+<tr>
+<td>rarity</td>
+<td>Integer</td>
+<td>The rarity of the decoration</td>
+</tr>
+<tr>
+<td>slot</td>
+<td>Integer</td>
+<td>The slot that the decoration fits into</td>
+</tr>
+<tr>
+<td>skills</td>
+<td>Array&lt;<a href="#skillrank-fields">SkillRank</a>&gt;</td>
+<td>An array of skill ranks that the decoration provides</td>
+</tr>
+<tr>
+<td>skill</td>
+<td>Integer</td>
+<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) The ID of the <a href="#skill-fields">Skill</a> that the decoration provides</td>
+</tr>
+</tbody></table>
+<h1 id='items'>Items</h1><h2 id='get-all-items'>Get All Items</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/items"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/items'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">items</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// your code here</span>
+    <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns an array of <a href="#item-fields"><code>Item</code></a> objects. Some fields have been truncated for brevity.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Potion"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Potion"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"carryLimit"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"sellPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"buyPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all items.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://mhw-db.com/items</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>q</td>
+<td>No</td>
+<td>See the <a href="#searching-the-api">Searching the API</a> section</td>
+</tr>
+</tbody></table>
+<h3 id='response'>Response</h3>
+<p>This endpoint returns an array of items. For field information, see the <a href="#item-fields">Item Fields</a> section.</p>
+<h2 id='get-a-specific-item'>Get a Specific Item</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/items/1"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/items/1'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">item</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// your code here</span>
+    <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns a single <a href="#item-fields"><code>Item</code></a> object.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Potion"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Potion"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"carryLimit"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"sellPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"buyPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific item.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://mhw-db.com/items/&lt;id&gt;</code></p>
+<h3 id='path-parameters'>Path Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>The ID of the item to retrieve</td>
+</tr>
+</tbody></table>
+<h3 id='response-2'>Response</h3>
+<p>This endpoint returns a single item. For field information, see the <a href="#item-fields">Item Fields</a> section.</p>
+<h2 id='item-fields'>Item Fields</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Potion"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Potion"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"carryLimit"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"sellPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"buyPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>A sample <code>Item</code> object.</p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>The ID of the item</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>The name of the item</td>
+</tr>
+<tr>
+<td>description</td>
+<td>String</td>
+<td>A short description of the item</td>
+</tr>
+<tr>
+<td>rarity</td>
+<td>Integer</td>
+<td>The rarity of the item</td>
+</tr>
+<tr>
+<td>carryLimit</td>
+<td>Integer</td>
+<td>The maximum number of the item that may be in the player&#39;s inventory; zero indicates that there is no limit, or that the limit is not yet available</td>
+</tr>
+<tr>
+<td>sellPrice</td>
+<td>Integer</td>
+<td>The amount that the item may be sold for; zero indicates that the item may not be sold, or that the sell price is not yet available</td>
+</tr>
+<tr>
+<td>buyPrice</td>
+<td>Integer</td>
+<td>The amount that the item may be bought for; zero indicates that the item may not be bought, or that the buy price is not yet available</td>
+</tr>
+</tbody></table>
+<h1 id='skills'>Skills</h1><h2 id='get-all-skills'>Get All Skills</h2><pre class="highlight shell tab-shell"><code>curl https://mhw-db.com/skills
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/skills'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">skills</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// your code here</span>
+    <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns an array of <a href="#skill-fields"><code>Skill</code></a> objects. Some fields have been truncated for brevity.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"poison-resistance"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Poison Resistance"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Grants protection against the effects of poison."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ranks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"poison-resistance-rank-1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"skill"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"level"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Reduces the duration of poison by 30%."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"modifiers"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a list of all skills.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://mhw-db.com/skills</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>q</td>
+<td>No</td>
+<td>See the <a href="#searching-the-api">Searching the API</a> section</td>
+</tr>
+</tbody></table>
+<h3 id='response'>Response</h3>
+<p>This endpoint returns an array of skills and their ranks. For field information, see the <a href="#skill-fields">Skill Fields</a> section.</p>
+<h2 id='get-a-specific-skill'>Get a Specific Skill</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/skills/1"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/skills/1'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">skill</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// your code here</span>
+    <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns a single <a href="#skill-fields"><code>Skill</code></a> object. Some fields have been truncated for brevity.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"poison-resistance"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Poison Resistance"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Grants protection against the effects of poison."</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ranks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"poison-resistance-rank-1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"skill"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"level"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Reduces the duration of poison by 30%."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"modifiers"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific skill and it&#39;s ranks.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://mhw-db.com/skills/&lt;idOrSlug&gt;</code></p>
+<h3 id='path-parameters'>Path Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>idOrSlug</td>
+<td>Integer &#124; String</td>
+<td>The ID or slug of the skill to retrieve</td>
+</tr>
+</tbody></table>
+<h3 id='response-2'>Response</h3>
+<p>This endpoint returns a single skill and all of it&#39;s ranks. For field information, see the <a href="#skill-fields">Skill Fields</a> section.</p>
+<h2 id='skill-fields'>Skill Fields</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"attack-boost"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Attack Boost"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Increases attack power. Also ..."</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ranks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">39</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"attack-boost-rank-1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"skill"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"level"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Attack +3"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"modifiers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"attack"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>A sample <code>Skill</code> object. Some fields have been truncated for brevity.</p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>The skill&#39;s ID</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>String</td>
+<td>A human readable unique identifier</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>The name of the skill</td>
+</tr>
+<tr>
+<td>description</td>
+<td>String</td>
+<td>A short description of the skill</td>
+</tr>
+<tr>
+<td>ranks</td>
+<td>Array&lt;<a href="#skillrank-fields">SkillRank</a>&gt;</td>
+<td>An array of available ranks for the skill</td>
+</tr>
+</tbody></table>
+<h3 id='skillrank-fields'>SkillRank Fields</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>The ID of the skill rank</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>String</td>
+<td>A human readable unique identifier</td>
+</tr>
+<tr>
+<td>level</td>
+<td>Integer</td>
+<td>The numeric level of the skill rank (starting at 1)</td>
+</tr>
+<tr>
+<td>description</td>
+<td>String</td>
+<td>A text description of the skill rank</td>
+</tr>
+<tr>
+<td>skill</td>
+<td>Integer</td>
+<td>The ID of the skill that the rank belongs to</td>
+</tr>
+<tr>
+<td>skillName</td>
+<td>String</td>
+<td>The name of the skill that the rank belongs to</td>
+</tr>
+<tr>
+<td>modifiers</td>
+<td><a href="#skillrank-modifiers">SkillRank Modifiers</a></td>
+<td>See <a href="#skillrank-modifiers">SkillRank Modifiers</a> for more information</td>
+</tr>
+</tbody></table>
+<h3 id='skillrank-modifiers'>SkillRank Modifiers</h3>
+<p>These objects describe the stat modifiers granted by a skill rank. The object is a simple dictionary, mapping string keys
+to a value (usually an integer). All possible modifier fields can be found in the table below.</p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>affinity</td>
+<td>Percent</td>
+<td>Modifies the affinity of a weapon</td>
+</tr>
+<tr>
+<td>attack</td>
+<td>Integer</td>
+<td>Modifies the attack value of a weapon</td>
+</tr>
+<tr>
+<td>damageFire</td>
+<td>Integer</td>
+<td>Modifies fire damage</td>
+</tr>
+<tr>
+<td>damageWater</td>
+<td>Integer</td>
+<td>Modifies water damage</td>
+</tr>
+<tr>
+<td>damageIce</td>
+<td>Integer</td>
+<td>Modifies ice damage</td>
+</tr>
+<tr>
+<td>damageThunder</td>
+<td>Integer</td>
+<td>Modifies thunder damage</td>
+</tr>
+<tr>
+<td>damageDragon</td>
+<td>Integer</td>
+<td>Modifies dragon damage</td>
+</tr>
+<tr>
+<td>defense</td>
+<td>Integer</td>
+<td>Modifies the character&#39;s defense</td>
+</tr>
+<tr>
+<td>sharpnessBonus</td>
+<td>Integer</td>
+<td>Modifies the maximum sharpness of a weapon</td>
+</tr>
+<tr>
+<td>resistAll</td>
+<td>Integer</td>
+<td>Modifies all elemental resistances</td>
+</tr>
+<tr>
+<td>resistFire</td>
+<td>Integer</td>
+<td>Modifies fire resistance</td>
+</tr>
+<tr>
+<td>resistWater</td>
+<td>Integer</td>
+<td>Modifies water resistance</td>
+</tr>
+<tr>
+<td>resistIce</td>
+<td>Integer</td>
+<td>Modifies ice resistance</td>
+</tr>
+<tr>
+<td>resistThunder</td>
+<td>Integer</td>
+<td>Modifies thunder resistance</td>
+</tr>
+<tr>
+<td>resistDragon</td>
+<td>Integer</td>
+<td>Modifies dragon resistance</td>
+</tr>
+</tbody></table>
+<h1 id='weapons'>Weapons</h1><h2 id='get-all-weapons'>Get All Weapons</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/weapons"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/weapons'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">weapons</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// your code here</span>
+    <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns an array of <a href="#weapon-fields"><code>Weapon</code></a> objects. Some fields have been truncated for brevity.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"buster-sword-1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Buster Sword 1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"great-sword"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"slots"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
+    </span><span class="s2">"elements"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
+    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"attack"</span><span class="p">:</span><span class="w"> </span><span class="mi">384</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"sharpnessRed"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"sharpnessOrange"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"sharpnessYellow"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"crafting"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"craftable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"previous"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"branches"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
+      </span><span class="s2">"craftingMaterials"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
+      </span><span class="s2">"upgradeMaterials"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"sharpness"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"red"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"orange"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"yellow"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"green"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"blue"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a list of all weapons.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://mhw-db.com/weapons</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>q</td>
+<td>No</td>
+<td>See the <a href="#searching-the-api">Searching the API</a> section</td>
+</tr>
+</tbody></table>
+<h3 id='response'>Response</h3>
+<p>This endpoint returns an array of weapons. For field information, see the <a href="#weapon-fields">Weapon Fields</a> section.</p>
+<h2 id='get-a-specific-weapon'>Get a Specific Weapon</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/weapons/1"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/weapons/1'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">weapon</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// your code here</span>
+    <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns a single <a href="#weapon-fields"><code>Weapon</code></a> object. Some fields have been truncated for brevity.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"buster-sword-1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Buster Sword 1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"great-sword"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"slots"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
+  </span><span class="s2">"elements"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
+  </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"attack"</span><span class="p">:</span><span class="w"> </span><span class="mi">384</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"sharpnessRed"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"sharpnessOrange"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"sharpnessYellow"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"crafting"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"craftable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"previous"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"branches"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
+    </span><span class="s2">"craftingMaterials"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
+    </span><span class="s2">"upgradeMaterials"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"sharpness"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"red"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"orange"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"yellow"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"green"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"blue"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a weapon by it&#39;s ID or slug.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://mhw-db.com/weapons/&lt;idOrSlug&gt;</code></p>
+<h3 id='path-parameters'>Path Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>idOrSlug</td>
+<td>Integer &#124; String</td>
+<td>The ID or slug of the weapon to retrieve</td>
+</tr>
+</tbody></table>
+<h3 id='response-2'>Response</h3>
+<p>This endpoint returns a single weapon. For field information, see the <a href="#weapon-fields">Weapon Fields</a> section.</p>
+<h2 id='weapon-fields'>Weapon Fields</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">94</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iron-grace-3"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Iron Grace 3"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"long-sword"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"slots"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"elements"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"water"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"damage"</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"hidden"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"attack"</span><span class="p">:</span><span class="w"> </span><span class="mi">462</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"slotsRank1"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"elementHidden"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"elementDamage"</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"elementType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Water"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"sharpnessRed"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"sharpnessOrange"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"sharpnessYellow"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"sharpnessGreen"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"sharpnessBlue"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"crafting"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"craftable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"previous"</span><span class="p">:</span><span class="w"> </span><span class="mi">93</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"branches"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="mi">95</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"craftingMaterials"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="s2">"upgradeMaterials"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">119</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Carbalite Ore"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ore obtained from mining outcrops. Still ..."</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"carryLimit"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"sellPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"buyPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"sharpness"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"red"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"orange"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"yellow"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"green"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"blue"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>A sample <code>Weapon</code> object. Some fields have been truncated for brevity.</p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>The ID of the weapon</td>
+</tr>
+<tr>
+<td>slug</td>
+<td>String</td>
+<td>A human readable unique identifier</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>The name of the weapon</td>
+</tr>
+<tr>
+<td>type</td>
+<td><a href="#weapon-types">WeaponType</a></td>
+<td>The weapon&#39;s type</td>
+</tr>
+<tr>
+<td>rarity</td>
+<td>Integer</td>
+<td>The rarity of the weapon</td>
+</tr>
+<tr>
+<td>slots</td>
+<td>Array&lt;<a href="#slot-objects">Slot</a>&gt;</td>
+<td>An array containing slot information for the weapon</td>
+</tr>
+<tr>
+<td>elements</td>
+<td>Array&lt;<a href="#weapon-elements">WeaponElement</a>&gt;</td>
+<td>An array containing element damage info for the weapon</td>
+</tr>
+<tr>
+<td>crafting</td>
+<td><a href="#weapon-crafting-info">WeaponCraftingInfo</a></td>
+<td>Contains crafting information for the weapon</td>
+</tr>
+<tr>
+<td>sharpness</td>
+<td><a href="#weapon-sharpness">WeaponSharpness</a></td>
+<td>Contains sharpness information</td>
+</tr>
+<tr>
+<td>attributes</td>
+<td><a href="#weapon-attributes">WeaponAttributes</a></td>
+<td>See <a href="#weapon-attributes">WeaponAttributes</a> for more information</td>
+</tr>
+</tbody></table>
+<h3 id='weapon-types'>Weapon Types</h3>
+<p>A weapon&#39;s type can be one of the following values:</p>
+
+<table><thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>great-sword</td>
+<td>long-sword</td>
+<td>sword-and-shield</td>
+</tr>
+<tr>
+<td>dual-blades</td>
+<td>hammer</td>
+<td>hunting-horn</td>
+</tr>
+<tr>
+<td>lance</td>
+<td>gunlance</td>
+<td>switch-axe</td>
+</tr>
+<tr>
+<td>charge-blade</td>
+<td>insect-glaive</td>
+<td>light-bowgun</td>
+</tr>
+<tr>
+<td>heavy-bowgun</td>
+<td>bow</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id='weapon-crafting-info'>Weapon Crafting Info</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>craftable</td>
+<td>Boolean</td>
+<td>Indicates whether or not the weapon may be directly crafted</td>
+</tr>
+<tr>
+<td>previous</td>
+<td>Integer &#124; Null</td>
+<td>The ID of the weapon that this weapon is upgraded from, or <code>null</code> if nothing upgrades into this weapon</td>
+</tr>
+<tr>
+<td>branches</td>
+<td>Array&lt;Integer&gt;</td>
+<td>An array of IDs that the weapon may be upgraded into</td>
+</tr>
+<tr>
+<td>craftingMaterials</td>
+<td>Array&lt;<a href="#craftingcost-objects">CraftingCost</a>&gt;</td>
+<td>An array containing the material cost to create the weapon; will always be empty if <code>craftable</code> is false</td>
+</tr>
+<tr>
+<td>upgradeMaterials</td>
+<td>Array&lt;<a href="#craftingcost-objects">CraftingCost</a>&gt;</td>
+<td>An array containing the material cost to upgrade the weapon identified by <code>previous</code> into this weapon; will always be empty if <code>previous</code> is null</td>
+</tr>
+</tbody></table>
+<h3 id='weapon-elements'>Weapon Elements</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>type</td>
+<td><a href="#element-types">ElementType</a></td>
+<td>The element&#39;s damage type</td>
+</tr>
+<tr>
+<td>damage</td>
+<td>Integer</td>
+<td>The power of the element</td>
+</tr>
+<tr>
+<td>hidden</td>
+<td>Boolean</td>
+<td>Indicates whether or not the element is a hidden element</td>
+</tr>
+</tbody></table>
+<h3 id='weapon-sharpness'>Weapon Sharpness</h3>
+<p>Since MHW does not disclose actual sharpness values, sharpness is represented as a whole number out of 100, with 100 being the maximum possible sharpness a weapon can have. The total sharpness value is split across several different colors, indicating what percentage of the weapon&#39;s max sharpness belongs to each color.</p>
+
+<p>It&#39;s easiest to visualize sharpness as a single bar, 100 pixels wide. For example, the great sword &quot;<a href="https://mhw-db.com/weapons/6" target="_blank">Buster Sword 3</a>&quot; has 25 red, 12 orange, 13 yellow, 20 green, and 5 blue. A bar representing that might look like the bar below.</p>
+
+<div class="sharpness-bar">
+  <div class="red" style="width: 25px"></div>
+  <div class="orange" style="width: 12px;"></div>
+  <div class="yellow" style="width: 13px;"></div>
+  <div class="green" style="width: 20px;"></div>
+  <div class="blue" style="width: 5px;"></div>
+
+  <div class="clearfix"></div>
+</div>
+
+<p>All fields in the sharpness can be found in table below.</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>red</td>
+<td>Integer</td>
+<td>The red sharpness value</td>
+</tr>
+<tr>
+<td>orange</td>
+<td>Integer</td>
+<td>The orange sharpness value</td>
+</tr>
+<tr>
+<td>yellow</td>
+<td>Integer</td>
+<td>The yellow sharpness value</td>
+</tr>
+<tr>
+<td>green</td>
+<td>Integer</td>
+<td>The green sharpness value</td>
+</tr>
+<tr>
+<td>blue</td>
+<td>Integer</td>
+<td>The blue sharpness value</td>
+</tr>
+</tbody></table>
+<h3 id='weapon-attributes'>Weapon Attributes</h3>
+<p>The weapon attributes object is a dictionary of attribute modifiers attached to a weapon. These fields are planned to be slowly phased out over several releases, and instead provided by specialized fields (such as <code>sharpness</code>).</p>
+
+<p>Possible attribute keys are listed below.</p>
+
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ammoCapacities</td>
+<td><a href="#ammo-capacities">AmmoCapacities</a></td>
+<td>For &quot;light-bowgun&quot; and &quot;heavy-bowgun&quot; weapons only</td>
+</tr>
+<tr>
+<td>attack</td>
+<td>Integer</td>
+<td>The attack power of the weapon</td>
+</tr>
+<tr>
+<td>affinity</td>
+<td>Integer</td>
+<td>The affinity of the weapon</td>
+</tr>
+<tr>
+<td>boostType</td>
+<td><a href="#boost-types">BoostType</a></td>
+<td>For &quot;insect-glaive&quot; weapons only</td>
+</tr>
+<tr>
+<td>coatings</td>
+<td>Array&lt;<a href="#bow-coatings">Coating</a>&gt;</td>
+<td>For &quot;bow&quot; weapons only</td>
+</tr>
+<tr>
+<td>damageType</td>
+<td><a href="#damage-types">DamageType</a></td>
+<td>The type of damage the weapon deals</td>
+</tr>
+<tr>
+<td>deviation</td>
+<td><a href="#bowgun-deviation">Deviation</a></td>
+<td>For &quot;light-bowgun&quot; and &quot;heavy-bowgun&quot; weapons only</td>
+</tr>
+<tr>
+<td>elderseal</td>
+<td><a href="#elderseal-types">Elderseal</a></td>
+<td>The elderseal type attributed to the weapon</td>
+</tr>
+<tr>
+<td>phialType</td>
+<td><a href="#phial-types">PhialType</a></td>
+<td>For &quot;switch-axe&quot; and &quot;charge-blade&quot; weapons only</td>
+</tr>
+<tr>
+<td>shellingType</td>
+<td><a href="#shelling-types">ShellingType</a></td>
+<td>For &quot;gunlance&quot; weapons only</td>
+</tr>
+<tr>
+<td>specialAmmo</td>
+<td><a href="#special-ammo-types">SpecialAmmoType</a></td>
+<td>For &quot;light-bowgun&quot; and &quot;heavy-bowgun&quot; weapons only</td>
+</tr>
+<tr>
+<td>elementType</td>
+<td><a href="#element-types">ElementType</a></td>
+<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) The primary element type of the weapon</td>
+</tr>
+<tr>
+<td>elementDamage</td>
+<td>Integer</td>
+<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) The power of the weapon&#39;s primary element</td>
+</tr>
+<tr>
+<td>elementHidden</td>
+<td>Boolean</td>
+<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) If true, indicates that the primary element is a hidden element</td>
+</tr>
+<tr>
+<td>elementType2</td>
+<td><a href="#element-types">ElementType</a>)</td>
+<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) The secondary element type of the weapon</td>
+</tr>
+<tr>
+<td>elementDamage2</td>
+<td>Integer</td>
+<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) The power of the weapon&#39;s secondary element</td>
+</tr>
+<tr>
+<td>elementHidden2</td>
+<td>Boolean</td>
+<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) If true, indicates that the secondary element is a hidden element</td>
+</tr>
+<tr>
+<td>sharpnessRed</td>
+<td>Integer</td>
+<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) The size of the weapon&#39;s red sharpness bar</td>
+</tr>
+<tr>
+<td>sharpnessOrange</td>
+<td>Integer</td>
+<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) The size of the weapon&#39;s orange sharpness bar</td>
+</tr>
+<tr>
+<td>sharpnessYellow</td>
+<td>Integer</td>
+<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) The size of the weapon&#39;s yellow sharpness bar</td>
+</tr>
+<tr>
+<td>sharpnessGreen</td>
+<td>Integer</td>
+<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) The size of the weapon&#39;s green sharpness bar</td>
+</tr>
+<tr>
+<td>sharpnessBlue</td>
+<td>Integer</td>
+<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) The size of the weapon&#39;s blue sharpness bar</td>
+</tr>
+<tr>
+<td>sharpnessWhite</td>
+<td>Integer</td>
+<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) The size of the weapon&#39;s white sharpness bar</td>
+</tr>
+<tr>
+<td>slotsRank1</td>
+<td>Integer</td>
+<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) The number of rank 1 slots available on the weapon</td>
+</tr>
+<tr>
+<td>slotsRank2</td>
+<td>Integer</td>
+<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) The number of rank 2 slots available on the weapon</td>
+</tr>
+<tr>
+<td>slotsRank3</td>
+<td>Integer</td>
+<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) The number of rank 3 slots available on the weapon</td>
+</tr>
+</tbody></table>
+<h3 id='ammo-capacities'>Ammo Capacities</h3>
+<p>Light and heavy bowguns use the <code>attributes.ammoCapacities</code> field to specify ammo capacities for their various ammo types. In the <code>ammoCapacities</code> object, the key is the name of the ammo type, and the value is an array of capacities for each level of the ammo type.</p>
+
+<table><thead>
+<tr>
+<th>Ammo Name</th>
+<th style="text-align: center">Levels</th>
+<th></th>
+<th>Ammo Name</th>
+<th style="text-align: center">Levels</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>normal</td>
+<td style="text-align: center">3</td>
+<td></td>
+<td>flaming</td>
+<td style="text-align: center">1</td>
+</tr>
+<tr>
+<td>piercing</td>
+<td style="text-align: center">3</td>
+<td></td>
+<td>water</td>
+<td style="text-align: center">1</td>
+</tr>
+<tr>
+<td>spread</td>
+<td style="text-align: center">3</td>
+<td></td>
+<td>freeze</td>
+<td style="text-align: center">1</td>
+</tr>
+<tr>
+<td>sticky</td>
+<td style="text-align: center">3</td>
+<td></td>
+<td>thunder</td>
+<td style="text-align: center">1</td>
+</tr>
+<tr>
+<td>cluster</td>
+<td style="text-align: center">3</td>
+<td></td>
+<td>dragon</td>
+<td style="text-align: center">1</td>
+</tr>
+<tr>
+<td>recover</td>
+<td style="text-align: center">2</td>
+<td></td>
+<td>slicing</td>
+<td style="text-align: center">1</td>
+</tr>
+<tr>
+<td>poison</td>
+<td style="text-align: center">2</td>
+<td></td>
+<td>wyvern</td>
+<td style="text-align: center">1</td>
+</tr>
+<tr>
+<td>paralysis</td>
+<td style="text-align: center">2</td>
+<td></td>
+<td>demon</td>
+<td style="text-align: center">1</td>
+</tr>
+<tr>
+<td>sleep</td>
+<td style="text-align: center">2</td>
+<td></td>
+<td>armor</td>
+<td style="text-align: center">1</td>
+</tr>
+<tr>
+<td>exhaust</td>
+<td style="text-align: center">2</td>
+<td></td>
+<td>tranq</td>
+<td style="text-align: center">1</td>
+</tr>
+</tbody></table>
+<h3 id='boost-types'>Boost Types</h3>
+<p>An insect glaive&#39;s boost type may be one of the following values.</p>
+
+<ul>
+<li>Sever Boost</li>
+<li>Speed Bost</li>
+<li>Element Boost</li>
+<li>Health Boost</li>
+<li>Stamina Boost</li>
+<li>Blunt Boost</li>
+</ul>
+<h3 id='bow-coatings'>Bow Coatings</h3>
+<p>A bow&#39;s coating may be one of the following values.</p>
+
+<ul>
+<li>Close Range</li>
+<li>Paralysis</li>
+<li>Poison</li>
+<li>Sleep</li>
+<li>Blast</li>
+<li>Power</li>
+</ul>
+<h3 id='bowgun-deviation'>Bowgun Deviation</h3>
+<p>A bowgun&#39;s deviation may be one of the following values.</p>
+
+<ul>
+<li>None</li>
+<li>Low</li>
+<li>Average</li>
+<li>High</li>
+</ul>
+<h3 id='damage-types'>Damage Types</h3>
+<p>A weapon&#39;s damage type will be one of the following values:</p>
+
+<ul>
+<li>blunt</li>
+<li>piercing</li>
+<li>slashing</li>
+</ul>
+<h3 id='elderseal-types'>Elderseal Types</h3>
+<p>A weapon&#39;s elderseal type may be one of the following values:</p>
+
+<ul>
+<li>low</li>
+<li>average</li>
+<li>high</li>
+</ul>
+<h3 id='phial-types'>Phial Types</h3>
+<p>A phial type is represented in one of two forms. The first of which is a simple form, which may be one of the following values.</p>
+
+<ul>
+<li>Impact Phial</li>
+<li>Element Phial</li>
+<li>Power Phial</li>
+</ul>
+
+<p>The second is a dynamic form, for phial types that also include a strength. Such phial types may be one of the following values, followed by a number that indicates their strength (e.g. &quot;Dragon Phial 300&quot;).</p>
+
+<ul>
+<li>Dragon Phial</li>
+<li>Exhaust Phial</li>
+<li>Para Phial</li>
+<li>Poison Phial</li>
+</ul>
+<h3 id='shelling-types'>Shelling Types</h3>
+<p>A gunlance&#39;s shelling type may be one of the following values, followed by a level indicator in the form &quot;Lv#&quot; (e.g. &quot;Normal Lv2&quot;).</p>
+
+<ul>
+<li>Normal</li>
+<li>Long</li>
+<li>Wide</li>
+</ul>
+<h3 id='special-ammo-types'>Special Ammo Types</h3>
+<p>A light or heavy bowgun&#39;s special ammo type may be one of the following values.</p>
+
+<ul>
+<li>Wyvernblast</li>
+<li>Wyvernheart</li>
+<li>Wyvernsnipe</li>
+</ul>
+<h1 id='data-types'>Data Types</h1><h2 id='scalar-data-types'>Scalar Data Types</h2>
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>String</td>
+<td>Text of any length</td>
+</tr>
+<tr>
+<td>Integer</td>
+<td>A normal integer</td>
+</tr>
+<tr>
+<td>Percent</td>
+<td>A percentage, formatted as a whole number without the trailing percent sign; may be negative</td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td>A normal boolean (either <code>true</code> or <code>false</code>)</td>
+</tr>
+<tr>
+<td>Enum(...)</td>
+<td>One of any value listed between the parenthesis</td>
+</tr>
+<tr>
+<td>Array&lt;T&gt;</td>
+<td>An array containing zero more values of type <code>T</code></td>
+</tr>
+<tr>
+<td>Null</td>
+<td>Represents an empty value (usually used when a field has no value)</td>
+</tr>
+</tbody></table>
+<h2 id='element-types'>Element Types</h2>
+<p>An element type may be one of the following values.</p>
+
+<table><thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead><tbody>
+<tr>
+<td>fire</td>
+<td>water</td>
+<td>ice</td>
+</tr>
+<tr>
+<td>thunder</td>
+<td>dragon</td>
+<td>blast</td>
+</tr>
+<tr>
+<td>poison</td>
+<td>sleep</td>
+<td>paralysis</td>
+</tr>
+</tbody></table>
+<h2 id='craftingcost-objects'>CraftingCost Objects</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">231</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pukei-Pukei Sac"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pukei-Pukei material. Obtained ..."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"carryLimit"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"sellPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"buyPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>A sample <code>CraftingCost</code> object. Some fields have been truncated for brevity.</p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>quantity</td>
+<td>Integer</td>
+<td>The quantity of the item needed for the craft</td>
+</tr>
+<tr>
+<td>item</td>
+<td><a href="#item-objects">Item</a></td>
+<td>The item to be consumed during crafting</td>
+</tr>
+</tbody></table>
+<h2 id='slot-objects'>Slot Objects</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>A sample <code>Slot</code> object.</p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>rank</td>
+<td>Integer</td>
+<td>The rank of the slot</td>
+</tr>
+</tbody></table>
+<h1 id='searching-the-api'>Searching the API</h1>
+<p>Any endpoint can be searched by passing a <code>q</code> parameter in the URL, i.e. <code>/skills?q=...</code>. The value of <code>q</code> should be a MongoDB-style <a href="https://docs.mongodb.com/manual/tutorial/query-documents/">query document</a>. For those that are not familiar with Mongo query documents, a short explanation can be found below.</p>
+<h2 id='query-document'>Query Document</h2>
+<p>A &quot;query document&quot; is simply a JSON object that defines fields and values to search by. For example, a request to <a href='https://mhw-db.com/skills?q={"name":"Poison%20Resistance"}' target="_blank"><code>/skills?q={&quot;name&quot;:&quot;Poison Resistance&quot;}</code></a> would return a collection containing all skills whose name matched the string &quot;Poison Resistance&quot; exactly.</p>
+
+<p>You can enhance your searches by using operators in your document, a list of which <a href="#operators">can be found here</a>. For example, a request to <a href='https://mhw-db.com/armor?q={"defense.base":{"$gt":50}}' target="_blank"><code>/armor?q={&quot;defense.base&quot;:{&quot;$gt&quot;:50}}</code></a> would return any armor with a base defense that is greater than 50.</p>
+<h2 id='related-objects'>Related Objects</h2>
+<p>You can also search fields that are related or nested in an object. A request to <a href='https://mhw-db.com/skills?q={"ranks.level":3}' target="_blank"><code>/skills?q={&quot;ranks.level&quot;:3}</code></a> would return a collection containing all skills that have a rank of 3. A request to <a href='https://mhw-db.com/armor?q={"defense.base":40}' target="_blank"><code>/armor?q={&quot;defense.base&quot;:40}</code></a> would return all armor that has exactly 40 base defense.</p>
+
+<p>Any field in the API that is an ID of another object or a collection of API objects (for example, the <code>skill</code> field on <a href="https://github.com/LartTyler/MHWDB-Docs/wiki/Decorations">Decorations</a> or the <code>skills</code> field on <a href="https://github.com/LartTyler/MHWDB-Docs/wiki/Charms">Charms</a>) can be searched as if it were an object. For example, in order to find any decorations whose skill modifies your ice elemental damage, you could use the following query document on the <code>/decorations</code> endpoint.</p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"skill.ranks.modifiers.damageIce"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"$exists"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h2 id='operators'>Operators</h2>
+<p>An operator starts with a dollar sign, and allows you to perform more than just equality checks on data.</p>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Name</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><a href="#and">$and</a></td>
+<td style="text-align: left">Joins query clauses with a logical <strong>AND</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#or">$or</a></td>
+<td style="text-align: left">Joins query clauses with a logical <strong>OR</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#gt">$gt</a></td>
+<td style="text-align: left">Matches values that are greater than the specified value.</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#gte">$gte</a></td>
+<td style="text-align: left">Matches values that are greater than or equal to the specified value.</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#lt">$lt</a></td>
+<td style="text-align: left">Matches values that are less than the specified value.</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#lte">$lte</a></td>
+<td style="text-align: left">Matches values that are less than or equal to the specified value.</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#eq">$eq</a></td>
+<td style="text-align: left">Matches values that are equal to the specified value.</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#neq">$neq</a></td>
+<td style="text-align: left">Matches values that are not equal to the specified value.</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#in">$in</a></td>
+<td style="text-align: left">Matches values that are equal to any of the values in the specified array.</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#nin">$nin</a></td>
+<td style="text-align: left">Matches values that are not equal to any of the values in the specified array.</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#like">$like</a></td>
+<td style="text-align: left">Matches values that match the provided comparison string.</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#nlike">$nlike</a></td>
+<td style="text-align: left">Matches values that do not match the provided comparison string.</td>
+</tr>
+<tr>
+<td style="text-align: left"><a href="#exists">$exists</a></td>
+<td style="text-align: left">Matches values that match the given existence check.</td>
+</tr>
+</tbody></table>
+<h3 id='and'>$and</h3>
+<p><em>Syntax</em>: <code>{&quot;$and&quot;: [{expression1}, {expression2}, ..., {expressionN}]}</code></p>
+
+<p>The <code>$and</code> joins query clauses with a logical <strong>AND</strong>.</p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"$and"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="s2">"high"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"attributes.defense"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>The above query, applied to the <code>/armor</code> endpoint, would find only armor that has a <code>rank</code> equal to &quot;high, and a defense attribute of 40.</p>
+
+<p>By default, consecutive expressions are joined by an <code>$and</code> operator, so in most cases it&#39;s not necessary to use <code>$and</code> to join expressions. The above document could be shortened to the following, and would yield the same results.</p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="s2">"high"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"attributes.defense"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='or'>$or</h3>
+<p><em>Syntax</em>: <code>{&quot;$or&quot;: [{expression1}, {expression2}, ..., {expressionN}]}</code></p>
+
+<p>The <code>$or</code> joins query clauses with a logical <strong>OR</strong>.</p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"$or"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="s2">"high"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"attributes.defense"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>The example above would match any entity where <code>rank = &quot;high&quot; OR attributes.defense = 40</code>.</p>
+<h3 id='gt'>$gt</h3>
+<p><em>Syntax</em>: <code>{&quot;field&quot;: {&quot;$gt&quot;: value}}</code></p>
+
+<p>The <code>$gt</code> operator matches values that are greater than the specified value.</p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"attributes.defense"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"$gt"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>The example above would match any entity where <code>attributes.defense &gt; 40</code>.</p>
+<h3 id='gte'>$gte</h3>
+<p><em>Syntax</em>: <code>{&quot;field&quot;: {&quot;$gte&quot;: value}}</code></p>
+
+<p>The <code>$gte</code> operator matches values that are greater than or equal to the specified value.</p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"attributes.defense"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"$gte"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>The example above would match any entity where <code>attributes.defense &gt;= 40</code>.</p>
+<h3 id='lt'>$lt</h3>
+<p><em>Syntax</em>: <code>{&quot;field&quot;: {&quot;$lt&quot;: value}}</code></p>
+
+<p>The <code>$lt</code> operator changes the field comparison to less than.</p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"attributes.defense"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"$lt"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>The example above would match any entity where <code>attributes.defense &lt; 40</code>.</p>
+<h3 id='lte'>$lte</h3>
+<p><em>Syntax</em>: <code>{&quot;field&quot;: {&quot;$lte&quot;: value}}</code></p>
+
+<p>The <code>$lte</code> operator matches values that are less than or equal to the specified value.</p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"attributes.defense"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"$lte"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>The example above would match any entity where <code>attributes.defense &lt;= 40</code>.</p>
+<h3 id='eq'>$eq</h3>
+<p><em>Syntax</em>: <code>{&quot;field&quot;: {&quot;$eq&quot;: value}}</code> <em>or</em> <code>{&quot;field&quot;: value}</code></p>
+
+<p>The <code>$eq</code> operator matches values that are equal to the specified value.</p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"attributes.defense"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>The example above would match any entity where <code>attributes.defense = 40</code>.</p>
+<h3 id='neq'>$neq</h3>
+<p><em>Syntax</em>: <code>{&quot;field&quot;: {&quot;$neq&quot;: value}}</code></p>
+
+<p>The <code>$neq</code> operator is the negated form of <a href="#eq"><code>$eq</code></a>, and matches values that are not equal to the specified value.</p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"attributes.defense"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>The example above would match any entity where <code>attributes.defense != 40</code>.</p>
+<h3 id='in'>$in</h3>
+<p><em>Syntax</em>: <code>{&quot;field&quot;: {&quot;$in&quot;: [value1, value2, ..., valueN]}}</code></p>
+
+<p>The <code>$in</code> operator matches values that are equal to any value in the specified array.</p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"$in"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"high"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"g"</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>The example above would match any entity where <code>rank IN (&quot;high&quot;, &quot;g&quot;)</code>.</p>
+<h3 id='nin'>$nin</h3>
+<p><em>Syntax</em>: <code>{&quot;field&quot;: {&quot;$nin&quot;: [value1, value2, ..., valueN]}}</code></p>
+
+<p>The <code>$nin</code> operator is the negated form of <a href="#in"><code>$in</code></a>, and matches any values that are not equal to any value in the specified array.</p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"$nin"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="s2">"low"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"high"</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>The example above would match any entity where <code>rank NOT IN (&quot;low&quot;, &quot;high&quot;)</code>.</p>
+<h3 id='like'>$like</h3>
+<p><em>Syntax</em>: <code>{&quot;field&quot;: {&quot;$like&quot;: value}}</code></p>
+
+<p>The <code>$like</code> operator matches any value that matches the specified comparison string.</p>
+
+<p>A comparison string may contain any character allowable in a normal string, but treats the following characters as metacharacters.</p>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Character</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><code>%</code></td>
+<td style="text-align: left">Matches anything zero or more times</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>_</code></td>
+<td style="text-align: left">Matches anything once</td>
+</tr>
+</tbody></table>
+
+<p>To use either character as their literal character and not a metacharacter, simply prefix them with a backslash, like so: <code>\%</code> or <code>\_</code>.</p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"$like"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nergal%"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>The example above would match any entity where the name field begins with the string &quot;Nergal&quot; (<code>name LIKE &quot;Nergal%&quot;</code>).</p>
+<h3 id='nlike'>$nlike</h3>
+<p><em>Syntax</em>: <code>{&quot;field&quot;: {&quot;$nlike&quot;: value}}</code></p>
+
+<p>The <code>$nlike</code> operator is the negated form of <a href="#like"><code>$like</code></a>, and matches any value that does not match the specified comparison string. Please see the documentation for <a href="#like"><code>$like</code></a> for an explanation of comparison strings.</p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"$nlike"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nergal%"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>The example above would match any entity where the name field does not begin with &quot;Nergal&quot; (<code>name NOT LIKE &quot;Nergal%&quot;</code>).</p>
+<h3 id='exists'>$exists</h3>
+<p><em>Syntax</em>: <code>{&quot;field&quot;: {&quot;$exists&quot;: boolean}}</code></p>
+
+<p>The <code>$exists</code> operator matches subfield existence. When the value of <code>$exists</code> is <code>true</code>, it will match any entity that has the specified field. When it is false, it will match any entity that does <em>not</em> have the specified field.</p>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"attributes.slotsRank2"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"$exists"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>The example above would match any entity that has the provided field (or, in other words, where <code>attributes.slotsRank2 IS NOT NULL</code>).</p>
+<h1 id='deprecation-schedule'>Deprecation Schedule</h1>
+<p>Below you can find a list of deprecated API features, as well as the information on when those features will be removed
+from the API. Since we follow semantic versioning for the API, only major releases will include breaking changes.</p>
+
+<table><thead>
+<tr>
+<th>Feature</th>
+<th>Replaced By</th>
+<th style="text-align: center">Deprecated In</th>
+<th style="text-align: center">Removal Date</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>Armor.attributes.resist*</code> fields</td>
+<td><a href="#armor-resistances"><code>Armor.resistances</code></a></td>
+<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.8.0">1.8.0</a></td>
+<td style="text-align: center">2018-05-05</td>
+</tr>
+<tr>
+<td><code>Armor.attributes.slotsRank*</code> fields</td>
+<td><a href="#armor-objects"><code>Armor.slots</code></a></td>
+<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.8.0">1.8.0</a></td>
+<td style="text-align: center">2018-05-05</td>
+</tr>
+<tr>
+<td><code>Armor.attributes.defense</code> fields</td>
+<td><a href="#defense-objects"><code>Armor.defense</code></a></td>
+<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.8.0">1.8.0</a></td>
+<td style="text-align: center">2018-05-05</td>
+</tr>
+<tr>
+<td><code>Weapon.attributes.slotsRank*</code> fields</td>
+<td><a href="#weapon-objects"><code>Weapon.slots</code></a></td>
+<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.8.0">1.8.0</a></td>
+<td style="text-align: center">2018-05-05</td>
+</tr>
+<tr>
+<td><code>Weapon.attributes.sharpness*</code> fields</td>
+<td><a href="#weapon-sharpness"><code>Weapon.sharpness</code></a></td>
+<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.9.0">1.9.0</a></td>
+<td style="text-align: center">2018-05-12</td>
+</tr>
+<tr>
+<td><code>Weapon.attributes.element*</code> fields</td>
+<td><a href="#weapon-elements"><code>Weapon.elements</code></a></td>
+<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.9.0">1.9.0</a></td>
+<td style="text-align: center">2018-05-12</td>
+</tr>
+<tr>
+<td><code>Decoration.skill</code> field</td>
+<td><a href="#decoration-objects"><code>Decoration.skills</code></a></td>
+<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.9.0">1.9.0</a></td>
+<td style="text-align: center">2018-05-12</td>
+</tr>
+</tbody></table>
+<h1 id='errors'>Errors</h1>
+<blockquote>
+<p>Error responses will always look something like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"error.code_type"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A more verbose, human-readable error message"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Any response that does not use the 200 range of HTTP status codes will, in almost every case, include a description
+of the error that occurred in the response body. Every error response will follow the same format.</p>
+
+<p>Error responses will ALWAYS have, at minimum, an <code>error</code> key, which will contain an object. The error object will always
+have a <code>code</code> key and a <code>message</code> key. The <code>code</code> key acts like an identifier; it will always be the same for the same
+kind of error, and may be used for error handling in your code. The <code>message</code> key will be a description of what happened,
+and may change slightly. It should be used by you, the developer, to help debug what went wrong.</p>
+<h2 id='error-codes'>Error Codes</h2>
+<table><thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>not_found</td>
+<td>No object could be found with the ID or slug provided</td>
+</tr>
+<tr>
+<td>search.malformed_query</td>
+<td>Your query object was invalid; check your syntax and try again</td>
+</tr>
+<tr>
+<td>search.empty_params</td>
+<td>Your search query must include at least one field to search by</td>
+</tr>
+<tr>
+<td>search.error</td>
+<td>An unhandled error occurred while executing your search</td>
+</tr>
+<tr>
+<td>slug_not_supported</td>
+<td>This resource cannot be retrieved using a slug</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+                <a href="#" data-language-name="javascript">javascript</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
