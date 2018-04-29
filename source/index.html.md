@@ -13,6 +13,7 @@ includes:
   - endpoints_armor
   - endpoints_armor_sets
   - endpoints_charms
+  - endpoints_decorations
   - data_types
   - deprecations
   - errors
