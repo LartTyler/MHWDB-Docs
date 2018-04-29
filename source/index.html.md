@@ -16,6 +16,7 @@ includes:
   - endpoints_decorations
   - endpoints_items
   - endpoints_skills
+  - endpoints_weapons
   - data_types
   - deprecations
   - errors
