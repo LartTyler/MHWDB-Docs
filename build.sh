@@ -72,4 +72,4 @@ commit() {
     echo "Ready to push."
 }
 
-main()
+main
