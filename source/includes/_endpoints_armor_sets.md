@@ -1,6 +1,6 @@
 # Armor Sets
 ## Get All Armor Sets
-```curl
+```shell
 curl "https://mhw-db.com/armor/sets"
 ```
 
