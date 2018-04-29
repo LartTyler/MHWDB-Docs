@@ -6,6 +6,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - javascript
 
 toc_footers:
+  - <a href="https://github.com/LartTyler/MHWDB-API">Visit Us on GitHub</a>
   - <a href='https://github.com/lord/slate'>Documentation Powered by Slate</a>
 
 includes:
