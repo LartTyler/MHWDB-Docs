@@ -14,6 +14,7 @@ includes:
   - endpoints_armor_sets
   - endpoints_charms
   - endpoints_decorations
+  - endpoints_items
   - data_types
   - deprecations
   - errors
