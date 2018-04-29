@@ -1,0 +1,31 @@
+.sharpness-bar {
+    margin: 0 28px 15px;
+    width: 100px;
+    height: 10px;
+    background-color: #1e2325;
+
+    > div:not(.clearfix) {
+        height: 10px;
+        float: left;
+
+        &.red {
+            background-color: #be3843;
+        }
+
+        &.orange {
+            background-color: #d3673d;
+        }
+
+        &.yellow {
+            background-color: #c9b232;
+        }
+
+        &.green {
+            background-color: #81b034;
+        }
+
+        &.blue {
+            background-color: #3a58d7;
+        }
+    }
+}
