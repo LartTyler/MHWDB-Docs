@@ -10,4 +10,4 @@ Feature | Replaced By | Deprecated In | Removal Date
 `Weapon.attributes.slotsRank*` fields | [`Weapon.slots`](#weapon-objects) | [1.8.0](https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.8.0) | 2018-05-05
 `Weapon.attributes.sharpness*` fields | [`Weapon.sharpness`](#weapon-sharpness) | [1.9.0](https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.9.0) | 2018-05-12
 `Weapon.attributes.element*` fields | [`Weapon.elements`](#weapon-elements) | [1.9.0](https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.9.0) | 2018-05-12
-`Decoration.skill` field | [`Decoration.skills`](#decoration-objects) | [1.9.0](https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.9.0) | 2018-05-12
+`Decoration.skill` field | [`Decoration.skills`](#decoration-fields) | [1.9.0](https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.9.0) | 2018-05-12
