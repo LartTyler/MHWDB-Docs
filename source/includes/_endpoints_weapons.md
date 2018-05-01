@@ -255,7 +255,7 @@ blue | Integer | The blue sharpness value
 white | Integer | The white sharpness value
 
 ### Weapon Attributes
-The weapon attributes object is a dictionary of attribute modifiers attached to a weapon. These fields are planned to be slowly phased out over several releases, and instead provided by specialized fields (such as `sharpness`).
+The weapon attributes object is a dictionary of attribute modifiers attached to a weapon. Most of these fields are planned to be slowly phased out over several releases, and instead provided by specialized fields (such as `sharpness`).
 
 Possible attribute keys are listed below.
 
@@ -267,6 +267,7 @@ affinity | Integer | The affinity of the weapon
 boostType | [BoostType](#boost-types) | For "insect-glaive" weapons only
 coatings | Array&lt;[Coating](#bow-coatings)&gt; | For "bow" weapons only
 damageType | [DamageType](#damage-types) | The type of damage the weapon deals
+defense | Integer | Some weapons (namely "gunlance" types) augment player defense; such weapons indicate that with this field
 deviation | [Deviation](#bowgun-deviation) | For "light-bowgun" and "heavy-bowgun" weapons only
 elderseal | [Elderseal](#elderseal-types) | The elderseal type attributed to the weapon
 phialType | [PhialType](#phial-types) | For "switch-axe" and "charge-blade" weapons only
