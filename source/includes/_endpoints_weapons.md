@@ -230,14 +230,15 @@ hidden | Boolean | Indicates whether or not the element is a hidden element
 ### Weapon Sharpness
 Since MHW does not disclose actual sharpness values, sharpness is represented as a whole number out of 100, with 100 being the maximum possible sharpness a weapon can have. The total sharpness value is split across several different colors, indicating what percentage of the weapon's max sharpness belongs to each color.
 
-It's easiest to visualize sharpness as a single bar, 100 pixels wide. For example, the great sword "<a href="https://mhw-db.com/weapons/6" target="_blank">Buster Sword 3</a>" has 25 red, 12 orange, 13 yellow, 20 green, and 5 blue. A bar representing that might look like the bar below.
+It's easiest to visualize sharpness as a single bar, 100 pixels wide. For example, the long sword "<a href="https://mhw-db.com/weapons/156" target="_blank">Dark Scimitar 3</a>" has 27 red, 8 orange, 15 yellow, 20 green, 10 blue, and 7 white. A bar representing that might look like the bar below.
 
 <div class="sharpness-bar">
-  <div class="red" style="width: 25px"></div>
-  <div class="orange" style="width: 12px;"></div>
-  <div class="yellow" style="width: 13px;"></div>
+  <div class="red" style="width: 27px"></div>
+  <div class="orange" style="width: 8px;"></div>
+  <div class="yellow" style="width: 15px;"></div>
   <div class="green" style="width: 20px;"></div>
-  <div class="blue" style="width: 5px;"></div>
+  <div class="blue" style="width: 10px;"></div>
+  <div class="white" style="width: 7px;"></div>
 
   <div class="clearfix"></div>
 </div>
@@ -251,6 +252,7 @@ orange | Integer | The orange sharpness value
 yellow | Integer | The yellow sharpness value
 green | Integer | The green sharpness value
 blue | Integer | The blue sharpness value
+white | Integer | The white sharpness value
 
 ### Weapon Attributes
 The weapon attributes object is a dictionary of attribute modifiers attached to a weapon. These fields are planned to be slowly phased out over several releases, and instead provided by specialized fields (such as `sharpness`).
