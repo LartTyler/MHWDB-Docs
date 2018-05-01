@@ -2212,14 +2212,15 @@ to a value (usually an integer). All possible modifier fields can be found in th
 <h3 id='weapon-sharpness'>Weapon Sharpness</h3>
 <p>Since MHW does not disclose actual sharpness values, sharpness is represented as a whole number out of 100, with 100 being the maximum possible sharpness a weapon can have. The total sharpness value is split across several different colors, indicating what percentage of the weapon&#39;s max sharpness belongs to each color.</p>
 
-<p>It&#39;s easiest to visualize sharpness as a single bar, 100 pixels wide. For example, the great sword &quot;<a href="https://mhw-db.com/weapons/6" target="_blank">Buster Sword 3</a>&quot; has 25 red, 12 orange, 13 yellow, 20 green, and 5 blue. A bar representing that might look like the bar below.</p>
+<p>It&#39;s easiest to visualize sharpness as a single bar, 100 pixels wide. For example, the long sword &quot;<a href="https://mhw-db.com/weapons/156" target="_blank">Dark Scimitar 3</a>&quot; has 27 red, 8 orange, 15 yellow, 20 green, 10 blue, and 7 white. A bar representing that might look like the bar below.</p>
 
 <div class="sharpness-bar">
-  <div class="red" style="width: 25px"></div>
-  <div class="orange" style="width: 12px;"></div>
-  <div class="yellow" style="width: 13px;"></div>
+  <div class="red" style="width: 27px"></div>
+  <div class="orange" style="width: 8px;"></div>
+  <div class="yellow" style="width: 15px;"></div>
   <div class="green" style="width: 20px;"></div>
-  <div class="blue" style="width: 5px;"></div>
+  <div class="blue" style="width: 10px;"></div>
+  <div class="white" style="width: 7px;"></div>
 
   <div class="clearfix"></div>
 </div>
@@ -2258,9 +2259,14 @@ to a value (usually an integer). All possible modifier fields can be found in th
 <td>Integer</td>
 <td>The blue sharpness value</td>
 </tr>
+<tr>
+<td>white</td>
+<td>Integer</td>
+<td>The white sharpness value</td>
+</tr>
 </tbody></table>
 <h3 id='weapon-attributes'>Weapon Attributes</h3>
-<p>The weapon attributes object is a dictionary of attribute modifiers attached to a weapon. These fields are planned to be slowly phased out over several releases, and instead provided by specialized fields (such as <code>sharpness</code>).</p>
+<p>The weapon attributes object is a dictionary of attribute modifiers attached to a weapon. Most of these fields are planned to be slowly phased out over several releases, and instead provided by specialized fields (such as <code>sharpness</code>).</p>
 
 <p>Possible attribute keys are listed below.</p>
 
@@ -2300,6 +2306,11 @@ to a value (usually an integer). All possible modifier fields can be found in th
 <td>damageType</td>
 <td><a href="#damage-types">DamageType</a></td>
 <td>The type of damage the weapon deals</td>
+</tr>
+<tr>
+<td>defense</td>
+<td>Integer</td>
+<td>Some weapons (namely &quot;gunlance&quot; types) augment player defense; such weapons indicate that with this field</td>
 </tr>
 <tr>
 <td>deviation</td>
