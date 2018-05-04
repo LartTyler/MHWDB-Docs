@@ -47,6 +47,9 @@ fetch('https://mhw-db.com/armor')
     "assets": {
       "imageMale": "https://assets.mhw-db.com/armor/...",
       "imageFemale": "https://assets.mhw-db.com/armor/..."
+    },
+    "crafting": {
+      "materials": [...]
     }
   }
 ]
@@ -89,29 +92,32 @@ fetch('https://mhw-db.com/armor/1')
   "rank": "low",
   "rarity": 1,
   "defense": {
-      "base": 2,
-      "max": 38,
-      "augmented": 68
+    "base": 2,
+    "max": 38,
+    "augmented": 68
   },
   "resistances": {
-      "fire": 2,
-      "water": 0,
-      "ice": 0,
-      "thunder": 0,
-      "dragon": 0
+    "fire": 2,
+    "water": 0,
+    "ice": 0,
+    "thunder": 0,
+    "dragon": 0
   },
   "slots": [...],
   "attributes": {...},
   "skills": [...],
   "armorSet": {
-      "id": 1,
-      "name": "Leather",
-      "rank": "low",
-      "pieces": [...]
+    "id": 1,
+    "name": "Leather",
+    "rank": "low",
+    "pieces": [...]
   },
   "assets": {
-      "imageMale": "https://assets.mhw-db.com/armor/...",
-      "imageFemale": "https://assets.mhw-db.com/armor/..."
+    "imageMale": "https://assets.mhw-db.com/armor/...",
+    "imageFemale": "https://assets.mhw-db.com/armor/..."
+  },
+  "crafting": {
+    "materials": [...]
   }
 }
 ```
@@ -155,11 +161,7 @@ This endpoint returns a single armor piece. For field information, see the [Armo
       "rank": 1
     }
   ],
-  "attributes": {
-    "defense": 32,
-    "slotsRank1": 1,
-    "resistFire": 2
-  },
+  "attributes": {},
   "skills": [
     {
       "id": 207,
@@ -186,6 +188,22 @@ This endpoint returns a single armor piece. For field information, see the [Armo
   "assets": {
     "imageMale": "https://assets.mhw-db.com/armor/...",
     "imageFemale": "https://assets.mhw-db.com/armor/..."
+  },
+  "crafting": {
+    "materials": [
+      {
+        "quantity": 2,
+        "item": {
+          "id": 119,
+          "name": "Carbalite Ore",
+          "description": "Ore obtained from mining outcrops. Still ...",
+          "rarity": 0,
+          "carryLimit": 0,
+          "sellPrice": 0,
+          "buyPrice": 0
+        }
+      }
+    ]
   }
 }
 ```
@@ -206,6 +224,7 @@ slots | Array&lt;[Slot](#slot-objects)&gt; | An array decoration slot informatio
 skills | Array&lt;[SkillRank](#skillrank-objects)&gt; | An array of skill ranks granted by the armor
 armorSet | [SetInfo](#set-info) | Contains information about the set that the armor piece belongs to 
 assets | [ArmorAssets](#armor-assets) | Contains information about armor UI assets (such as preview images)
+crafting | [ArmorCraftingInfo](#armor-crafting-info) | Contains crafting information for the armor piece
 attributes | [ArmorAttributes](#armor-attributes) | See [ArmorAttributes](#armor-attributes) for more information
 
 ### Armor Ranks
@@ -257,6 +276,11 @@ Field | Type | Description
 imageMale | String | URL to the male preview image, or `null` if one does not exist
 imageFemale | String | URL to the female preview image, or `null` if one does not exist
 
+### Armor Crafting Info
+Field | Type | Description
+----- | ---- | -----------
+materials | Array&lt;[CraftingCost](#craftingcost-objects)&gt; | An array of crafting material costs
+
 ### Armor Attributes
 The `ArmorAttributes` is a dictionary of attribute modifiers attached to the armor piece. These fields are planned to be
 slowly phased out over several releases, and instead provided by specialized fields (such as `resistances`).
@@ -266,6 +290,3 @@ Possible attribute keys are listed below.
 Name | Type | Description
 ---- | ---- | -----------
 requiredGender | Enum("male", "female") | If present, identifies the only gender that may equip the armor piece
-slotsRank1 | Integer | ([_deprecated_](#deprecation-schedule)) The number of rank 1 slots available on the armor piece
-slotsRank2 | Integer | ([_deprecated_](#deprecation-schedule)) The number of rank 2 slots available on the armor piece
-slotsRank3 | Integer | ([_deprecated_](#deprecation-schedule)) The number of rank 3 slots available on the armor piece
