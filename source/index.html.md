@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: Monster Hunter World API
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
