@@ -25,10 +25,7 @@ fetch('https://mhw-db.com/weapons')
     "slots": [...],
     "elements": [...],
     "attributes": {
-      "attack": 384,
-      "sharpnessRed": 25,
-      "sharpnessOrange": 12,
-      "sharpnessYellow": 13
+      "attack": 384
     },
     "crafting": {
       "craftable": true,
@@ -42,7 +39,8 @@ fetch('https://mhw-db.com/weapons')
       "orange": 12,
       "yellow": 13,
       "green": 0,
-      "blue": 0
+      "blue": 0,
+      "white": 0
     }
   }
 ]
@@ -86,10 +84,7 @@ fetch('https://mhw-db.com/weapons/1')
   "slots": [...],
   "elements": [...],
   "attributes": {
-    "attack": 384,
-    "sharpnessRed": 25,
-    "sharpnessOrange": 12,
-    "sharpnessYellow": 13
+    "attack": 384
   },
   "crafting": {
     "craftable": true,
@@ -103,7 +98,8 @@ fetch('https://mhw-db.com/weapons/1')
     "orange": 12,
     "yellow": 13,
     "green": 0,
-    "blue": 0
+    "blue": 0,
+    "white": 0
   }
 }
 ```
@@ -143,15 +139,9 @@ This endpoint returns a single weapon. For field information, see the [Weapon Fi
   ],
   "attributes": {
     "attack": 462,
-    "slotsRank1": 1,
     "elementHidden": true,
     "elementDamage": 120,
-    "elementType": "Water",
-    "sharpnessRed": 22,
-    "sharpnessOrange": 13,
-    "sharpnessYellow": 12,
-    "sharpnessGreen": 20,
-    "sharpnessBlue": 8
+    "elementType": "water"
   },
   "crafting": {
     "craftable": false,
@@ -180,7 +170,8 @@ This endpoint returns a single weapon. For field information, see the [Weapon Fi
     "orange": 13,
     "yellow": 12,
     "green": 20,
-    "blue": 8
+    "blue": 8,
+    "white": 0
   }
 }
 ```
@@ -279,15 +270,6 @@ elementHidden | Boolean | ([_deprecated_](#deprecation-schedule)) If true, indic
 elementType2 | [ElementType](#element-types)) | ([_deprecated_](#deprecation-schedule)) The secondary element type of the weapon
 elementDamage2 | Integer | ([_deprecated_](#deprecation-schedule)) The power of the weapon's secondary element
 elementHidden2 | Boolean | ([_deprecated_](#deprecation-schedule)) If true, indicates that the secondary element is a hidden element
-sharpnessRed | Integer | ([_deprecated_](#deprecation-schedule)) The size of the weapon's red sharpness bar
-sharpnessOrange | Integer | ([_deprecated_](#deprecation-schedule)) The size of the weapon's orange sharpness bar
-sharpnessYellow | Integer | ([_deprecated_](#deprecation-schedule)) The size of the weapon's yellow sharpness bar
-sharpnessGreen | Integer | ([_deprecated_](#deprecation-schedule)) The size of the weapon's green sharpness bar
-sharpnessBlue | Integer | ([_deprecated_](#deprecation-schedule)) The size of the weapon's blue sharpness bar
-sharpnessWhite | Integer | ([_deprecated_](#deprecation-schedule)) The size of the weapon's white sharpness bar
-slotsRank1 | Integer | ([_deprecated_](#deprecation-schedule)) The number of rank 1 slots available on the weapon
-slotsRank2 | Integer | ([_deprecated_](#deprecation-schedule)) The number of rank 2 slots available on the weapon
-slotsRank3 | Integer | ([_deprecated_](#deprecation-schedule)) The number of rank 3 slots available on the weapon
 
 ### Ammo Capacities
 Light and heavy bowguns use the `attributes.ammoCapacities` field to specify ammo capacities for their various ammo types. In the `ammoCapacities` object, the key is the name of the ammo type, and the value is an array of capacities for each level of the ammo type.
