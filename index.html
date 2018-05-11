@@ -347,6 +347,9 @@
                     <a href="#related-objects" class="toc-h2 toc-link" data-title="Related Objects">Related Objects</a>
                   </li>
                   <li>
+                    <a href="#related-object-arrays" class="toc-h2 toc-link" data-title="Related Object Arrays">Related Object Arrays</a>
+                  </li>
+                  <li>
                     <a href="#operators" class="toc-h2 toc-link" data-title="Operators">Operators</a>
                   </li>
               </ul>
@@ -2669,16 +2672,36 @@ to a value (usually an integer). All possible modifier fields can be found in th
 <p>A &quot;query document&quot; is simply a JSON object that defines fields and values to search by. For example, a request to <a href='https://mhw-db.com/skills?q={"name":"Poison%20Resistance"}' target="_blank"><code>/skills?q={&quot;name&quot;:&quot;Poison Resistance&quot;}</code></a> would return a collection containing all skills whose name matched the string &quot;Poison Resistance&quot; exactly.</p>
 
 <p>You can enhance your searches by using operators in your document, a list of which <a href="#operators">can be found here</a>. For example, a request to <a href='https://mhw-db.com/armor?q={"defense.base":{"$gt":50}}' target="_blank"><code>/armor?q={&quot;defense.base&quot;:{&quot;$gt&quot;:50}}</code></a> would return any armor with a base defense that is greater than 50.</p>
-<h2 id='related-objects'>Related Objects</h2>
-<p>You can also search fields that are related or nested in an object. A request to <a href='https://mhw-db.com/skills?q={"ranks.level":3}' target="_blank"><code>/skills?q={&quot;ranks.level&quot;:3}</code></a> would return a collection containing all skills that have a rank of 3. A request to <a href='https://mhw-db.com/armor?q={"defense.base":40}' target="_blank"><code>/armor?q={&quot;defense.base&quot;:40}</code></a> would return all armor that has exactly 40 base defense.</p>
-
-<p>Any field in the API that is an ID of another object or a collection of API objects (for example, the <code>skill</code> field on <a href="https://github.com/LartTyler/MHWDB-Docs/wiki/Decorations">Decorations</a> or the <code>skills</code> field on <a href="https://github.com/LartTyler/MHWDB-Docs/wiki/Charms">Charms</a>) can be searched as if it were an object. For example, in order to find any decorations whose skill modifies your ice elemental damage, you could use the following query document on the <code>/decorations</code> endpoint.</p>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+<h2 id='related-objects'>Related Objects</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"skill.ranks.modifiers.damageIce"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"$exists"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h2 id='operators'>Operators</h2>
+</span></code></pre>
+<p>You can also search fields that are related or nested in an object. A request to <a href='https://mhw-db.com/skills?q={"ranks.level":3}' target="_blank"><code>/skills?q={&quot;ranks.level&quot;:3}</code></a> would return a collection containing all skills that have a rank of 3. A request to <a href='https://mhw-db.com/armor?q={"defense.base":40}' target="_blank"><code>/armor?q={&quot;defense.base&quot;:40}</code></a> would return all armor that has exactly 40 base defense.</p>
+
+<p>Any field in the API that is an ID of another object or a collection of API objects (for example, the <code>skill</code> field on <a href="https://github.com/LartTyler/MHWDB-Docs/wiki/Decorations">Decorations</a> or the <code>skills</code> field on <a href="https://github.com/LartTyler/MHWDB-Docs/wiki/Charms">Charms</a>) can be searched as if it were an object, as is show in the example to the right.</p>
+<h2 id='related-object-arrays'>Related Object Arrays</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"crafting.branches.length"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"$gte"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Applied to <code>/weapons</code>, returns any weapon that has at least one item it can be upgraded into.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"crafting.branches.length"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Applied to <code>/weapons</code>, returns any weapon that can&#39;t be upgraded any further (i.e. is the final weapon in it&#39;s tree).</p>
+</blockquote>
+
+<p>Any field whose values is an array of related objects (such as <code>Armor.skills</code> or <code>Charm.ranks</code>) can be filtered by it&#39;s length by adding <code>.length</code> after the field name in your search. This will work for ANY array of objects in the API, and supports filtering using any operator.</p>
+
+<p>For examples, please see the example query documents to the right.</p>
+<h2 id='operators'>Operators</h2>
 <p>An operator starts with a dollar sign, and allows you to perform more than just equality checks on data.</p>
 
 <table><thead>
