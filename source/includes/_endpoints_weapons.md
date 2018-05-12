@@ -138,10 +138,6 @@ This endpoint returns a single weapon. For field information, see the [Weapon Fi
     }
   ],
   "attributes": {
-    "attack": 462,
-    "elementHidden": true,
-    "elementDamage": 120,
-    "elementType": "water"
   },
   "crafting": {
     "craftable": false,
@@ -264,12 +260,6 @@ elderseal | [Elderseal](#elderseal-types) | The elderseal type attributed to the
 phialType | [PhialType](#phial-types) | For "switch-axe" and "charge-blade" weapons only
 shellingType | [ShellingType](#shelling-types) | For "gunlance" weapons only
 specialAmmo | [SpecialAmmoType](#special-ammo-types) | For "light-bowgun" and "heavy-bowgun" weapons only
-elementType | [ElementType](#element-types) | ([_deprecated_](#deprecation-schedule)) The primary element type of the weapon
-elementDamage | Integer | ([_deprecated_](#deprecation-schedule)) The power of the weapon's primary element
-elementHidden | Boolean | ([_deprecated_](#deprecation-schedule)) If true, indicates that the primary element is a hidden element
-elementType2 | [ElementType](#element-types)) | ([_deprecated_](#deprecation-schedule)) The secondary element type of the weapon
-elementDamage2 | Integer | ([_deprecated_](#deprecation-schedule)) The power of the weapon's secondary element
-elementHidden2 | Boolean | ([_deprecated_](#deprecation-schedule)) If true, indicates that the secondary element is a hidden element
 
 ### Ammo Capacities
 Light and heavy bowguns use the `attributes.ammoCapacities` field to specify ammo capacities for their various ammo types. In the `ammoCapacities` object, the key is the name of the ammo type, and the value is an array of capacities for each level of the ammo type.

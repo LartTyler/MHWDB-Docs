@@ -32,8 +32,7 @@ fetch('https://mhw-db.com/decorations')
         "modifiers": []
       }
     ],
-    "slot": 1,
-    "skill": 1
+    "slot": 1
   },
 ```
 
@@ -82,8 +81,7 @@ fetch('https://mhw-db.com/decorations/1')
       "modifiers": []
     }
   ],
-  "slot": 1,
-  "skill": 1
+  "slot": 1
 }
 ```
 
@@ -119,8 +117,7 @@ This endpoint returns a single decoration. For field information, see the [Decor
       "modifiers": []
     }
   ],
-  "slot": 1,
-  "skill": 1
+  "slot": 1
 }
 ```
 
@@ -134,4 +131,3 @@ name | String | The name of the decoration
 rarity | Integer | The rarity of the decoration
 slot | Integer | The slot that the decoration fits into
 skills | Array&lt;[SkillRank](#skillrank-fields)&gt; | An array of skill ranks that the decoration provides
-skill | Integer | ([_deprecated_](#deprecation-schedule)) The ID of the [Skill](#skill-fields) that the decoration provides
