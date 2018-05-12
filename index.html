@@ -293,6 +293,23 @@
               </ul>
           </li>
           <li>
+            <a href="#motion-values" class="toc-h1 toc-link" data-title="Motion Values">Motion Values</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-motion-values" class="toc-h2 toc-link" data-title="Get All Motion Values">Get All Motion Values</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-motion-value" class="toc-h2 toc-link" data-title="Get A Specific Motion Value">Get a Specific Motion Value</a>
+                  </li>
+                  <li>
+                    <a href="#get-motion-values-by-weapon" class="toc-h2 toc-link" data-title="Get Motion Values By Weapon">Get Motion Values By Weapon</a>
+                  </li>
+                  <li>
+                    <a href="#motionvalue-fields" class="toc-h2 toc-link" data-title="Motionvalue Fields">MotionValue Fields</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#skills" class="toc-h1 toc-link" data-title="Skills">Skills</a>
               <ul class="toc-list-h2">
                   <li>
@@ -1341,8 +1358,7 @@ represented as ranks under a <a href="#charm-fields">Charm</a> object, which gro
         </span><span class="s2">"modifiers"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"slot"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"skill"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="s2">"slot"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
   </span><span class="p">},</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves all decorations.</p>
@@ -1390,8 +1406,7 @@ represented as ranks under a <a href="#charm-fields">Charm</a> object, which gro
       </span><span class="s2">"modifiers"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
-  </span><span class="s2">"slot"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"skill"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="s2">"slot"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves a specific decoration.</p>
@@ -1429,8 +1444,7 @@ represented as ranks under a <a href="#charm-fields">Charm</a> object, which gro
       </span><span class="s2">"modifiers"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
-  </span><span class="s2">"slot"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"skill"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="s2">"slot"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
@@ -1473,11 +1487,6 @@ represented as ranks under a <a href="#charm-fields">Charm</a> object, which gro
 <td>skills</td>
 <td>Array&lt;<a href="#skillrank-fields">SkillRank</a>&gt;</td>
 <td>An array of skill ranks that the decoration provides</td>
-</tr>
-<tr>
-<td>skill</td>
-<td>Integer</td>
-<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) The ID of the <a href="#skill-fields">Skill</a> that the decoration provides</td>
 </tr>
 </tbody></table>
 <h1 id='items'>Items</h1><h2 id='get-all-items'>Get All Items</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/items"</span>
@@ -1615,6 +1624,187 @@ represented as ranks under a <a href="#charm-fields">Charm</a> object, which gro
 <td>buyPrice</td>
 <td>Integer</td>
 <td>The amount that the item may be bought for; zero indicates that the item may not be bought, or that the buy price is not yet available</td>
+</tr>
+</tbody></table>
+<h1 id='motion-values'>Motion Values</h1><h2 id='get-all-motion-values'>Get All Motion Values</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/motion-values"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/motion-values'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">motionValues</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// your code here</span>
+    <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns an array of <a href="#motionvalue-fields"><code>MotionValue</code></a> objects. Some fields have been truncated for brevity.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Charged Slash Lv1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"weaponType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"great-sword"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"damageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sever"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"stun"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"exhaust"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all motion values in the game.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://mhw-db.com/motion-values</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>q</td>
+<td>No</td>
+<td>See the <a href="#searching-the-api">Searching the API</a> section</td>
+</tr>
+</tbody></table>
+<h3 id='response'>Response</h3>
+<p>This endpoint returns an array of motion values. For field information, see the <a href="#motionvalue-fields">MotionValue Fields</a> section.</p>
+<h2 id='get-a-specific-motion-value'>Get a Specific Motion Value</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/motion-values/1"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/motion-values/1'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">motionValue</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// your code here</span>
+    <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns a single <a href="#motionvalue-fields"><code>MotionValue</code></a> object. Some fields have been truncated for brevity.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Charged Slash Lv1"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"weaponType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"great-sword"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"damageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sever"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"stun"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"exhaust"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a motion value by it&#39;s ID.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://mhw-db.com/motion-values/&lt;id&gt;</code></p>
+<h3 id='path-parameters'>Path Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>The ID of the motion value to retrieve</td>
+</tr>
+</tbody></table>
+<h3 id='response-2'>Response</h3>
+<p>This endpoint returns a single motion value. For field information, see the <a href="#motionvalue-fields">MotionValue Fields</a> section.</p>
+<h2 id='get-motion-values-by-weapon'>Get Motion Values By Weapon</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/motion-values/great-sword"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/motion-values/great-sword'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">motionValues</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// your code here</span>
+    <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns an array of <a href="#motionvalue-fields"><code>MotionValue</code></a> objects. Some fields have been truncated for brevity.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Charged Rising Slash Lv1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"weaponType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"great-sword"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"damageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sever"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"stun"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"exhaust"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"values"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves an array of motion values that belong to the specified weapon type.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET https://mhw-db.com/motion-values/&lt;weaponType&gt;</code></p>
+<h3 id='path-parameters-2'>Path Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>weaponType</td>
+<td><a href="#weapon-types">WeaponType</a></td>
+<td>The weapon type to retrieve motion values for</td>
+</tr>
+</tbody></table>
+<h3 id='response-3'>Response</h3>
+<p>This endpoint returns an array of motion values. For field information, see the <a href="#motionvalue-fields">MotionValue Fields</a> section.</p>
+<h2 id='motionvalue-fields'>MotionValue Fields</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">119</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Charged Big Bang"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"weaponType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hammer"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"damageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"blunt"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"stun"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"exhaust"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"hits"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="mi">15</span><span class="p">,</span><span class="w">
+    </span><span class="mi">76</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>A sample <code>MotionValue</code> object.</p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>The ID of the motion value</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>The name of the motion value</td>
+</tr>
+<tr>
+<td>weaponType</td>
+<td><a href="#weapon-types">WeaponType</a></td>
+<td>The weapon type that the motion value belongs to</td>
+</tr>
+<tr>
+<td>damageType</td>
+<td><a href="#damage-types">DamageType</a></td>
+<td>The type of damage that the motion value does</td>
+</tr>
+<tr>
+<td>stun</td>
+<td>Integer &#124; Null</td>
+<td>The potency of the motion value&#39;s stun damage</td>
+</tr>
+<tr>
+<td>exhaust</td>
+<td>Integer &#124; Null</td>
+<td>The potency of the motion value&#39;s exhaust damage</td>
+</tr>
+<tr>
+<td>hits</td>
+<td>Array&lt;Integer&gt;</td>
+<td>An array of hits caused by the motion value; each hit is represented as a whole number precentage of the raw damage applied by the hit</td>
 </tr>
 </tbody></table>
 <h1 id='skills'>Skills</h1><h2 id='get-all-skills'>Get All Skills</h2><pre class="highlight shell tab-shell"><code>curl https://mhw-db.com/skills
@@ -1915,10 +2105,14 @@ to a value (usually an integer). All possible modifier fields can be found in th
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Buster Sword 1"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"great-sword"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"attack"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"display"</span><span class="p">:</span><span class="w"> </span><span class="mi">384</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"raw"</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="s2">"slots"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
     </span><span class="s2">"elements"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
     </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"attack"</span><span class="p">:</span><span class="w"> </span><span class="mi">384</span><span class="w">
+      </span><span class="s2">"attack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"384"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="s2">"crafting"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="s2">"craftable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
@@ -1926,6 +2120,10 @@ to a value (usually an integer). All possible modifier fields can be found in th
       </span><span class="s2">"branches"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
       </span><span class="s2">"craftingMaterials"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
       </span><span class="s2">"upgradeMaterials"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://assets.mhw-db.com/weapons/great-sword/icons/..."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://assets.mhw-db.com/weapons/great-sword/..."</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="s2">"sharpness"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="s2">"red"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
@@ -1973,10 +2171,14 @@ to a value (usually an integer). All possible modifier fields can be found in th
   </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Buster Sword 1"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"great-sword"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"attack"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"display"</span><span class="p">:</span><span class="w"> </span><span class="mi">384</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"raw"</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="w">
+  </span><span class="p">},</span><span class="w">
   </span><span class="s2">"slots"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
   </span><span class="s2">"elements"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
   </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"attack"</span><span class="p">:</span><span class="w"> </span><span class="mi">384</span><span class="w">
+    </span><span class="s2">"attack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"384"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="s2">"crafting"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"craftable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
@@ -1984,6 +2186,10 @@ to a value (usually an integer). All possible modifier fields can be found in th
     </span><span class="s2">"branches"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
     </span><span class="s2">"craftingMaterials"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
     </span><span class="s2">"upgradeMaterials"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://assets.mhw-db.com/weapons/great-sword/icons/..."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://assets.mhw-db.com/weapons/great-sword/..."</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="s2">"sharpness"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"red"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
@@ -2020,6 +2226,10 @@ to a value (usually an integer). All possible modifier fields can be found in th
   </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Iron Grace 3"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"long-sword"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"attack"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"display"</span><span class="p">:</span><span class="w"> </span><span class="mi">462</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"raw"</span><span class="p">:</span><span class="w"> </span><span class="mi">140</span><span class="w">
+  </span><span class="p">},</span><span class="w">
   </span><span class="s2">"slots"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
@@ -2033,10 +2243,7 @@ to a value (usually an integer). All possible modifier fields can be found in th
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"attack"</span><span class="p">:</span><span class="w"> </span><span class="mi">462</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"elementHidden"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"elementDamage"</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"elementType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"water"</span><span class="w">
+    </span><span class="s2">"attack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"462"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="s2">"crafting"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"craftable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
@@ -2059,6 +2266,10 @@ to a value (usually an integer). All possible modifier fields can be found in th
         </span><span class="p">}</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://assets.mhw-db.com/weapons/long-sword/icons/..."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://assets.mhw-db.com/weapons/long-sword/..."</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="s2">"sharpness"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"red"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w">
@@ -2107,6 +2318,11 @@ to a value (usually an integer). All possible modifier fields can be found in th
 <td>The rarity of the weapon</td>
 </tr>
 <tr>
+<td>attack</td>
+<td><a href="#weapon-attack">Attack</a></td>
+<td>Contains information about the attack values of the weapon</td>
+</tr>
+<tr>
 <td>slots</td>
 <td>Array&lt;<a href="#slot-objects">Slot</a>&gt;</td>
 <td>An array containing slot information for the weapon</td>
@@ -2120,6 +2336,11 @@ to a value (usually an integer). All possible modifier fields can be found in th
 <td>crafting</td>
 <td><a href="#weapon-crafting-info">WeaponCraftingInfo</a></td>
 <td>Contains crafting information for the weapon</td>
+</tr>
+<tr>
+<td>assets</td>
+<td><a href="#weapon-assets">WeaponAssets</a></td>
+<td>Contains information about weapon UI assets (such as preview images)</td>
 </tr>
 <tr>
 <td>sharpness</td>
@@ -2166,6 +2387,25 @@ to a value (usually an integer). All possible modifier fields can be found in th
 <td>heavy-bowgun</td>
 <td>bow</td>
 <td></td>
+</tr>
+</tbody></table>
+<h3 id='weapon-attack'>Weapon Attack</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>display</td>
+<td>Integer</td>
+<td>The attack value of the weapon that&#39;s displayed in game</td>
+</tr>
+<tr>
+<td>raw</td>
+<td>Integer</td>
+<td>The true raw attack value of the weapon</td>
 </tr>
 </tbody></table>
 <h3 id='weapon-crafting-info'>Weapon Crafting Info</h3>
@@ -2224,6 +2464,25 @@ to a value (usually an integer). All possible modifier fields can be found in th
 <td>hidden</td>
 <td>Boolean</td>
 <td>Indicates whether or not the element is a hidden element</td>
+</tr>
+</tbody></table>
+<h3 id='weapon-assets'>Weapon Assets</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>icon</td>
+<td>String</td>
+<td>The weapon&#39;s icon</td>
+</tr>
+<tr>
+<td>image</td>
+<td>String</td>
+<td>An image showing the weapon&#39;s in game model</td>
 </tr>
 </tbody></table>
 <h3 id='weapon-sharpness'>Weapon Sharpness</h3>
@@ -2353,36 +2612,6 @@ to a value (usually an integer). All possible modifier fields can be found in th
 <td>specialAmmo</td>
 <td><a href="#special-ammo-types">SpecialAmmoType</a></td>
 <td>For &quot;light-bowgun&quot; and &quot;heavy-bowgun&quot; weapons only</td>
-</tr>
-<tr>
-<td>elementType</td>
-<td><a href="#element-types">ElementType</a></td>
-<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) The primary element type of the weapon</td>
-</tr>
-<tr>
-<td>elementDamage</td>
-<td>Integer</td>
-<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) The power of the weapon&#39;s primary element</td>
-</tr>
-<tr>
-<td>elementHidden</td>
-<td>Boolean</td>
-<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) If true, indicates that the primary element is a hidden element</td>
-</tr>
-<tr>
-<td>elementType2</td>
-<td><a href="#element-types">ElementType</a>)</td>
-<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) The secondary element type of the weapon</td>
-</tr>
-<tr>
-<td>elementDamage2</td>
-<td>Integer</td>
-<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) The power of the weapon&#39;s secondary element</td>
-</tr>
-<tr>
-<td>elementHidden2</td>
-<td>Boolean</td>
-<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) If true, indicates that the secondary element is a hidden element</td>
 </tr>
 </tbody></table>
 <h3 id='ammo-capacities'>Ammo Capacities</h3>
@@ -2957,22 +3186,10 @@ from the API. Since we follow semantic versioning for the API, only major releas
 </tr>
 </thead><tbody>
 <tr>
-<td><code>Weapon.attributes.sharpness*</code> fields</td>
-<td><a href="#weapon-sharpness"><code>Weapon.sharpness</code></a></td>
-<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.9.0">1.9.0</a></td>
-<td style="text-align: center">2018-05-12</td>
-</tr>
-<tr>
-<td><code>Weapon.attributes.element*</code> fields</td>
-<td><a href="#weapon-elements"><code>Weapon.elements</code></a></td>
-<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.9.0">1.9.0</a></td>
-<td style="text-align: center">2018-05-12</td>
-</tr>
-<tr>
-<td><code>Decoration.skill</code> field</td>
-<td><a href="#decoration-fields"><code>Decoration.skills</code></a></td>
-<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.9.0">1.9.0</a></td>
-<td style="text-align: center">2018-05-12</td>
+<td><code>Weapon.attributes.attack</code> field</td>
+<td><a href="#weapon-attack"><code>Weapon.attack</code></a></td>
+<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.11.0">1.11.0</a></td>
+<td style="text-align: center">2018-05-19</td>
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>
