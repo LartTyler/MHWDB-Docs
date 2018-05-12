@@ -16,6 +16,7 @@ includes:
   - endpoints_charms
   - endpoints_decorations
   - endpoints_items
+  - endpoints_motion_values
   - endpoints_skills
   - endpoints_weapons
   - data_types
