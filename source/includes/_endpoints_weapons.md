@@ -22,10 +22,14 @@ fetch('https://mhw-db.com/weapons')
     "name": "Buster Sword 1",
     "type": "great-sword",
     "rarity": 1,
+    "attack": {
+      "display": 384,
+      "raw": 80
+    },
     "slots": [...],
     "elements": [...],
     "attributes": {
-      "attack": 384
+      "attack": "384"
     },
     "crafting": {
       "craftable": true,
@@ -33,6 +37,10 @@ fetch('https://mhw-db.com/weapons')
       "branches": [...],
       "craftingMaterials": [...],
       "upgradeMaterials": [...]
+    },
+    "assets": {
+      "icon": "https://assets.mhw-db.com/weapons/great-sword/icons/...",
+      "image": "https://assets.mhw-db.com/weapons/great-sword/..."
     },
     "sharpness": {
       "red": 25,
@@ -81,10 +89,14 @@ fetch('https://mhw-db.com/weapons/1')
   "name": "Buster Sword 1",
   "type": "great-sword",
   "rarity": 1,
+  "attack": {
+    "display": 384,
+    "raw": 80
+  },
   "slots": [...],
   "elements": [...],
   "attributes": {
-    "attack": 384
+    "attack": "384"
   },
   "crafting": {
     "craftable": true,
@@ -92,6 +104,10 @@ fetch('https://mhw-db.com/weapons/1')
     "branches": [...],
     "craftingMaterials": [...],
     "upgradeMaterials": [...]
+  },
+  "assets": {
+    "icon": "https://assets.mhw-db.com/weapons/great-sword/icons/...",
+    "image": "https://assets.mhw-db.com/weapons/great-sword/..."
   },
   "sharpness": {
     "red": 25,
@@ -125,6 +141,10 @@ This endpoint returns a single weapon. For field information, see the [Weapon Fi
   "name": "Iron Grace 3",
   "type": "long-sword",
   "rarity": 5,
+  "attack": {
+    "display": 462,
+    "raw": 140
+  },
   "slots": [
     {
       "rank": 1
@@ -138,6 +158,7 @@ This endpoint returns a single weapon. For field information, see the [Weapon Fi
     }
   ],
   "attributes": {
+    "attack": "462"
   },
   "crafting": {
     "craftable": false,
@@ -161,6 +182,10 @@ This endpoint returns a single weapon. For field information, see the [Weapon Fi
       }
     ]
   },
+  "assets": {
+    "icon": "https://assets.mhw-db.com/weapons/long-sword/icons/...",
+    "image": "https://assets.mhw-db.com/weapons/long-sword/..."
+  },
   "sharpness": {
     "red": 22,
     "orange": 13,
@@ -181,9 +206,11 @@ slug | String | A human readable unique identifier
 name | String | The name of the weapon
 type | [WeaponType](#weapon-types) | The weapon's type
 rarity | Integer | The rarity of the weapon
+attack | [Attack](#weapon-attack) | Contains information about the attack values of the weapon
 slots | Array&lt;[Slot](#slot-objects)&gt; | An array containing slot information for the weapon
 elements | Array&lt;[WeaponElement](#weapon-elements)&gt; | An array containing element damage info for the weapon
 crafting | [WeaponCraftingInfo](#weapon-crafting-info) | Contains crafting information for the weapon
+assets | [WeaponAssets](#weapon-assets) | Contains information about weapon UI assets (such as preview images)
 sharpness | [WeaponSharpness](#weapon-sharpness) | Contains sharpness information
 attributes | [WeaponAttributes](#weapon-attributes) | See [WeaponAttributes](#weapon-attributes) for more information
 
@@ -197,6 +224,12 @@ dual-blades | hammer | hunting-horn
 lance | gunlance | switch-axe
 charge-blade | insect-glaive | light-bowgun
 heavy-bowgun | bow
+
+### Weapon Attack
+Field | Type | Description
+----- | ---- | -----------
+display | Integer | The attack value of the weapon that's displayed in game
+raw | Integer | The true raw attack value of the weapon
 
 ### Weapon Crafting Info
 Field | Type | Description
@@ -213,6 +246,12 @@ Field | Type | Description
 type | [ElementType](#element-types) | The element's damage type
 damage | Integer | The power of the element
 hidden | Boolean | Indicates whether or not the element is a hidden element
+
+### Weapon Assets
+Field | Type | Description
+----- | ---- | -----------
+icon | String | The weapon's icon
+image | String | An image showing the weapon's in game model
 
 ### Weapon Sharpness
 Since MHW does not disclose actual sharpness values, sharpness is represented as a whole number out of 100, with 100 being the maximum possible sharpness a weapon can have. The total sharpness value is split across several different colors, indicating what percentage of the weapon's max sharpness belongs to each color.
