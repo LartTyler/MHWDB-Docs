@@ -21,6 +21,7 @@ includes:
   - endpoints_weapons
   - data_types
   - searching
+  - projecting
   - deprecations
   - errors
 
