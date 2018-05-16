@@ -372,6 +372,9 @@
               </ul>
           </li>
           <li>
+            <a href="#projecting-results" class="toc-h1 toc-link" data-title="Projecting Results">Projecting Results</a>
+          </li>
+          <li>
             <a href="#deprecation-schedule" class="toc-h1 toc-link" data-title="Deprecation Schedule">Deprecation Schedule</a>
           </li>
           <li>
@@ -3173,6 +3176,43 @@ to a value (usually an integer). All possible modifier fields can be found in th
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>The example above would match any entity that has the provided field (or, in other words, where <code>attributes.slotsRank2 IS NOT NULL</code>).</p>
+<h1 id='projecting-results'>Projecting Results</h1><pre class="highlight shell tab-shell"><code>curl -G <span class="s2">"https://mhw-db.com/weapons"</span> <span class="se">\</span>
+    -d <span class="s1">'p={"id":true, "name": true, "type": true, "crafting.branches": true}'</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">URL</span><span class="p">(</span><span class="s1">'https://mhw-db.com/weapons'</span><span class="p">);</span>
+<span class="nx">url</span><span class="p">.</span><span class="nx">searchParams</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">'p'</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+    <span class="na">id</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">name</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="na">type</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s1">'crafting.branches'</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+<span class="p">}));</span>
+
+<span class="nx">fetch</span><span class="p">(</span><span class="nx">uri</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">weapons</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// your code here</span>
+    <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns an array of partial <a href="#weapon-fields"><code>Weapon</code></a> objects, whose fields are defined by the <code>p</code> query parameter.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Buster Sword 1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"great-sword"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"crafting"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"branches"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="mi">2</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>You can specify which fields the API should return, called &quot;projecting&quot;, by providing the <code>p</code> query parameter.</p>
+
+<p>The value of <code>p</code> should be a JSON object, where the key is the field path to project, and the value is a boolean indicating whether or not the field should be either <code>true</code> if the field should be included, or <code>false</code> if it should be excluded. Please note that you cannot mix inclusions and exclusions in a single projection.</p>
+
+<p>Field paths should be the dot-notation identifier of a field. For example, weapons have a <code>crafting</code> field, which in turn contains a <code>craftingMaterials</code> field, which contains a <code>quantity</code> field. It&#39;s dot-notation form would be <code>crafting.craftingMaterials.quantity</code>. When projecting fields, any unrecognized field name will be silently ignored.</p>
 <h1 id='deprecation-schedule'>Deprecation Schedule</h1>
 <p>Below you can find a list of deprecated API features, as well as the information on when those features will be removed
 from the API. Since we follow semantic versioning for the API, only major releases will include breaking changes.</p>
