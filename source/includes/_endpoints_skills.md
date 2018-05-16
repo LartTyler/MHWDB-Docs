@@ -43,6 +43,7 @@ This endpoint retrieves a list of all skills.
 ### Query Parameters
 Parameter | Required | Description
 --------- | -------- | -----------
+p | No | See the [Projecting Results](#projecting-results) section
 q | No | See the [Searching the API](#searching-the-api) section
 
 ### Response
@@ -92,6 +93,11 @@ This endpoint retrieves a specific skill and it's ranks.
 Parameter | Type | Description
 --------- | ---- | -----------
 idOrSlug | Integer &#124; String | The ID or slug of the skill to retrieve
+
+### Query Parameters
+Parameter | Required | Description
+--------- | -------- | -----------
+p | No | See the [Projecting Results](#projecting-results) section
 
 ### Response
 This endpoint returns a single skill and all of it's ranks. For field information, see the [Skill Fields](#skill-fields) section.

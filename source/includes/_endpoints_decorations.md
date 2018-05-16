@@ -44,6 +44,7 @@ This endpoint retrieves all decorations.
 ### Query Parameters
 Parameter | Required | Description
 --------- | -------- | -----------
+p | No | See the [Projecting Results](#projecting-results) section
 q | No | See the [Searching the API](#searching-the-api) section
 
 ### Response
@@ -95,6 +96,11 @@ This endpoint retrieves a specific decoration.
 Parameter | Type | Description
 --------- | ---- | -----------
 idOrSlug | Integer &#124; String | The ID or slug of the decoration to retrieve
+
+### Query Parameters
+Parameter | Required | Description
+--------- | -------- | -----------
+p | No | See the [Projecting Results](#projecting-results) section
 
 ### Response
 This endpoint returns a single decoration. For field information, see the [Decoration Fields](#decoration-fields) section.

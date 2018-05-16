@@ -62,6 +62,7 @@ This endpoint retrieves a list of all weapons.
 ### Query Parameters
 Parameter | Required | Description
 --------- | -------- | -----------
+p | No | See the [Projecting Results](#projecting-results) section
 q | No | See the [Searching the API](#searching-the-api) section
 
 ### Response
@@ -129,6 +130,11 @@ This endpoint retrieves a weapon by it's ID or slug.
 Parameter | Type | Description
 --------- | ---- | -----------
 idOrSlug | Integer &#124; String | The ID or slug of the weapon to retrieve
+
+### Query Parameters
+Parameter | Required | Description
+--------- | -------- | -----------
+p | No | See the [Projecting Results](#projecting-results) section
 
 ### Response
 This endpoint returns a single weapon. For field information, see the [Weapon Fields](#weapon-fields) section.

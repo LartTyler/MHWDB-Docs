@@ -36,6 +36,7 @@ This endpoint retrieves all motion values in the game.
 ### Query Parameters
 Parameter | Required | Description
 --------- | -------- | -----------
+p | No | See the [Projecting Results](#projecting-results) section
 q | No | See the [Searching the API](#searching-the-api) section
 
 ### Response
@@ -78,6 +79,11 @@ Parameter | Type | Description
 --------- | ---- | -----------
 id | Integer | The ID of the motion value to retrieve
 
+### Query Parameters
+Parameter | Required | Description
+--------- | -------- | -----------
+p | No | See the [Projecting Results](#projecting-results) section
+
 ### Response
 This endpoint returns a single motion value. For field information, see the [MotionValue Fields](#motionvalue-fields) section.
 
@@ -119,6 +125,12 @@ This endpoint retrieves an array of motion values that belong to the specified w
 Parameter | Type | Description
 --------- | ---- | -----------
 weaponType | [WeaponType](#weapon-types) | The weapon type to retrieve motion values for
+
+### Query Parameters
+Parameter | Required | Description
+--------- | -------- | -----------
+p | No | See the [Projecting Results](#projecting-results) section
+q | No | See the [Searching the API](#searching-the-api) section
 
 ### Response
 This endpoint returns an array of motion values. For field information, see the [MotionValue Fields](#motionvalue-fields) section.

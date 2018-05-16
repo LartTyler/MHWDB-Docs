@@ -50,6 +50,7 @@ This endpoint retrieves all armor sets.
 ### Query Parameters
 Parameter | Required | Description
 --------- | -------- | -----------
+p | No | See the [Projecting Results](#projecting-results) section
 q | No | See the [Searching the API](#searching-the-api) section
 
 ### Response
@@ -116,12 +117,17 @@ fetch('https://mhw-db.com/armor/sets/20')
 This endpoint retrieves a specific armor set by it's ID.
 
 ### HTTP Request
-`GET https://mhw-db.com/armor/sets/<id>
+`GET https://mhw-db.com/armor/sets/<id>`
 
 ### Path Parameters
 Parameter | Type | Description
 --------- | ---- | -----------
 id | Integer | The ID of the armor set to retrieve
+
+### Query Parameters
+Parameter | Required | Description
+--------- | -------- | -----------
+p | No | See the [Projecting Results](#projecting-results) section
 
 ### Response
 This endpoint returns a single armor set. For field information, see the [ArmorSet Fields](#armorset-fields) section.

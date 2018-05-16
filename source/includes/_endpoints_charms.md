@@ -46,7 +46,8 @@ This endpoint retrieves all charms.
 ### Query Parameters
 Parameter | Required | Description
 --------- | -------- | -----------
-q | No | See the [Searching the API](#searching-the-api)
+p | No | See the [Projecting Results](#projecting-results) section
+q | No | See the [Searching the API](#searching-the-api) section
 
 ### Response
 This endpoint returns an array of charms. For field information, see the [Charm Fields](#charm-fields) section.
@@ -95,6 +96,11 @@ This endpoint retrieves a specific charm and it's ranks.
 Parameter | Type | Description
 --------- | ---- | -----------
 idOrSlug | Integer &#124; String | The ID or slug of the charm to retrieve
+
+### Query Parameters
+Parameter | Required | Description
+--------- | -------- | -----------
+p | No | See the [Projecting Results](#projecting-results) section
 
 ### Response
 This endpoint returns a single charm and all of it's ranks. For field information, see the [Charm Fields](#charm-fields) section.

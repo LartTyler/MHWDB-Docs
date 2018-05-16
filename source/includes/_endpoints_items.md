@@ -36,6 +36,7 @@ This endpoint retrieves all items.
 ### Query Parameters
 Parameter | Required | Description
 --------- | -------- | -----------
+p | No | See the [Projecting Results](#projecting-results) section
 q | No | See the [Searching the API](#searching-the-api) section
 
 ### Response
@@ -77,6 +78,11 @@ This endpoint retrieves a specific item.
 Parameter | Type | Description
 --------- | ---- | -----------
 id | Integer | The ID of the item to retrieve
+
+### Query Parameters
+Parameter | Required | Description
+--------- | -------- | -----------
+p | No | See the [Projecting Results](#projecting-results) section
 
 ### Response
 This endpoint returns a single item. For field information, see the [Item Fields](#item-fields) section.

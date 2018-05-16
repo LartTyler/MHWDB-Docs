@@ -63,6 +63,7 @@ This endpoint retrieves all armor pieces.
 ### Query Parameters
 Parameter | Required | Description
 --------- | -------- | -----------
+p | No | See the [Projecting Results](#projecting-results) section
 q | No | See the [Searching the API](#searching-the-api) section
 
 ### Response
@@ -131,6 +132,11 @@ This endpoint retrieves an armor piece by it's ID or slug.
 Parameter | Type | Description
 --------- | ---- | -----------
 idOrSlug | Integer &#124; String | The ID or slug of the armor piece to retrieve
+
+### Query Parameters
+Parameter | Required | Description
+--------- | -------- | -----------
+p | No | See the [Projecting Results](#projecting-results) section
 
 ### Response
 This endpoint returns a single armor piece. For field information, see the [Armor Fields](#armor-fields) section.
