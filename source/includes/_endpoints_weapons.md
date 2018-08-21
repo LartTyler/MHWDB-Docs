@@ -223,7 +223,7 @@ slots | Array&lt;[Slot](#slot-objects)&gt; | An array containing slot informatio
 elements | Array&lt;[WeaponElement](#weapon-elements)&gt; | An array containing element damage info for the weapon
 crafting | [WeaponCraftingInfo](#weapon-crafting-info) | Contains crafting information for the weapon
 assets | [WeaponAssets](#weapon-assets) | Contains information about weapon UI assets (such as preview images)
-sharpness | [WeaponSharpness](#weapon-sharpness) | Contains sharpness information
+sharpness | [WeaponSharpness (d)](#weapon-sharpness-deprecated) | ([_deprecated_](#deprecation-schedule)) Contains sharpness information
 durability | Array&lt;[WeaponSharpness](#weapon-sharpness)&gt; | An array of sharpness information, ordered by handicraft level; base sharpness can always be found at index 0
 attributes | [WeaponAttributes](#weapon-attributes) | See [WeaponAttributes](#weapon-attributes) for more information
 
@@ -313,6 +313,8 @@ Since, for a 100px wide bar, those percentages map 1:1, the resulting bar would 
 
   <div class="clearfix"></div>
 </div>
+
+### Weapon Sharpness (_deprecated_)
 Since MHW does not disclose actual sharpness values, sharpness is represented as a whole number out of 100, with 100 being the maximum possible sharpness a weapon can have. The total sharpness value is split across several different colors, indicating what percentage of the weapon's max sharpness belongs to each color.
 
 It's easiest to visualize sharpness as a single bar, 100 pixels wide. For example, the long sword "<a href="https://mhw-db.com/weapons/156" target="_blank">Dark Scimitar 3</a>" has 27 red, 8 orange, 15 yellow, 20 green, 10 blue, and 7 white. A bar representing that might look like the bar below.

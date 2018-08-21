@@ -4,4 +4,4 @@ from the API. Since we follow semantic versioning for the API, only major releas
 
 Feature | Replaced By | Deprecated In | Removal Date
 ------- | ----------- | :-----------: | :----------:
-`Weapon.attributes.attack` field | [`Weapon.attack`](#weapon-attack) | [1.11.0](https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.11.0) | 2018-05-19
+`Weapon.sharpness` field | [`Weapon.durability`](#weapon-fields) | [1.13.0](https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.13.0) | 2018-08-25
