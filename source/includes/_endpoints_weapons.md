@@ -28,9 +28,7 @@ fetch('https://mhw-db.com/weapons')
     },
     "slots": [...],
     "elements": [...],
-    "attributes": {
-      "attack": "384"
-    },
+    "attributes": {},
     "crafting": {
       "craftable": true,
       "previous": null,
@@ -96,9 +94,7 @@ fetch('https://mhw-db.com/weapons/1')
   },
   "slots": [...],
   "elements": [...],
-  "attributes": {
-    "attack": "384"
-  },
+  "attributes": {},
   "crafting": {
     "craftable": true,
     "previous": null,
@@ -163,9 +159,7 @@ This endpoint returns a single weapon. For field information, see the [Weapon Fi
       "hidden": true
     }
   ],
-  "attributes": {
-    "attack": "462"
-  },
+  "attributes": {},
   "crafting": {
     "craftable": false,
     "previous": 93,
@@ -294,7 +288,6 @@ Possible attribute keys are listed below.
 Name | Type | Description
 ---- | ---- | -----------
 ammoCapacities | [AmmoCapacities](#ammo-capacities) | For "light-bowgun" and "heavy-bowgun" weapons only
-attack | Integer | The attack power of the weapon
 affinity | Integer | The affinity of the weapon
 boostType | [BoostType](#boost-types) | For "insect-glaive" weapons only
 coatings | Array&lt;[Coating](#bow-coatings)&gt; | For "bow" weapons only
