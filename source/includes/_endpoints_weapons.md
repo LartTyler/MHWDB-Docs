@@ -379,30 +379,30 @@ exhaust | 2 | | tranq | 1
 ### Boost Types
 An insect glaive's boost type may be one of the following values.
 
-- Sever Boost
-- Speed Bost
-- Element Boost
-- Health Boost
-- Stamina Boost
-- Blunt Boost
+- sever
+- speed
+- element
+- health
+- stamina
+- blunt
 
 ### Bow Coatings
 A bow's coating may be one of the following values.
 
-- Close Range
-- Paralysis
-- Poison
-- Sleep
-- Blast
-- Power
+- close range
+- paralysis
+- poison
+- sleep
+- blast
+- power
 
 ### Bowgun Deviation
 A bowgun's deviation may be one of the following values.
 
-- None
-- Low
-- Average
-- High
+- none
+- low
+- average
+- high
 
 ### Damage Types
 A weapon's damage type will be one of the following values:
@@ -421,16 +421,17 @@ A weapon's elderseal type may be one of the following values:
 ### Phial Types
 A phial type is represented in one of two forms. The first of which is a simple form, which may be one of the following values.
 
-- Impact Phial
-- Element Phial
-- Power Phial
+- impact
+- element
+- power
+- power element
 
-The second is a dynamic form, for phial types that also include a strength. Such phial types may be one of the following values, followed by a number that indicates their strength (e.g. "Dragon Phial 300").
+The second is a dynamic form, for phial types that also include a strength. Such phial types may be one of the following values, followed by a number that indicates their strength (e.g. "dragon 300").
 
-- Dragon Phial
-- Exhaust Phial
-- Para Phial
-- Poison Phial
+- dragon
+- exhaust
+- para
+- poison
 
 ### Shelling Types
 A gunlance's shelling type may be one of the following values, followed by a level indicator in the form "Lv#" (e.g. "Normal Lv2").
@@ -442,6 +443,6 @@ A gunlance's shelling type may be one of the following values, followed by a lev
 ### Special Ammo Types
 A light or heavy bowgun's special ammo type may be one of the following values.
 
-- Wyvernblast
-- Wyvernheart
-- Wyvernsnipe
+- wyvernblast
+- wyvernheart
+- wyvernsnipe
