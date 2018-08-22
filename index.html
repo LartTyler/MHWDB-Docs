@@ -1585,8 +1585,7 @@ represented as ranks under a <a href="#charm-fields">Charm</a> object, which gro
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Potion"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="s2">"carryLimit"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"sellPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"buyPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
@@ -1630,8 +1629,7 @@ represented as ranks under a <a href="#charm-fields">Charm</a> object, which gro
   </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Potion"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
   </span><span class="s2">"carryLimit"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"sellPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"buyPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+  </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves a specific item.</p>
@@ -1673,8 +1671,7 @@ represented as ranks under a <a href="#charm-fields">Charm</a> object, which gro
   </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Potion"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
   </span><span class="s2">"carryLimit"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"sellPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"buyPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+  </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
@@ -1714,14 +1711,9 @@ represented as ranks under a <a href="#charm-fields">Charm</a> object, which gro
 <td>The maximum number of the item that may be in the player&#39;s inventory; zero indicates that there is no limit, or that the limit is not yet available</td>
 </tr>
 <tr>
-<td>sellPrice</td>
+<td>value</td>
 <td>Integer</td>
-<td>The amount that the item may be sold for; zero indicates that the item may not be sold, or that the sell price is not yet available</td>
-</tr>
-<tr>
-<td>buyPrice</td>
-<td>Integer</td>
-<td>The amount that the item may be bought for; zero indicates that the item may not be bought, or that the buy price is not yet available</td>
+<td>The Zenny value of the item; zero indicates that value is not yet available</td>
 </tr>
 </tbody></table>
 <h1 id='motion-values'>Motion Values</h1><h2 id='get-all-motion-values'>Get All Motion Values</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/motion-values"</span>
@@ -2266,9 +2258,7 @@ to a value (usually an integer). All possible modifier fields can be found in th
     </span><span class="p">},</span><span class="w">
     </span><span class="s2">"slots"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
     </span><span class="s2">"elements"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
-    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"attack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"384"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
     </span><span class="s2">"crafting"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
       </span><span class="s2">"craftable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
       </span><span class="s2">"previous"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
@@ -2287,7 +2277,8 @@ to a value (usually an integer). All possible modifier fields can be found in th
       </span><span class="s2">"green"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
       </span><span class="s2">"blue"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
       </span><span class="s2">"white"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"durability"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
@@ -2337,9 +2328,7 @@ to a value (usually an integer). All possible modifier fields can be found in th
   </span><span class="p">},</span><span class="w">
   </span><span class="s2">"slots"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
   </span><span class="s2">"elements"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
-  </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"attack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"384"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
   </span><span class="s2">"crafting"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"craftable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
     </span><span class="s2">"previous"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
@@ -2358,7 +2347,8 @@ to a value (usually an integer). All possible modifier fields can be found in th
     </span><span class="s2">"green"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="s2">"blue"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="s2">"white"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"durability"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves a weapon by it&#39;s ID or slug.</p>
@@ -2416,9 +2406,7 @@ to a value (usually an integer). All possible modifier fields can be found in th
       </span><span class="s2">"hidden"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
-  </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"attack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"462"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
   </span><span class="s2">"crafting"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"craftable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
     </span><span class="s2">"previous"</span><span class="p">:</span><span class="w"> </span><span class="mi">93</span><span class="p">,</span><span class="w">
@@ -2452,7 +2440,17 @@ to a value (usually an integer). All possible modifier fields can be found in th
     </span><span class="s2">"green"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
     </span><span class="s2">"blue"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
     </span><span class="s2">"white"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"durability"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"red"</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"orange"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"yellow"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"green"</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"blue"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"white"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
@@ -2518,8 +2516,13 @@ to a value (usually an integer). All possible modifier fields can be found in th
 </tr>
 <tr>
 <td>sharpness</td>
-<td><a href="#weapon-sharpness">WeaponSharpness</a></td>
-<td>Contains sharpness information</td>
+<td><a href="#weapon-sharpness-deprecated">WeaponSharpness (d)</a></td>
+<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) Contains sharpness information</td>
+</tr>
+<tr>
+<td>durability</td>
+<td>Array&lt;<a href="#weapon-sharpness">WeaponSharpness</a>&gt;</td>
+<td>An array of sharpness information, ordered by handicraft level; base sharpness can always be found at index 0</td>
 </tr>
 <tr>
 <td>attributes</td>
@@ -2660,6 +2663,83 @@ to a value (usually an integer). All possible modifier fields can be found in th
 </tr>
 </tbody></table>
 <h3 id='weapon-sharpness'>Weapon Sharpness</h3>
+<p>Since <a href="https://github.com/LartTyler/MHWDB-API/releases/tag/1.13.0">v1.13.0</a>, the API provides true sharpness values for
+weapons. For each color, sharpness is represented as an integer indicating the number of normal hits the weapon can
+make before sharpness degrades (that is to say, the number of hits that did not bounce off of a monster due to the
+body part being too hard for the weapon or sharpness level).</p>
+
+<p>All fields in a sharpness object can be found in the table below.</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>red</td>
+<td>Integer</td>
+<td>The number of normal hits the weapon can make at red sharpness</td>
+</tr>
+<tr>
+<td>orange</td>
+<td>Integer</td>
+<td>The number of normal hits the weapon can make at orange sharpness</td>
+</tr>
+<tr>
+<td>yellow</td>
+<td>Integer</td>
+<td>The number of normal hits the weapon can make at yellow sharpness</td>
+</tr>
+<tr>
+<td>green</td>
+<td>Integer</td>
+<td>The number of normal hits the weapon can make at green sharpness</td>
+</tr>
+<tr>
+<td>blue</td>
+<td>Integer</td>
+<td>The number of normal hits the weapon can make at blue sharpness</td>
+</tr>
+<tr>
+<td>white</td>
+<td>Integer</td>
+<td>The number of normal hits the weapon can make at white sharpness</td>
+</tr>
+</tbody></table>
+
+<p>In previous versions, these docs provided a simple method for visually representing sharpness values, since they were
+represented as percetages (which could be mapped 1:1 to pixels for a 100px wide sharpness bar). You can achieve the
+same result by taking the new sharpness values and using the following formula to convert them into their old percetage
+value, then flooring the result: <code>&lfloor;sharpness / 400 * 100&rfloor;</code>.</p>
+
+<p>So, for example, the long sword &quot;<a href="https://mhw-db.com/weapons/156" target="_blank">Dark Scimitar 3</a>&quot; has a
+base durability of 110 red, 30 orange, 60 yellow, 80 green, 40 blue, and 30 white. This converts to the old system as
+follows.</p>
+
+<p><code>
+Red: &lfloor;110 / 400 * 100&rfloor; = 27<br>
+Orange: &lfloor;30 / 400 * 100&rfloor; = 7<br>
+Yellow: &lfloor;60 / 400 * 100&rfloor; = 15<br>
+Green: &lfloor;80 / 400 * 100&rfloor; = 20<br>
+Blue: &lfloor;40 / 400 * 100&rfloor; = 10<br>
+Red: &lfloor;30 / 400 * 100&rfloor; = 7
+</code></p>
+
+<p>Since, for a 100px wide bar, those percentages map 1:1, the resulting bar would look something like the bar below.</p>
+
+<div class="sharpness-bar">
+  <div class="red" style="width: 27px"></div>
+  <div class="orange" style="width: 7px;"></div>
+  <div class="yellow" style="width: 15px;"></div>
+  <div class="green" style="width: 20px;"></div>
+  <div class="blue" style="width: 10px;"></div>
+  <div class="white" style="width: 7px;"></div>
+
+  <div class="clearfix"></div>
+</div>
+<h3 id='weapon-sharpness-deprecated'>Weapon Sharpness (<em>deprecated</em>)</h3>
 <p>Since MHW does not disclose actual sharpness values, sharpness is represented as a whole number out of 100, with 100 being the maximum possible sharpness a weapon can have. The total sharpness value is split across several different colors, indicating what percentage of the weapon&#39;s max sharpness belongs to each color.</p>
 
 <p>It&#39;s easiest to visualize sharpness as a single bar, 100 pixels wide. For example, the long sword &quot;<a href="https://mhw-db.com/weapons/156" target="_blank">Dark Scimitar 3</a>&quot; has 27 red, 8 orange, 15 yellow, 20 green, 10 blue, and 7 white. A bar representing that might look like the bar below.</p>
@@ -2731,11 +2811,6 @@ to a value (usually an integer). All possible modifier fields can be found in th
 <td>ammoCapacities</td>
 <td><a href="#ammo-capacities">AmmoCapacities</a></td>
 <td>For &quot;light-bowgun&quot; and &quot;heavy-bowgun&quot; weapons only</td>
-</tr>
-<tr>
-<td>attack</td>
-<td>Integer</td>
-<td>The attack power of the weapon</td>
 </tr>
 <tr>
 <td>affinity</td>
@@ -2875,32 +2950,32 @@ to a value (usually an integer). All possible modifier fields can be found in th
 <p>An insect glaive&#39;s boost type may be one of the following values.</p>
 
 <ul>
-<li>Sever Boost</li>
-<li>Speed Bost</li>
-<li>Element Boost</li>
-<li>Health Boost</li>
-<li>Stamina Boost</li>
-<li>Blunt Boost</li>
+<li>sever</li>
+<li>speed</li>
+<li>element</li>
+<li>health</li>
+<li>stamina</li>
+<li>blunt</li>
 </ul>
 <h3 id='bow-coatings'>Bow Coatings</h3>
 <p>A bow&#39;s coating may be one of the following values.</p>
 
 <ul>
-<li>Close Range</li>
-<li>Paralysis</li>
-<li>Poison</li>
-<li>Sleep</li>
-<li>Blast</li>
-<li>Power</li>
+<li>close range</li>
+<li>paralysis</li>
+<li>poison</li>
+<li>sleep</li>
+<li>blast</li>
+<li>power</li>
 </ul>
 <h3 id='bowgun-deviation'>Bowgun Deviation</h3>
 <p>A bowgun&#39;s deviation may be one of the following values.</p>
 
 <ul>
-<li>None</li>
-<li>Low</li>
-<li>Average</li>
-<li>High</li>
+<li>none</li>
+<li>low</li>
+<li>average</li>
+<li>high</li>
 </ul>
 <h3 id='damage-types'>Damage Types</h3>
 <p>A weapon&#39;s damage type will be one of the following values:</p>
@@ -2922,18 +2997,19 @@ to a value (usually an integer). All possible modifier fields can be found in th
 <p>A phial type is represented in one of two forms. The first of which is a simple form, which may be one of the following values.</p>
 
 <ul>
-<li>Impact Phial</li>
-<li>Element Phial</li>
-<li>Power Phial</li>
+<li>impact</li>
+<li>element</li>
+<li>power</li>
+<li>power element</li>
 </ul>
 
-<p>The second is a dynamic form, for phial types that also include a strength. Such phial types may be one of the following values, followed by a number that indicates their strength (e.g. &quot;Dragon Phial 300&quot;).</p>
+<p>The second is a dynamic form, for phial types that also include a strength. Such phial types may be one of the following values, followed by a number that indicates their strength (e.g. &quot;dragon 300&quot;).</p>
 
 <ul>
-<li>Dragon Phial</li>
-<li>Exhaust Phial</li>
-<li>Para Phial</li>
-<li>Poison Phial</li>
+<li>dragon</li>
+<li>exhaust</li>
+<li>para</li>
+<li>poison</li>
 </ul>
 <h3 id='shelling-types'>Shelling Types</h3>
 <p>A gunlance&#39;s shelling type may be one of the following values, followed by a level indicator in the form &quot;Lv#&quot; (e.g. &quot;Normal Lv2&quot;).</p>
@@ -2947,9 +3023,9 @@ to a value (usually an integer). All possible modifier fields can be found in th
 <p>A light or heavy bowgun&#39;s special ammo type may be one of the following values.</p>
 
 <ul>
-<li>Wyvernblast</li>
-<li>Wyvernheart</li>
-<li>Wyvernsnipe</li>
+<li>wyvernblast</li>
+<li>wyvernheart</li>
+<li>wyvernsnipe</li>
 </ul>
 <h1 id='data-types'>Data Types</h1><h2 id='scalar-data-types'>Scalar Data Types</h2>
 <table><thead>
@@ -3397,10 +3473,10 @@ from the API. Since we follow semantic versioning for the API, only major releas
 </tr>
 </thead><tbody>
 <tr>
-<td><code>Weapon.attributes.attack</code> field</td>
-<td><a href="#weapon-attack"><code>Weapon.attack</code></a></td>
-<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.11.0">1.11.0</a></td>
-<td style="text-align: center">2018-05-19</td>
+<td><code>Weapon.sharpness</code> field</td>
+<td><a href="#weapon-fields"><code>Weapon.durability</code></a></td>
+<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.13.0">1.13.0</a></td>
+<td style="text-align: center">2018-08-25</td>
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>
