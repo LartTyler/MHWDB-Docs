@@ -22,8 +22,7 @@ fetch('https://mhw-db.com/items')
     "description": "Potion",
     "rarity": 1,
     "carryLimit": 10,
-    "sellPrice": 8,
-    "buyPrice": 0
+    "value": 8
   }
 ]
 ```
@@ -64,8 +63,7 @@ fetch('https://mhw-db.com/items/1')
   "description": "Potion",
   "rarity": 1,
   "carryLimit": 10,
-  "sellPrice": 8,
-  "buyPrice": 0
+  "value": 8
 }
 ```
 
@@ -95,8 +93,7 @@ This endpoint returns a single item. For field information, see the [Item Fields
   "description": "Potion",
   "rarity": 1,
   "carryLimit": 10,
-  "sellPrice": 8,
-  "buyPrice": 0
+  "value": 8
 }
 ```
 
@@ -109,5 +106,4 @@ name | String | The name of the item
 description | String | A short description of the item
 rarity | Integer | The rarity of the item
 carryLimit | Integer | The maximum number of the item that may be in the player's inventory; zero indicates that there is no limit, or that the limit is not yet available
-sellPrice | Integer | The amount that the item may be sold for; zero indicates that the item may not be sold, or that the sell price is not yet available
-buyPrice | Integer | The amount that the item may be bought for; zero indicates that the item may not be bought, or that the buy price is not yet available
+value | Integer | The Zenny value of the item; zero indicates that value is not yet available

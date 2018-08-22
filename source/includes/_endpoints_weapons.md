@@ -28,9 +28,7 @@ fetch('https://mhw-db.com/weapons')
     },
     "slots": [...],
     "elements": [...],
-    "attributes": {
-      "attack": "384"
-    },
+    "attributes": {},
     "crafting": {
       "craftable": true,
       "previous": null,
@@ -49,7 +47,8 @@ fetch('https://mhw-db.com/weapons')
       "green": 0,
       "blue": 0,
       "white": 0
-    }
+    },
+	  "durability": [...]
   }
 ]
 ```
@@ -96,9 +95,7 @@ fetch('https://mhw-db.com/weapons/1')
   },
   "slots": [...],
   "elements": [...],
-  "attributes": {
-    "attack": "384"
-  },
+  "attributes": {},
   "crafting": {
     "craftable": true,
     "previous": null,
@@ -117,7 +114,8 @@ fetch('https://mhw-db.com/weapons/1')
     "green": 0,
     "blue": 0,
     "white": 0
-  }
+  },
+  "durability": [...]
 }
 ```
 
@@ -163,9 +161,7 @@ This endpoint returns a single weapon. For field information, see the [Weapon Fi
       "hidden": true
     }
   ],
-  "attributes": {
-    "attack": "462"
-  },
+  "attributes": {},
   "crafting": {
     "craftable": false,
     "previous": 93,
@@ -199,7 +195,17 @@ This endpoint returns a single weapon. For field information, see the [Weapon Fi
     "green": 20,
     "blue": 8,
     "white": 0
-  }
+  },
+  "durability": [
+    {
+      "red": 90,
+      "orange": 50,
+      "yellow": 50,
+      "green": 80,
+      "blue": 30,
+      "white": 0
+    }
+  ]
 }
 ```
 
@@ -217,7 +223,8 @@ slots | Array&lt;[Slot](#slot-objects)&gt; | An array containing slot informatio
 elements | Array&lt;[WeaponElement](#weapon-elements)&gt; | An array containing element damage info for the weapon
 crafting | [WeaponCraftingInfo](#weapon-crafting-info) | Contains crafting information for the weapon
 assets | [WeaponAssets](#weapon-assets) | Contains information about weapon UI assets (such as preview images)
-sharpness | [WeaponSharpness](#weapon-sharpness) | Contains sharpness information
+sharpness | [WeaponSharpness (d)](#weapon-sharpness-deprecated) | ([_deprecated_](#deprecation-schedule)) Contains sharpness information
+durability | Array&lt;[WeaponSharpness](#weapon-sharpness)&gt; | An array of sharpness information, ordered by handicraft level; base sharpness can always be found at index 0
 attributes | [WeaponAttributes](#weapon-attributes) | See [WeaponAttributes](#weapon-attributes) for more information
 
 ### Weapon Types
@@ -260,6 +267,54 @@ icon | String | The weapon's icon
 image | String | An image showing the weapon's in game model
 
 ### Weapon Sharpness
+Since [v1.13.0](https://github.com/LartTyler/MHWDB-API/releases/tag/1.13.0), the API provides true sharpness values for
+weapons. For each color, sharpness is represented as an integer indicating the number of normal hits the weapon can
+make before sharpness degrades (that is to say, the number of hits that did not bounce off of a monster due to the
+body part being too hard for the weapon or sharpness level).
+
+All fields in a sharpness object can be found in the table below.
+
+Field | Type | Description
+----- | ---- | -----------
+red | Integer | The number of normal hits the weapon can make at red sharpness
+orange | Integer | The number of normal hits the weapon can make at orange sharpness
+yellow | Integer | The number of normal hits the weapon can make at yellow sharpness
+green | Integer | The number of normal hits the weapon can make at green sharpness
+blue | Integer | The number of normal hits the weapon can make at blue sharpness
+white | Integer | The number of normal hits the weapon can make at white sharpness
+
+In previous versions, these docs provided a simple method for visually representing sharpness values, since they were
+represented as percetages (which could be mapped 1:1 to pixels for a 100px wide sharpness bar). You can achieve the
+same result by taking the new sharpness values and using the following formula to convert them into their old percetage
+value, then flooring the result: <code>&lfloor;sharpness / 400 * 100&rfloor;</code>.
+
+So, for example, the long sword "<a href="https://mhw-db.com/weapons/156" target="_blank">Dark Scimitar 3</a>" has a
+base durability of 110 red, 30 orange, 60 yellow, 80 green, 40 blue, and 30 white. This converts to the old system as
+follows.
+
+<code>
+Red: &lfloor;110 / 400 * 100&rfloor; = 27<br>
+Orange: &lfloor;30 / 400 * 100&rfloor; = 7<br>
+Yellow: &lfloor;60 / 400 * 100&rfloor; = 15<br>
+Green: &lfloor;80 / 400 * 100&rfloor; = 20<br>
+Blue: &lfloor;40 / 400 * 100&rfloor; = 10<br>
+Red: &lfloor;30 / 400 * 100&rfloor; = 7
+</code>
+
+Since, for a 100px wide bar, those percentages map 1:1, the resulting bar would look something like the bar below.
+
+<div class="sharpness-bar">
+  <div class="red" style="width: 27px"></div>
+  <div class="orange" style="width: 7px;"></div>
+  <div class="yellow" style="width: 15px;"></div>
+  <div class="green" style="width: 20px;"></div>
+  <div class="blue" style="width: 10px;"></div>
+  <div class="white" style="width: 7px;"></div>
+
+  <div class="clearfix"></div>
+</div>
+
+### Weapon Sharpness (_deprecated_)
 Since MHW does not disclose actual sharpness values, sharpness is represented as a whole number out of 100, with 100 being the maximum possible sharpness a weapon can have. The total sharpness value is split across several different colors, indicating what percentage of the weapon's max sharpness belongs to each color.
 
 It's easiest to visualize sharpness as a single bar, 100 pixels wide. For example, the long sword "<a href="https://mhw-db.com/weapons/156" target="_blank">Dark Scimitar 3</a>" has 27 red, 8 orange, 15 yellow, 20 green, 10 blue, and 7 white. A bar representing that might look like the bar below.
@@ -294,7 +349,6 @@ Possible attribute keys are listed below.
 Name | Type | Description
 ---- | ---- | -----------
 ammoCapacities | [AmmoCapacities](#ammo-capacities) | For "light-bowgun" and "heavy-bowgun" weapons only
-attack | Integer | The attack power of the weapon
 affinity | Integer | The affinity of the weapon
 boostType | [BoostType](#boost-types) | For "insect-glaive" weapons only
 coatings | Array&lt;[Coating](#bow-coatings)&gt; | For "bow" weapons only
@@ -325,30 +379,30 @@ exhaust | 2 | | tranq | 1
 ### Boost Types
 An insect glaive's boost type may be one of the following values.
 
-- Sever Boost
-- Speed Bost
-- Element Boost
-- Health Boost
-- Stamina Boost
-- Blunt Boost
+- sever
+- speed
+- element
+- health
+- stamina
+- blunt
 
 ### Bow Coatings
 A bow's coating may be one of the following values.
 
-- Close Range
-- Paralysis
-- Poison
-- Sleep
-- Blast
-- Power
+- close range
+- paralysis
+- poison
+- sleep
+- blast
+- power
 
 ### Bowgun Deviation
 A bowgun's deviation may be one of the following values.
 
-- None
-- Low
-- Average
-- High
+- none
+- low
+- average
+- high
 
 ### Damage Types
 A weapon's damage type will be one of the following values:
@@ -367,16 +421,17 @@ A weapon's elderseal type may be one of the following values:
 ### Phial Types
 A phial type is represented in one of two forms. The first of which is a simple form, which may be one of the following values.
 
-- Impact Phial
-- Element Phial
-- Power Phial
+- impact
+- element
+- power
+- power element
 
-The second is a dynamic form, for phial types that also include a strength. Such phial types may be one of the following values, followed by a number that indicates their strength (e.g. "Dragon Phial 300").
+The second is a dynamic form, for phial types that also include a strength. Such phial types may be one of the following values, followed by a number that indicates their strength (e.g. "dragon 300").
 
-- Dragon Phial
-- Exhaust Phial
-- Para Phial
-- Poison Phial
+- dragon
+- exhaust
+- para
+- poison
 
 ### Shelling Types
 A gunlance's shelling type may be one of the following values, followed by a level indicator in the form "Lv#" (e.g. "Normal Lv2").
@@ -388,6 +443,6 @@ A gunlance's shelling type may be one of the following values, followed by a lev
 ### Special Ammo Types
 A light or heavy bowgun's special ammo type may be one of the following values.
 
-- Wyvernblast
-- Wyvernheart
-- Wyvernsnipe
+- wyvernblast
+- wyvernheart
+- wyvernsnipe
