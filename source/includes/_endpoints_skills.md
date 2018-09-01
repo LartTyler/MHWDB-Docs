@@ -159,6 +159,7 @@ damageIce | Integer | Modifies ice damage
 damageThunder | Integer | Modifies thunder damage
 damageDragon | Integer | Modifies dragon damage
 defense | Integer | Modifies the character's defense
+health | Integer | Modifies the character's maximum health
 sharpnessBonus | Integer | Modifies the maximum sharpness of a weapon
 resistAll | Integer | Modifies all elemental resistances
 resistFire | Integer | Modifies fire resistance
