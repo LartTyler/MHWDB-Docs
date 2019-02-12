@@ -15,7 +15,7 @@ Vagrant.configure(2) do |config|
 
 		apt-get autoremove -yq
 
-		gem install --no-ri --no-rdoc bundler
+		gem install --no-ri --no-rdoc bundler -v 1.14.5
 	SHELL
 
 	config.vm.provision "install", type: "shell", privileged: false, inline: <<-SHELL
