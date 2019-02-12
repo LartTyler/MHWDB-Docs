@@ -11,6 +11,7 @@ toc_footers:
   - <a href='https://github.com/lord/slate'>Documentation Powered by Slate</a>
 
 includes:
+  - endpoints_ailments
   - endpoints_armor
   - endpoints_armor_sets
   - endpoints_charms
