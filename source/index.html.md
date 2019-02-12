@@ -31,4 +31,4 @@ search: true
 ---
 
 # Introduction
-Welcome to the REST API docs for [https://mhw-db.com](https://mhw-db.com).
+Welcome to the API docs for [https://mhw-db.com](https://mhw-db.com).
