@@ -23,3 +23,6 @@ build/
 _yardoc
 doc/
 .idea/
+
+# Vagrant files
+/*-cloudimg-console.log
