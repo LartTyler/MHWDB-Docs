@@ -32,7 +32,7 @@ fetch('https://mhw-db.com/ailments')
 ]
 ```
 
-This endpoint retrieves all ailments
+This endpoint retrieves all ailments.
 
 ### HTTP Request
 `GET https://mhw-db.com/ailments`
