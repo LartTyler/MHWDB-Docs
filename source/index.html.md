@@ -18,6 +18,7 @@ includes:
   - endpoints_decorations
   - endpoints_items
   - endpoints_locations
+  - endpoints_monsters
   - endpoints_motion_values
   - endpoints_skills
   - endpoints_weapons
