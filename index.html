@@ -223,6 +223,20 @@
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
           <li>
+            <a href="#ailments" class="toc-h1 toc-link" data-title="Ailments">Ailments</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-ailments" class="toc-h2 toc-link" data-title="Get All Ailments">Get All Ailments</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-ailment" class="toc-h2 toc-link" data-title="Get A Specific Ailment">Get a Specific Ailment</a>
+                  </li>
+                  <li>
+                    <a href="#ailment-fields" class="toc-h2 toc-link" data-title="Ailment Fields">Ailment Fields</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#armor" class="toc-h1 toc-link" data-title="Armor">Armor</a>
               <ul class="toc-list-h2">
                   <li>
@@ -289,6 +303,34 @@
                   </li>
                   <li>
                     <a href="#item-fields" class="toc-h2 toc-link" data-title="Item Fields">Item Fields</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#locations" class="toc-h1 toc-link" data-title="Locations">Locations</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-locations" class="toc-h2 toc-link" data-title="Get All Locations">Get All Locations</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-location" class="toc-h2 toc-link" data-title="Get A Specific Location">Get a Specific Location</a>
+                  </li>
+                  <li>
+                    <a href="#location-fields" class="toc-h2 toc-link" data-title="Location Fields">Location Fields</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#monsters" class="toc-h1 toc-link" data-title="Monsters">Monsters</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-monsters" class="toc-h2 toc-link" data-title="Get All Monsters">Get All Monsters</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-monster" class="toc-h2 toc-link" data-title="Get A Specific Monster">Get a Specific Monster</a>
+                  </li>
+                  <li>
+                    <a href="#monster-fields" class="toc-h2 toc-link" data-title="Monster Fields">Monster Fields</a>
                   </li>
               </ul>
           </li>
@@ -396,7 +438,225 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the REST API docs for <a href="https://mhw-db.com">https://mhw-db.com</a>.</p>
+<p>Welcome to the API docs for <a href="https://mhw-db.com">https://mhw-db.com</a>.</p>
+<h1 id='ailments'>Ailments</h1><h2 id='get-all-ailments'>Get All Ailments</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/ailments"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/ailments'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">ailments</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// your code here</span>
+    <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns an array of <a href="#ailment-fields"><code>Ailment</code></a> objects. Some fields have been truncated for brevity.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Blastblight"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Blastblight will cause a ..."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"recovery"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"actions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
+            </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"protection"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
+            </span><span class="s2">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all ailments.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://mhw-db.com/ailments</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>p</td>
+<td>No</td>
+<td>See the <a href="#projecting-results">Projecting Results</a> section</td>
+</tr>
+<tr>
+<td>q</td>
+<td>No</td>
+<td>See the <a href="#searching-the-api">Searching the API</a> section</td>
+</tr>
+</tbody></table>
+<h3 id='response'>Response</h3>
+<p>This endpoint returns an array of ailments. For field information, see the <a href="#ailment-fields">Ailment Fields</a> section.</p>
+<h2 id='get-a-specific-ailment'>Get a Specific Ailment</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/ailments/1"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/ailments/1'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">ailment</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// your code here</span>
+    <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns a single <a href="#ailment-fields"><code>Ailment</code></a> object. Some fields have been truncated for brevity.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Blastblight"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Blastblight will cause a ..."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recovery"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"actions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
+        </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"protection"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
+        </span><span class="s2">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific ailment.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://mhw-db.com/ailments/&lt;id&gt;</code></p>
+<h3 id='path-parameters'>Path Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>The ID of the ailment to retrieve</td>
+</tr>
+</tbody></table>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>p</td>
+<td>No</td>
+<td>See the <a href="#projecting-results">Projecting Results</a> section</td>
+</tr>
+</tbody></table>
+<h3 id='response-2'>Response</h3>
+<p>This endpoint returns a single ailment. For field information, see the <a href="#ailment-fields">Ailment Fields</a> section.</p>
+<h2 id='ailment-fields'>Ailment Fields</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bleeding"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bleeding causes damage when performing certain actions, such as running, ..."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recovery"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"actions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"crouch"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Well-done Steak"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Provides a moderate boost to your stamina and keeps it at max for a ..."</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"carryLimit"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"protection"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bleeding Resistance"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Grants protection against bleeding."</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>A sample <code>Ailment</code> object.</p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>The ID of the ailment</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>The name of the ailment</td>
+</tr>
+<tr>
+<td>description</td>
+<td>String</td>
+<td>A short description of the ailment</td>
+</tr>
+<tr>
+<td>recovery</td>
+<td><a href="#recovery-fields">Recovery</a></td>
+<td>An object describing methods to recover from the ailment</td>
+</tr>
+<tr>
+<td>protection</td>
+<td><a href="#protection-fields">Protection</a></td>
+<td>An object describing methods for mitigating or preventing the ailment</td>
+</tr>
+</tbody></table>
+<h3 id='recovery-fields'>Recovery Fields</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>actions</td>
+<td>Array&lt;<a href="#recovery-actions">RecoveryAction</a>&gt;</td>
+<td>An array of actions that can be taken to remove the ailment</td>
+</tr>
+<tr>
+<td>items</td>
+<td>Array&lt;<a href="#item-fields">Item</a>&gt;</td>
+<td>An array of items that can remove the ailment</td>
+</tr>
+</tbody></table>
+<h3 id='recovery-actions'>Recovery Actions</h3>
+<ul>
+<li>crouch</li>
+<li>dodge</li>
+</ul>
+<h3 id='protection-fields'>Protection Fields</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>items</td>
+<td>Array&lt;<a href="#item-fields">Item</a>&gt;</td>
+<td>An array of items that can prevent the ailment</td>
+</tr>
+<tr>
+<td>skills</td>
+<td>Array&lt;<a href="#skill-fields">Skill</a>&gt;</td>
+<td>An array of skills that can prevent the ailment</td>
+</tr>
+</tbody></table>
 <h1 id='armor'>Armor</h1><h2 id='get-all-armor-pieces'>Get All Armor Pieces</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/armor"</span>
 </code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/armor'</span><span class="p">)</span>
     <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
@@ -1714,6 +1974,478 @@ represented as ranks under a <a href="#charm-fields">Charm</a> object, which gro
 <td>value</td>
 <td>Integer</td>
 <td>The Zenny value of the item; zero indicates that value is not yet available</td>
+</tr>
+</tbody></table>
+<h1 id='locations'>Locations</h1><h2 id='get-all-locations'>Get All Locations</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/locations"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/locations'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">locations</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// your code here</span>
+    <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns an array of <a href="#location-fields"><code>Location</code></a> objects. Some fields have been truncated for brevity.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ancient Forest"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"zoneCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"camps"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Southwest Camp"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"zone"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all locations.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://mhw-db.com/locations</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>p</td>
+<td>No</td>
+<td>See the <a href="#projecting-results">Projecting Results</a> section</td>
+</tr>
+<tr>
+<td>q</td>
+<td>No</td>
+<td>See the <a href="#searching-the-api">Searching the API</a> section</td>
+</tr>
+</tbody></table>
+<h3 id='response'>Response</h3>
+<p>This endpoint returns an array of locations. For field information, see the <a href="#location-fields">Location Fields</a> section.</p>
+<h2 id='get-a-specific-location'>Get a Specific Location</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/locations/1"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/locations/1'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">location</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// your code here</span>
+    <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns a single <a href="#location-fields"><code>Location</code></a> object. Some fields have been truncated for brevity.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ancient Forest"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"zoneCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"camps"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Southwest Camp"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"zone"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific location.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://mhw-db.com/locations/&lt;id&gt;</code></p>
+<h3 id='path-parameters'>Path Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>The ID of the location to retrieve</td>
+</tr>
+</tbody></table>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>p</td>
+<td>No</td>
+<td>See the <a href="#projecting-results">Projecting Results</a> section</td>
+</tr>
+</tbody></table>
+<h3 id='response-2'>Response</h3>
+<p>This endpoint returns a single location. For field information, see the <a href="#location-fields">Location Fields</a> section.</p>
+<h2 id='location-fields'>Location Fields</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ancient Forest"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"zoneCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"camps"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Southwest Camp"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"zone"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Northwest Camp"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"zone"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Northeast Camp"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"zone"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ancient Forest Camp"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"zone"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>A sample <code>Location</code> object.</p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>The ID of the location</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>The name of the location</td>
+</tr>
+<tr>
+<td>zoneCount</td>
+<td>Integer</td>
+<td>The number of zones in the location</td>
+</tr>
+<tr>
+<td>camps</td>
+<td>Array&lt;<a href="#camp-fields">Camp</a>&gt;</td>
+<td>An array of camps available in the location</td>
+</tr>
+</tbody></table>
+<h3 id='camp-fields'>Camp Fields</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>The ID of the camp</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>The name of the camp</td>
+</tr>
+<tr>
+<td>zone</td>
+<td>Integer</td>
+<td>Which zone the camp is located in</td>
+</tr>
+</tbody></table>
+<h1 id='monsters'>Monsters</h1><h2 id='get-all-monsters'>Get All Monsters</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/monsters"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/monsters'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">monsters</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// your code here</span>
+    <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns an array of <a href="#monster-fields"><code>Monster</code></a> objects. Some fields have been truncated for brevity.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Apceros"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"small"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"species"</span><span class="p">:</span><span class="w"> </span><span class="s2">"herbivore"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Herbivores that inhabit the Wildspire Waste. They've developed..."</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"elements"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"ailments"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"locations"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"resistances"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="s2">"weaknesses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"element"</span><span class="p">:</span><span class="w"> </span><span class="s2">"thunder"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"stars"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"condition"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all monsters.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://mhw-db.com/monsters</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>p</td>
+<td>No</td>
+<td>See the <a href="#projecting-results">Projecting Results</a> section</td>
+</tr>
+<tr>
+<td>q</td>
+<td>No</td>
+<td>See the <a href="#searching-the-api">Searching the API</a> section</td>
+</tr>
+</tbody></table>
+<h3 id='response'>Response</h3>
+<p>This endpoint returns an array of monsters. For field information, see the <a href="#monster-fields">Monster Fields</a> section.</p>
+<h2 id='get-a-specific-monster'>Get a Specific Monster</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/monsters/1"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/monsters/1'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">ailment</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// your code here</span>
+    <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns a single <a href="#monster-fields"><code>Monster</code></a> object. Some fields have been truncated for brevity.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Apceros"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"small"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"species"</span><span class="p">:</span><span class="w"> </span><span class="s2">"herbivore"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Herbivores that inhabit the Wildspire Waste. They've developed..."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"elements"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="s2">"ailments"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="s2">"locations"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="s2">"resistances"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="s2">"weaknesses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"element"</span><span class="p">:</span><span class="w"> </span><span class="s2">"thunder"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"stars"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"condition"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific monster.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://mhw-db.com/monsters/&lt;id&gt;</code></p>
+<h3 id='path-parameters'>Path Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>The ID of the monster to retrieve</td>
+</tr>
+</tbody></table>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>p</td>
+<td>No</td>
+<td>See the <a href="#projecting-results">Projecting Results</a> section</td>
+</tr>
+</tbody></table>
+<h3 id='response-2'>Response</h3>
+<p>This endpoint returns a single monster. For field information, see the <a href="#monster-fields">Monster Fields</a> section.</p>
+<h2 id='monster-fields'>Monster Fields</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vaal Hazak"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"large"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"species"</span><span class="p">:</span><span class="w"> </span><span class="s2">"elder dragon"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A grotesque Elder Dragon, that inhabits the..."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"elements"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="s2">"ailments"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Effluvia"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A blight caused by the mists in the Rotten Vale, and by certain..."</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"recovery"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">},</span><span class="w">
+            </span><span class="s2">"protection"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"locations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rotten Vale"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"zoneCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"resistances"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"element"</span><span class="p">:</span><span class="w"> </span><span class="s2">"water"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"condition"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"weaknesses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"element"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fire"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"stars"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"condition"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>A sample <code>Monster</code> object.</p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>The ID of the monster</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>The name of the monster</td>
+</tr>
+<tr>
+<td>type</td>
+<td><a href="#monster-types">MonsterType</a></td>
+<td>The monster&#39;s category</td>
+</tr>
+<tr>
+<td>species</td>
+<td><a href="#monster-species">MonsterSpecies</a></td>
+<td>The monster&#39;s species</td>
+</tr>
+<tr>
+<td>description</td>
+<td>String</td>
+<td>A brief description of the monster</td>
+</tr>
+<tr>
+<td>elements</td>
+<td>Array&lt;<a href="#element-types">ElementType</a>&gt;</td>
+<td>An array of elements used by the monster</td>
+</tr>
+<tr>
+<td>ailments</td>
+<td>Array&lt;<a href="#ailment-fields">Ailment</a>&gt;</td>
+<td>An array of ailments inflicted by the monster</td>
+</tr>
+<tr>
+<td>locations</td>
+<td>Array&lt;<a href="#location-fields">Location</a>&gt;</td>
+<td>An array of locations where the monster can be found</td>
+</tr>
+<tr>
+<td>resistances</td>
+<td>Array&lt;<a href="#monster-resistance-fields">MonsterResistance</a>&gt;</td>
+<td>An array of the monster&#39;s elemental resistances</td>
+</tr>
+<tr>
+<td>weakness</td>
+<td>Array&lt;<a href="#monster-weakness-fields">MonsterWeakness</a>&gt;</td>
+<td>An array of the monster&#39;s elemental weaknesses</td>
+</tr>
+</tbody></table>
+<h3 id='monster-types'>Monster Types</h3>
+<p>A monster&#39;s type is one of the following values.</p>
+
+<ul>
+<li><code>small</code></li>
+<li><code>large</code></li>
+</ul>
+<h3 id='monster-species'>Monster Species</h3>
+<p>A monster&#39;s species is one of the following values.</p>
+
+<ul>
+<li><code>bird wyvern</code></li>
+<li><code>brute wyvern</code></li>
+<li><code>fanged wyvern</code></li>
+<li><code>fish</code></li>
+<li><code>flying wyvern</code></li>
+<li><code>herbivore</code></li>
+<li><code>lynian</code></li>
+<li><code>neopteron</code></li>
+<li><code>piscine wyvern</code></li>
+<li><code>wingdrake</code></li>
+<li><code>elder dragon</code></li>
+</ul>
+<h3 id='monster-resistance-fields'>Monster Resistance Fields</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>element</td>
+<td><a href="#element-types">ElementType</a></td>
+<td>The element the resistance applies to</td>
+</tr>
+<tr>
+<td>condition</td>
+<td>String</td>
+<td>A text description of the condition under which the resistance applies (i.e. &quot;covered in mud&quot;), or <code>null</code> if the resistance is always active</td>
+</tr>
+</tbody></table>
+<h3 id='monster-weakness-fields'>Monster Weakness Fields</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>element</td>
+<td><a href="#element-types">ElementType</a></td>
+<td>The element the weakness applies to</td>
+</tr>
+<tr>
+<td>stars</td>
+<td>Integer</td>
+<td>The magnitude of the weakness; corresponds directly to the number of stars shown in the hunter&#39;s log in-game</td>
+</tr>
+<tr>
+<td>condition</td>
+<td>String</td>
+<td>A text description of the condition under which the weakness applies (i.e. &quot;covered in mud&quot;), or <code>null</code> if the weakness is always active</td>
 </tr>
 </tbody></table>
 <h1 id='motion-values'>Motion Values</h1><h2 id='get-all-motion-values'>Get All Motion Values</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/motion-values"</span>
@@ -3185,249 +3917,18 @@ Red: &lfloor;30 / 400 * 100&rfloor; = 7
 <p>Any field whose values is an array of related objects (such as <code>Armor.skills</code> or <code>Charm.ranks</code>) can be filtered by it&#39;s length by adding <code>.length</code> after the field name in your search. This will work for ANY array of objects in the API, and supports filtering using any operator.</p>
 
 <p>For examples, please see the example query documents to the right.</p>
-<h2 id='operators'>Operators</h2>
+<h2 id='operators'>Operators</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"$like"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Negal%"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"$in"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"high"</span><span class="p">,</span><span class="w"> </span><span class="s2">"g"</span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 <p>An operator starts with a dollar sign, and allows you to perform more than just equality checks on data.</p>
 
-<table><thead>
-<tr>
-<th style="text-align: left">Name</th>
-<th style="text-align: left">Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left"><a href="#and">$and</a></td>
-<td style="text-align: left">Joins query clauses with a logical <strong>AND</strong>.</td>
-</tr>
-<tr>
-<td style="text-align: left"><a href="#or">$or</a></td>
-<td style="text-align: left">Joins query clauses with a logical <strong>OR</strong>.</td>
-</tr>
-<tr>
-<td style="text-align: left"><a href="#gt">$gt</a></td>
-<td style="text-align: left">Matches values that are greater than the specified value.</td>
-</tr>
-<tr>
-<td style="text-align: left"><a href="#gte">$gte</a></td>
-<td style="text-align: left">Matches values that are greater than or equal to the specified value.</td>
-</tr>
-<tr>
-<td style="text-align: left"><a href="#lt">$lt</a></td>
-<td style="text-align: left">Matches values that are less than the specified value.</td>
-</tr>
-<tr>
-<td style="text-align: left"><a href="#lte">$lte</a></td>
-<td style="text-align: left">Matches values that are less than or equal to the specified value.</td>
-</tr>
-<tr>
-<td style="text-align: left"><a href="#eq">$eq</a></td>
-<td style="text-align: left">Matches values that are equal to the specified value.</td>
-</tr>
-<tr>
-<td style="text-align: left"><a href="#neq">$neq</a></td>
-<td style="text-align: left">Matches values that are not equal to the specified value.</td>
-</tr>
-<tr>
-<td style="text-align: left"><a href="#in">$in</a></td>
-<td style="text-align: left">Matches values that are equal to any of the values in the specified array.</td>
-</tr>
-<tr>
-<td style="text-align: left"><a href="#nin">$nin</a></td>
-<td style="text-align: left">Matches values that are not equal to any of the values in the specified array.</td>
-</tr>
-<tr>
-<td style="text-align: left"><a href="#like">$like</a></td>
-<td style="text-align: left">Matches values that match the provided comparison string.</td>
-</tr>
-<tr>
-<td style="text-align: left"><a href="#nlike">$nlike</a></td>
-<td style="text-align: left">Matches values that do not match the provided comparison string.</td>
-</tr>
-<tr>
-<td style="text-align: left"><a href="#exists">$exists</a></td>
-<td style="text-align: left">Matches values that match the given existence check.</td>
-</tr>
-</tbody></table>
-<h3 id='and'>$and</h3>
-<p><em>Syntax</em>: <code>{&quot;$and&quot;: [{expression1}, {expression2}, ..., {expressionN}]}</code></p>
-
-<p>The <code>$and</code> joins query clauses with a logical <strong>AND</strong>.</p>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"$and"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="s2">"high"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"attributes.defense"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>The above query, applied to the <code>/armor</code> endpoint, would find only armor that has a <code>rank</code> equal to &quot;high, and a defense attribute of 40.</p>
-
-<p>By default, consecutive expressions are joined by an <code>$and</code> operator, so in most cases it&#39;s not necessary to use <code>$and</code> to join expressions. The above document could be shortened to the following, and would yield the same results.</p>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="s2">"high"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"attributes.defense"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='or'>$or</h3>
-<p><em>Syntax</em>: <code>{&quot;$or&quot;: [{expression1}, {expression2}, ..., {expressionN}]}</code></p>
-
-<p>The <code>$or</code> joins query clauses with a logical <strong>OR</strong>.</p>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"$or"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="s2">"high"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"attributes.defense"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>The example above would match any entity where <code>rank = &quot;high&quot; OR attributes.defense = 40</code>.</p>
-<h3 id='gt'>$gt</h3>
-<p><em>Syntax</em>: <code>{&quot;field&quot;: {&quot;$gt&quot;: value}}</code></p>
-
-<p>The <code>$gt</code> operator matches values that are greater than the specified value.</p>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"attributes.defense"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"$gt"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>The example above would match any entity where <code>attributes.defense &gt; 40</code>.</p>
-<h3 id='gte'>$gte</h3>
-<p><em>Syntax</em>: <code>{&quot;field&quot;: {&quot;$gte&quot;: value}}</code></p>
-
-<p>The <code>$gte</code> operator matches values that are greater than or equal to the specified value.</p>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"attributes.defense"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"$gte"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>The example above would match any entity where <code>attributes.defense &gt;= 40</code>.</p>
-<h3 id='lt'>$lt</h3>
-<p><em>Syntax</em>: <code>{&quot;field&quot;: {&quot;$lt&quot;: value}}</code></p>
-
-<p>The <code>$lt</code> operator changes the field comparison to less than.</p>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"attributes.defense"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"$lt"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>The example above would match any entity where <code>attributes.defense &lt; 40</code>.</p>
-<h3 id='lte'>$lte</h3>
-<p><em>Syntax</em>: <code>{&quot;field&quot;: {&quot;$lte&quot;: value}}</code></p>
-
-<p>The <code>$lte</code> operator matches values that are less than or equal to the specified value.</p>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"attributes.defense"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"$lte"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>The example above would match any entity where <code>attributes.defense &lt;= 40</code>.</p>
-<h3 id='eq'>$eq</h3>
-<p><em>Syntax</em>: <code>{&quot;field&quot;: {&quot;$eq&quot;: value}}</code> <em>or</em> <code>{&quot;field&quot;: value}</code></p>
-
-<p>The <code>$eq</code> operator matches values that are equal to the specified value.</p>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"attributes.defense"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>The example above would match any entity where <code>attributes.defense = 40</code>.</p>
-<h3 id='neq'>$neq</h3>
-<p><em>Syntax</em>: <code>{&quot;field&quot;: {&quot;$neq&quot;: value}}</code></p>
-
-<p>The <code>$neq</code> operator is the negated form of <a href="#eq"><code>$eq</code></a>, and matches values that are not equal to the specified value.</p>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"attributes.defense"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>The example above would match any entity where <code>attributes.defense != 40</code>.</p>
-<h3 id='in'>$in</h3>
-<p><em>Syntax</em>: <code>{&quot;field&quot;: {&quot;$in&quot;: [value1, value2, ..., valueN]}}</code></p>
-
-<p>The <code>$in</code> operator matches values that are equal to any value in the specified array.</p>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"$in"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="s2">"high"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"g"</span><span class="w">
-    </span><span class="p">]</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>The example above would match any entity where <code>rank IN (&quot;high&quot;, &quot;g&quot;)</code>.</p>
-<h3 id='nin'>$nin</h3>
-<p><em>Syntax</em>: <code>{&quot;field&quot;: {&quot;$nin&quot;: [value1, value2, ..., valueN]}}</code></p>
-
-<p>The <code>$nin</code> operator is the negated form of <a href="#in"><code>$in</code></a>, and matches any values that are not equal to any value in the specified array.</p>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"$nin"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="s2">"low"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"high"</span><span class="w">
-    </span><span class="p">]</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>The example above would match any entity where <code>rank NOT IN (&quot;low&quot;, &quot;high&quot;)</code>.</p>
-<h3 id='like'>$like</h3>
-<p><em>Syntax</em>: <code>{&quot;field&quot;: {&quot;$like&quot;: value}}</code></p>
-
-<p>The <code>$like</code> operator matches any value that matches the specified comparison string.</p>
-
-<p>A comparison string may contain any character allowable in a normal string, but treats the following characters as metacharacters.</p>
-
-<table><thead>
-<tr>
-<th style="text-align: left">Character</th>
-<th style="text-align: left">Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left"><code>%</code></td>
-<td style="text-align: left">Matches anything zero or more times</td>
-</tr>
-<tr>
-<td style="text-align: left"><code>_</code></td>
-<td style="text-align: left">Matches anything once</td>
-</tr>
-</tbody></table>
-
-<p>To use either character as their literal character and not a metacharacter, simply prefix them with a backslash, like so: <code>\%</code> or <code>\_</code>.</p>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"$like"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nergal%"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>The example above would match any entity where the name field begins with the string &quot;Nergal&quot; (<code>name LIKE &quot;Nergal%&quot;</code>).</p>
-<h3 id='nlike'>$nlike</h3>
-<p><em>Syntax</em>: <code>{&quot;field&quot;: {&quot;$nlike&quot;: value}}</code></p>
-
-<p>The <code>$nlike</code> operator is the negated form of <a href="#like"><code>$like</code></a>, and matches any value that does not match the specified comparison string. Please see the documentation for <a href="#like"><code>$like</code></a> for an explanation of comparison strings.</p>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"$nlike"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nergal%"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>The example above would match any entity where the name field does not begin with &quot;Nergal&quot; (<code>name NOT LIKE &quot;Nergal%&quot;</code>).</p>
-<h3 id='exists'>$exists</h3>
-<p><em>Syntax</em>: <code>{&quot;field&quot;: {&quot;$exists&quot;: boolean}}</code></p>
-
-<p>The <code>$exists</code> operator matches subfield existence. When the value of <code>$exists</code> is <code>true</code>, it will match any entity that has the specified field. When it is false, it will match any entity that does <em>not</em> have the specified field.</p>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"attributes.slotsRank2"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"$exists"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>The example above would match any entity that has the provided field (or, in other words, where <code>attributes.slotsRank2 IS NOT NULL</code>).</p>
+<p>You can find a full list of supported operators in <a href="https://github.com/LartTyler/doctrine-query-document#built-in-operators">this GitHub repository</a>.</p>
 <h1 id='projecting-results'>Projecting Results</h1><pre class="highlight shell tab-shell"><code>curl -G <span class="s2">"https://mhw-db.com/weapons"</span> <span class="se">\</span>
     -d <span class="s1">'p={"id":true, "name": true, "type": true, "crafting.branches": true}'</span>
 </code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">url</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">URL</span><span class="p">(</span><span class="s1">'https://mhw-db.com/weapons'</span><span class="p">);</span>
@@ -3469,6 +3970,9 @@ Red: &lfloor;30 / 400 * 100&rfloor; = 7
 <p>Below you can find a list of deprecated API features, as well as the information on when those features will be removed
 from the API. Since we follow semantic versioning for the API, only major releases will include breaking changes.</p>
 
+<p>Please note that the removal date marks when the feature MAY be removed from the API. The feature won&#39;t be removed
+until the next release after the removal date, whenever that may fall.</p>
+
 <table><thead>
 <tr>
 <th>Feature</th>
@@ -3478,10 +3982,10 @@ from the API. Since we follow semantic versioning for the API, only major releas
 </tr>
 </thead><tbody>
 <tr>
-<td><code>Weapon.sharpness</code> field</td>
-<td><a href="#weapon-fields"><code>Weapon.durability</code></a></td>
-<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.13.0">1.13.0</a></td>
-<td style="text-align: center">2018-08-25</td>
+<td>No features pending removal.</td>
+<td>-</td>
+<td style="text-align: center">-</td>
+<td style="text-align: center">-</td>
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>
