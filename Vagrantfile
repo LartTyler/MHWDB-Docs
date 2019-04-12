@@ -5,6 +5,7 @@ Vagrant.configure(2) do |config|
 
 	config.vm.provider "virtualbox" do |vb|
 		vb.memory = "2048"
+		vb.cpus = 2
 	end
 
 	config.vm.provision "bootstrap", type: "shell", inline: <<-SHELL
@@ -15,7 +16,7 @@ Vagrant.configure(2) do |config|
 
 		apt-get autoremove -yq
 
-		gem install --no-ri --no-rdoc bundler
+		gem install --no-ri --no-rdoc bundler -v 1.14.5
 	SHELL
 
 	config.vm.provision "install", type: "shell", privileged: false, inline: <<-SHELL
@@ -34,6 +35,8 @@ Vagrant.configure(2) do |config|
 		echo "----------------------------------------------"
 		echo "Starting up middleman at http://localhost:4567"
 		echo "If it doesn't come up, check the ~/middleman.log file for any error messages"
+
+		killall -9 ruby2.5
 
 		cd /vagrant
 
