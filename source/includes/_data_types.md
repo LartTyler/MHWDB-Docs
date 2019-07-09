@@ -8,6 +8,7 @@ Percent | A percentage, formatted as a whole number without the trailing percent
 Boolean | A normal boolean (either `true` or `false`)
 Enum(...) | One of any value listed between the parenthesis
 Array&lt;T&gt; | An array containing zero more values of type `T`
+DateTime | An [ISO8601](#https://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations) string representing a date and time, in UTC
 Null | Represents an empty value (usually used when a field has no value)
 
 ## Rank Types
