@@ -10,6 +10,12 @@ Enum(...) | One of any value listed between the parenthesis
 Array&lt;T&gt; | An array containing zero more values of type `T`
 Null | Represents an empty value (usually used when a field has no value)
 
+## Rank Types
+A rank type may be one of the following values.
+
+- `low`
+- `high`
+
 ## Element Types
 An element type may be one of the following values.
 

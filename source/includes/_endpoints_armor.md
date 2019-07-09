@@ -222,13 +222,13 @@ id | Integer | The ID of the armor piece
 slug | String | A human readable unique identifier
 name | String | The name of the armor piece
 type | [ArmorType](#armor-types) | The slot the armor piece fits in
-rank | [ArmorRank](#armor-ranks) | The rank of the armor piece
+rank | [Rank](#rank-types) | The rank of the armor piece
 rarity | Integer | The rarity of the armor piece
 defense | [Defense](#defense-objects) | Contains information about the defense values of the armor piece
 resistances | [Resistances](#armor-resistances) | Contains information about elemental resistances
 slots | Array&lt;[Slot](#slot-objects)&gt; | An array decoration slot information, containing between 0 and 3 items
 skills | Array&lt;[SkillRank](#skillrank-objects)&gt; | An array of skill ranks granted by the armor
-armorSet | [SetInfo](#set-info) | Contains information about the set that the armor piece belongs to 
+armorSet | [SetInfo](#set-info) | Contains information about the set that the armor piece belongs to
 assets | [ArmorAssets](#armor-assets) | Contains information about armor UI assets (such as preview images)
 crafting | [ArmorCraftingInfo](#armor-crafting-info) | Contains crafting information for the armor piece
 attributes | [ArmorAttributes](#armor-attributes) | See [ArmorAttributes](#armor-attributes) for more information
