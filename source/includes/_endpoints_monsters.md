@@ -172,6 +172,7 @@ A monster's species is one of the following values.
 
 - `bird wyvern`
 - `brute wyvern`
+- `elder dragon`
 - `fanged wyvern`
 - `fish`
 - `flying wyvern`
@@ -179,8 +180,8 @@ A monster's species is one of the following values.
 - `lynian`
 - `neopteron`
 - `piscine wyvern`
+- `relict`
 - `wingdrake`
-- `elder dragon`
 
 ### Monster Resistance Fields
 Field | Type | Description
