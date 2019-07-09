@@ -260,6 +260,8 @@ type | [ElementType](#element-types) | The element's damage type
 damage | Integer | The power of the element
 hidden | Boolean | Indicates whether or not the element is a hidden element
 
+Please note that the `type` field can be any [`ElementType`](#element-types) value **except for** `stun`.
+
 ### Weapon Assets
 Field | Type | Description
 ----- | ---- | -----------

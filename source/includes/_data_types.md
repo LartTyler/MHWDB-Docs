@@ -18,6 +18,7 @@ An element type may be one of the following values.
 fire | water | ice
 thunder | dragon | blast
 poison | sleep | paralysis
+stun | |
 
 ## CraftingCost Objects
 ```json
