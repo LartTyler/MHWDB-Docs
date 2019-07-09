@@ -32,6 +32,28 @@ fetch('https://mhw-db.com/monsters')
                 "stars": 1,
                 "condition": null
             }
+        ],
+        "rewards": [
+            {
+                "id": 1,
+                "item": {
+                    "id": 67,
+                    "name": "Raw Meat",
+                    "description": "Meat carved from a monster. Can be ...",
+                    "rarity": 1,
+                    "carryLimit": 10,
+                    "value": 5
+                },
+                "conditions": [
+                    {
+                        "type": "carve",
+                        "subtype": null,
+                        "rank": "low",
+                        "quantity": 1,
+                        "chance": 100
+                    }
+                ]
+            }
         ]
     }
 ]
@@ -82,6 +104,28 @@ fetch('https://mhw-db.com/monsters/1')
             "element": "thunder",
             "stars": 1,
             "condition": null
+        }
+    ],
+    "rewards": [
+        {
+            "id": 1,
+            "item": {
+                "id": 67,
+                "name": "Raw Meat",
+                "description": "Meat carved from a monster. Can be ...",
+                "rarity": 1,
+                "carryLimit": 10,
+                "value": 5
+            },
+            "conditions": [
+                {
+                    "type": "carve",
+                    "subtype": null,
+                    "rank": "low",
+                    "quantity": 1,
+                    "chance": 100
+                }
+            ]
         }
     ]
 }
@@ -142,6 +186,13 @@ This endpoint returns a single monster. For field information, see the [Monster 
             "stars": 3,
             "condition": null
         }
+    ],
+    "reward": [
+        {
+            "id": 1,
+            "item": {...},
+            "conditions": [...]
+        }
     ]
 }
 ```
@@ -160,6 +211,7 @@ ailments | Array&lt;[Ailment](#ailment-fields)&gt; | An array of ailments inflic
 locations | Array&lt;[Location](#location-fields)&gt; | An array of locations where the monster can be found
 resistances | Array&lt;[MonsterResistance](#monster-resistance-fields)&gt; | An array of the monster's elemental resistances
 weakness | Array&lt;[MonsterWeakness](#monster-weakness-fields)&gt; | An array of the monster's elemental weaknesses
+rewards | Array&lt;[MonsterReward](#monster-reward-fields)&gt; | An array of the possible rewards / drops from the monster
 
 ### Monster Types
 A monster's type is one of the following values.
@@ -195,3 +247,10 @@ Field | Type | Description
 element | [ElementType](#element-types) | The element the weakness applies to
 stars | Integer | The magnitude of the weakness; corresponds directly to the number of stars shown in the hunter's log in-game
 condition | String | A text description of the condition under which the weakness applies (i.e. "covered in mud"), or `null` if the weakness is always active
+
+### Monster Reward Fields
+Field | Type | Description
+----- | ---- | -----------
+id | Integer | The reward's ID
+item | [Item](#item-fields) | The item granted by the reward
+conditions | Array&lt;[RewardCondition](#rewardcondition-objects)&gt; | An array of conditions that cause the reward to be granted

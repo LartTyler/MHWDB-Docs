@@ -26,6 +26,20 @@ thunder | dragon | blast
 poison | sleep | paralysis
 stun | |
 
+## Reward Condition Types
+A reward condition type may be one of the following values.
+
+- `carve`
+- `investigation`
+- `mining`
+- `palico`
+- `plunderblade`
+- `reward`
+- `siege reward`
+- `shiny`
+- `track`
+- `wound`
+
 ## CraftingCost Objects
 ```json
 {
@@ -61,3 +75,24 @@ item | [Item](#item-objects) | The item to be consumed during crafting
 Field | Type | Description
 ----- | ---- | -----------
 rank | Integer | The rank of the slot
+
+## RewardCondition Objects
+```json
+{
+  "type": "carve",
+  "subtype": "body",
+  "rank": "high",
+  "quantity": 1,
+  "chance": 15
+}
+```
+
+> A sample `RewardCondition` object.
+
+Field | Type | Description
+----- | ---- | -----------
+type | [RewardConditionType](#reward-condition-types) | The type identifier of the condition
+subtype | String | A text description of the condition's subtype (i.e. "body" or "tail" for the `carve` type)
+rank | [Rank](#rank-types) | The mission rank required to obtain the reward
+quantity | Integer | The number of items granted if the condition is met
+chance | Integer | The percent chance the reward will be granted if the condition is met (whole number between 1 and 100)
