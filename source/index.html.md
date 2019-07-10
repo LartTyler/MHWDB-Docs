@@ -16,6 +16,7 @@ includes:
   - endpoints_armor_sets
   - endpoints_charms
   - endpoints_decorations
+  - endpoints_events
   - endpoints_items
   - endpoints_locations
   - endpoints_monsters
