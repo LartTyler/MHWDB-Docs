@@ -293,6 +293,20 @@
               </ul>
           </li>
           <li>
+            <a href="#events" class="toc-h1 toc-link" data-title="Events">Events</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-events" class="toc-h2 toc-link" data-title="Get All Events">Get All Events</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-specific-event" class="toc-h2 toc-link" data-title="Get A Specific Event">Get a Specific Event</a>
+                  </li>
+                  <li>
+                    <a href="#event-fields" class="toc-h2 toc-link" data-title="Event Fields">Event Fields</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#items" class="toc-h1 toc-link" data-title="Items">Items</a>
               <ul class="toc-list-h2">
                   <li>
@@ -1837,6 +1851,236 @@ represented as ranks under a <a href="#charm-fields">Charm</a> object, which gro
 <td>An array of skill ranks that the decoration provides</td>
 </tr>
 </tbody></table>
+<h1 id='events'>Events</h1><h2 id='get-all-events'>Get All Events</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/events"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/events'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">events</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// your code here</span>
+    <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns an array of <a href="#event-fields"><code>Event</code></a> objects. Some fields have been truncated for brevity.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A Visitor from Eorzea (Extreme)"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"platform"</span><span class="p">:</span><span class="w"> </span><span class="s2">"console"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"exclusive"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"event quest"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"You and your entire party will have..."</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"requirements"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HR 50 or higher"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"questRank"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"successConditions"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Slay a Behemoth"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"startTimestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-05T00:00:00+0000"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"endTimestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-11T23:59:00+0000"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all ongoing and scheduled in-game events, pulled from the official Capcom events pages
+(<a href="http://game.capcom.com/world/steam/us/schedule.html">PC</a> and <a href="http://game.capcom.com/world/us/schedule.html">console</a>).</p>
+
+<p>Events are updated once per day, at midnight UTC. During the daily update, newly scheduled events will be added to the
+system, while events that have ended will be removed.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://mhw-db.com/events</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>p</td>
+<td>No</td>
+<td>See the <a href="#projecting-results">Projecting Results</a> section</td>
+</tr>
+<tr>
+<td>q</td>
+<td>No</td>
+<td>See the <a href="#searching-the-api">Searching the API</a> section</td>
+</tr>
+</tbody></table>
+<h3 id='response'>Response</h3>
+<p>This endpoint returns an array of events. For field information, see the <a href="#event-fields">Event Fields</a> section.</p>
+<h2 id='get-a-specific-event'>Get a Specific Event</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/events/1"</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/events/1'</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">event</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// your code here</span>
+    <span class="p">});</span>
+</code></pre>
+<blockquote>
+<p>The above command returns a single <a href="#event-fields"><code>Event</code></a> object. Some fields have been truncted for brevity.</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A Visitor from Eorzea (Extreme)"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"platform"</span><span class="p">:</span><span class="w"> </span><span class="s2">"console"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"exclusive"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"event quest"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"You and your entire party will have..."</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"requirements"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HR 50 or higher"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"questRank"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"successConditions"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Slay a Behemoth"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"startTimestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-05T00:00:00+0000"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"endTimestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-11T23:59:00+0000"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves a specific event.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://mhw-db.com/events/&lt;id&gt;</code></p>
+<h3 id='path-parameters'>Path Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>The ID of the event to retrieve</td>
+</tr>
+</tbody></table>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>p</td>
+<td>No</td>
+<td>See the <a href="#projecting-results">Projecting Results</a> section</td>
+</tr>
+</tbody></table>
+<h3 id='response-2'>Response</h3>
+<p>This endpoint returns a single event. For field information, see the <a href="#event-fields">Event Fields</a> section.</p>
+<h2 id='event-fields'>Event Fields</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A Visitor from Eorzea (Extreme)"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"platform"</span><span class="p">:</span><span class="w"> </span><span class="s2">"console"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"exclusive"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"event quest"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"You and your entire party will have..."</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"requirements"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HR 50 or higher"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"questRank"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"successConditions"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Slay a Behemoth"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"startTimestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-05T00:00:00+0000"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"endTimestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-11T23:59:00+0000"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Elder's Recess"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"zoneCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"camps"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>A sample <code>Event</code> object.</p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>The ID of the event</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>The event&#39;s title</td>
+</tr>
+<tr>
+<td>platform</td>
+<td><a href="#event-platforms">EventPlatform</a></td>
+<td>The platform that the event is running on (if an event is running on more than one platform, each platform will have it&#39;s own event object in the API)</td>
+</tr>
+<tr>
+<td>exclusive</td>
+<td><a href="#event-exclusivity-types">EventExclusivity</a></td>
+<td>For consoles, a value other than <code>null</code> indicates that the event is only running on a specific console</td>
+</tr>
+<tr>
+<td>type</td>
+<td><a href="#event-types">EventType</a></td>
+<td>The event&#39;s type</td>
+</tr>
+<tr>
+<td>description</td>
+<td>String</td>
+<td>A text description of the event</td>
+</tr>
+<tr>
+<td>requires</td>
+<td>String</td>
+<td>A text description of the event&#39;s entry requirements</td>
+</tr>
+<tr>
+<td>questRank</td>
+<td>Integer</td>
+<td>The rank of the quest</td>
+</tr>
+<tr>
+<td>successConditions</td>
+<td>String</td>
+<td>A text description of the event&#39;s success condition(s)</td>
+</tr>
+<tr>
+<td>startTimestamp</td>
+<td>DateTime</td>
+<td>A timestamp indicating when the event started</td>
+</tr>
+<tr>
+<td>endTimestamp</td>
+<td>DateTime</td>
+<td>A timestamp indicating when the event will end</td>
+</tr>
+<tr>
+<td>location</td>
+<td><a href="#location-fields">Location</a></td>
+<td>The location in which the event takes place</td>
+</tr>
+</tbody></table>
+<h3 id='event-types'>Event Types</h3>
+<p>An event&#39;s type may be one of the following values.</p>
+
+<ul>
+<li><code>kulve taroth siege</code></li>
+<li><code>event quest</code></li>
+<li><code>challenge quest</code></li>
+</ul>
+
+<p>Event types correspond to the section on the event page under which the event is listed.</p>
+<h3 id='event-platforms'>Event Platforms</h3>
+<p>An event&#39;s platform may be one of the following values.</p>
+
+<ul>
+<li><code>pc</code></li>
+<li><code>console</code></li>
+</ul>
+<h3 id='event-exclusivity-types'>Event Exclusivity Types</h3>
+<p>Some events (such as the Horizon Zero Dawn event) only run on specific consoles. For such events, the <code>exclusive</code> field
+will contain one of the following values.</p>
+
+<ul>
+<li><code>ps4</code></li>
+<li><code>xbox</code></li>
+</ul>
 <h1 id='items'>Items</h1><h2 id='get-all-items'>Get All Items</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/items"</span>
 </code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/items'</span><span class="p">)</span>
     <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
