@@ -125,6 +125,7 @@ This endpoint returns a single event. For field information, see the [Event Fiel
 > A sample `Event` object.
 
 Field | Type | Description
+----- | ---- | -----------
 id | Integer | The ID of the event
 name | String | The event's title
 platform | [EventPlatform](#event-platforms) | The platform that the event is running on (if an event is running on more than one platform, each platform will have it's own event object in the API)
