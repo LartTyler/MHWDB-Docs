@@ -386,13 +386,22 @@
                     <a href="#scalar-data-types" class="toc-h2 toc-link" data-title="Scalar Data Types">Scalar Data Types</a>
                   </li>
                   <li>
+                    <a href="#rank-types" class="toc-h2 toc-link" data-title="Rank Types">Rank Types</a>
+                  </li>
+                  <li>
                     <a href="#element-types" class="toc-h2 toc-link" data-title="Element Types">Element Types</a>
+                  </li>
+                  <li>
+                    <a href="#reward-condition-types" class="toc-h2 toc-link" data-title="Reward Condition Types">Reward Condition Types</a>
                   </li>
                   <li>
                     <a href="#craftingcost-objects" class="toc-h2 toc-link" data-title="Craftingcost Objects">CraftingCost Objects</a>
                   </li>
                   <li>
                     <a href="#slot-objects" class="toc-h2 toc-link" data-title="Slot Objects">Slot Objects</a>
+                  </li>
+                  <li>
+                    <a href="#rewardcondition-objects" class="toc-h2 toc-link" data-title="Rewardcondition Objects">RewardCondition Objects</a>
                   </li>
               </ul>
           </li>
@@ -913,7 +922,7 @@
 </tr>
 <tr>
 <td>rank</td>
-<td><a href="#armor-ranks">ArmorRank</a></td>
+<td><a href="#rank-types">Rank</a></td>
 <td>The rank of the armor piece</td>
 </tr>
 <tr>
@@ -1348,7 +1357,7 @@ slowly phased out over several releases, and instead provided by specialized fie
 </tr>
 <tr>
 <td>rank</td>
-<td><a href="#armor-ranks">ArmorRank</a></td>
+<td><a href="#rank-types">Rank</a></td>
 <td>The rank of the armor set</td>
 </tr>
 <tr>
@@ -2192,6 +2201,28 @@ represented as ranks under a <a href="#charm-fields">Charm</a> object, which gro
                 </span><span class="s2">"stars"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"condition"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
             </span><span class="p">}</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"rewards"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">67</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Raw Meat"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Meat carved from a monster. Can be ..."</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"carryLimit"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w">
+                </span><span class="p">},</span><span class="w">
+                </span><span class="s2">"conditions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="p">{</span><span class="w">
+                        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"carve"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"subtype"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="s2">"low"</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                        </span><span class="s2">"chance"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w">
+                    </span><span class="p">}</span><span class="w">
+                </span><span class="p">]</span><span class="w">
+            </span><span class="p">}</span><span class="w">
         </span><span class="p">]</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
@@ -2245,6 +2276,28 @@ represented as ranks under a <a href="#charm-fields">Charm</a> object, which gro
             </span><span class="s2">"element"</span><span class="p">:</span><span class="w"> </span><span class="s2">"thunder"</span><span class="p">,</span><span class="w">
             </span><span class="s2">"stars"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
             </span><span class="s2">"condition"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"rewards"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">67</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Raw Meat"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Meat carved from a monster. Can be ..."</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"carryLimit"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"conditions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"carve"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"subtype"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="s2">"low"</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                    </span><span class="s2">"chance"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -2317,6 +2370,13 @@ represented as ranks under a <a href="#charm-fields">Charm</a> object, which gro
             </span><span class="s2">"stars"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
             </span><span class="s2">"condition"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
         </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"reward"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">},</span><span class="w">
+            </span><span class="s2">"conditions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -2381,6 +2441,11 @@ represented as ranks under a <a href="#charm-fields">Charm</a> object, which gro
 <td>Array&lt;<a href="#monster-weakness-fields">MonsterWeakness</a>&gt;</td>
 <td>An array of the monster&#39;s elemental weaknesses</td>
 </tr>
+<tr>
+<td>rewards</td>
+<td>Array&lt;<a href="#monster-reward-fields">MonsterReward</a>&gt;</td>
+<td>An array of the possible rewards / drops from the monster</td>
+</tr>
 </tbody></table>
 <h3 id='monster-types'>Monster Types</h3>
 <p>A monster&#39;s type is one of the following values.</p>
@@ -2395,6 +2460,7 @@ represented as ranks under a <a href="#charm-fields">Charm</a> object, which gro
 <ul>
 <li><code>bird wyvern</code></li>
 <li><code>brute wyvern</code></li>
+<li><code>elder dragon</code></li>
 <li><code>fanged wyvern</code></li>
 <li><code>fish</code></li>
 <li><code>flying wyvern</code></li>
@@ -2402,8 +2468,8 @@ represented as ranks under a <a href="#charm-fields">Charm</a> object, which gro
 <li><code>lynian</code></li>
 <li><code>neopteron</code></li>
 <li><code>piscine wyvern</code></li>
+<li><code>relict</code></li>
 <li><code>wingdrake</code></li>
-<li><code>elder dragon</code></li>
 </ul>
 <h3 id='monster-resistance-fields'>Monster Resistance Fields</h3>
 <table><thead>
@@ -2446,6 +2512,30 @@ represented as ranks under a <a href="#charm-fields">Charm</a> object, which gro
 <td>condition</td>
 <td>String</td>
 <td>A text description of the condition under which the weakness applies (i.e. &quot;covered in mud&quot;), or <code>null</code> if the weakness is always active</td>
+</tr>
+</tbody></table>
+<h3 id='monster-reward-fields'>Monster Reward Fields</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Integer</td>
+<td>The reward&#39;s ID</td>
+</tr>
+<tr>
+<td>item</td>
+<td><a href="#item-fields">Item</a></td>
+<td>The item granted by the reward</td>
+</tr>
+<tr>
+<td>conditions</td>
+<td>Array&lt;<a href="#rewardcondition-objects">RewardCondition</a>&gt;</td>
+<td>An array of conditions that cause the reward to be granted</td>
 </tr>
 </tbody></table>
 <h1 id='motion-values'>Motion Values</h1><h2 id='get-all-motion-values'>Get All Motion Values</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/motion-values"</span>
@@ -3380,6 +3470,8 @@ to a value (usually an integer). All possible modifier fields can be found in th
 <td>Indicates whether or not the element is a hidden element</td>
 </tr>
 </tbody></table>
+
+<p>Please note that the <code>type</code> field can be any <a href="#element-types"><code>ElementType</code></a> value <strong>except for</strong> <code>stun</code>.</p>
 <h3 id='weapon-assets'>Weapon Assets</h3>
 <table><thead>
 <tr>
@@ -3796,10 +3888,21 @@ Red: &lfloor;30 / 400 * 100&rfloor; = 7
 <td>An array containing zero more values of type <code>T</code></td>
 </tr>
 <tr>
+<td>DateTime</td>
+<td>An <a href="#https://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations">ISO8601</a> string representing a date and time, in UTC</td>
+</tr>
+<tr>
 <td>Null</td>
 <td>Represents an empty value (usually used when a field has no value)</td>
 </tr>
 </tbody></table>
+<h2 id='rank-types'>Rank Types</h2>
+<p>A rank type may be one of the following values.</p>
+
+<ul>
+<li><code>low</code></li>
+<li><code>high</code></li>
+</ul>
 <h2 id='element-types'>Element Types</h2>
 <p>An element type may be one of the following values.</p>
 
@@ -3825,7 +3928,27 @@ Red: &lfloor;30 / 400 * 100&rfloor; = 7
 <td>sleep</td>
 <td>paralysis</td>
 </tr>
+<tr>
+<td>stun</td>
+<td></td>
+<td></td>
+</tr>
 </tbody></table>
+<h2 id='reward-condition-types'>Reward Condition Types</h2>
+<p>A reward condition type may be one of the following values.</p>
+
+<ul>
+<li><code>carve</code></li>
+<li><code>investigation</code></li>
+<li><code>mining</code></li>
+<li><code>palico</code></li>
+<li><code>plunderblade</code></li>
+<li><code>reward</code></li>
+<li><code>siege reward</code></li>
+<li><code>shiny</code></li>
+<li><code>track</code></li>
+<li><code>wound</code></li>
+</ul>
 <h2 id='craftingcost-objects'>CraftingCost Objects</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
   </span><span class="s2">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -3880,6 +4003,51 @@ Red: &lfloor;30 / 400 * 100&rfloor; = 7
 <td>rank</td>
 <td>Integer</td>
 <td>The rank of the slot</td>
+</tr>
+</tbody></table>
+<h2 id='rewardcondition-objects'>RewardCondition Objects</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"carve"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"subtype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"body"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="s2">"high"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"chance"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>A sample <code>RewardCondition</code> object.</p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>type</td>
+<td><a href="#reward-condition-types">RewardConditionType</a></td>
+<td>The type identifier of the condition</td>
+</tr>
+<tr>
+<td>subtype</td>
+<td>String</td>
+<td>A text description of the condition&#39;s subtype (i.e. &quot;body&quot; or &quot;tail&quot; for the <code>carve</code> type)</td>
+</tr>
+<tr>
+<td>rank</td>
+<td><a href="#rank-types">Rank</a></td>
+<td>The mission rank required to obtain the reward</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>Integer</td>
+<td>The number of items granted if the condition is met</td>
+</tr>
+<tr>
+<td>chance</td>
+<td>Integer</td>
+<td>The percent chance the reward will be granted if the condition is met (whole number between 1 and 100)</td>
 </tr>
 </tbody></table>
 <h1 id='searching-the-api'>Searching the API</h1>
