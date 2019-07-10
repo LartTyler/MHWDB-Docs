@@ -200,7 +200,7 @@ Field | Type | Description
 ----- | ---- | -----------
 id | Integer | The ID of the armor set
 name | String | The name of the armor set
-rank | [ArmorRank](#armor-ranks) | The rank of the armor set
+rank | [Rank](#rank-types) | The rank of the armor set
 pieces | Array&lt;[Armor](#armor-fields)&gt; | An array of armor pieces that are part of the set
 bonus | [ArmorSetBonus](#armorset-bonus) | Either an object describing armor set bonus information, or `null`
 
