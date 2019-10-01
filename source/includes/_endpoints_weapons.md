@@ -340,6 +340,111 @@ Name | Type | Description
 affinity | Integer | The affinity of the weapon
 defense | Integer | Some weapons (namely "gunlance" types) augment player defense; such weapons indicate that with this field
 
+
+### Boost Types
+An insect glaive's boost type may be one of the following values.
+
+- sever
+- speed
+- element
+- health
+- stamina
+- blunt
+
+
+### Bowgun Deviation
+A bowgun's deviation may be one of the following values.
+
+- none
+- low
+- average
+- high
+
+### Damage Types
+A weapon's damage type will be one of the following values:
+
+- blunt
+- piercing
+- slashing
+
+### Elderseal Types
+A weapon's elderseal type may be one of the following values:
+
+- low
+- average
+- high
+
+### Shelling Types
+A gunlance's shelling type may be one of the following values, followed by a level indicator in the form "Lv#" (e.g. "Normal Lv2").
+
+- Normal
+- Long
+- Wide
+
+### Special Ammo Types
+A light or heavy bowgun's special ammo type may be one of the following values.
+
+- wyvernblast
+- wyvernheart
+- wyvernsnipe
+
+### Bow Coatings
+```json
+{
+  "coatings": [
+    "close range",
+    "power"
+  ]
+}
+```
+
+Bows use their `coatings` field to indicate which bow coatings can be used with the weapon. The `coatings` field is an
+array of strings, where each item is a coating type allowed by the weapon.
+
+Coating types are listed below.
+
+- close range
+- paralysis
+- poison
+- sleep
+- blast
+- power
+
+### Phial Type
+```json
+{
+  "phial": {
+    "type": "impact",
+    "damage": null
+  }
+}
+```
+
+> A sample `PhialType` object.
+
+Charge Blades and Switch Axes use their `phial` field to provide information on what phial the weapon supports.
+
+Field | Type | Description
+----- | ---- | -----------
+type | `PhialType` | The phial's type (see below)
+damage | Integer | If non-null, indicates the damage of the phial element
+
+The value of the `type` field is split into two categories: standard and damaging.
+
+"Standard" types will always have a `null` value for `damage`. Such types are listed below.
+
+- impact
+- element
+- power
+- power element
+
+"Damaging" types will always have a numeric value for `damage`, and are listed below.
+
+- dragon
+- exhaust
+- para
+- poison
+
 ### Ammo Capacities
 ```json
 {
@@ -406,86 +511,3 @@ poison | 2 | | wyvern | 1
 paralysis | 2 | | demon | 1
 sleep | 2 | | armor | 1
 exhaust | 2 | | tranq | 1
-
-### Boost Types
-An insect glaive's boost type may be one of the following values.
-
-- sever
-- speed
-- element
-- health
-- stamina
-- blunt
-
-### Bow Coatings
-```json
-{
-  "coatings": [
-    "close range",
-    "power"
-  ]
-}
-```
-
-Bows use their `coatings` field to indicate which bow coatings can be used with the weapon. The `coatings` field is an
-array of strings, where each item is a coating type allowed by the weapon.
-
-Coating types are listed below.
-
-- close range
-- paralysis
-- poison
-- sleep
-- blast
-- power
-
-### Bowgun Deviation
-A bowgun's deviation may be one of the following values.
-
-- none
-- low
-- average
-- high
-
-### Damage Types
-A weapon's damage type will be one of the following values:
-
-- blunt
-- piercing
-- slashing
-
-### Elderseal Types
-A weapon's elderseal type may be one of the following values:
-
-- low
-- average
-- high
-
-### Phial Types
-A phial type is represented in one of two forms. The first of which is a simple form, which may be one of the following values.
-
-- impact
-- element
-- power
-- power element
-
-The second is a dynamic form, for phial types that also include a strength. Such phial types may be one of the following values, followed by a number that indicates their strength (e.g. "dragon 300").
-
-- dragon
-- exhaust
-- para
-- poison
-
-### Shelling Types
-A gunlance's shelling type may be one of the following values, followed by a level indicator in the form "Lv#" (e.g. "Normal Lv2").
-
-- Normal
-- Long
-- Wide
-
-### Special Ammo Types
-A light or heavy bowgun's special ammo type may be one of the following values.
-
-- wyvernblast
-- wyvernheart
-- wyvernsnipe
