@@ -374,13 +374,6 @@ A weapon's elderseal type may be one of the following values:
 - average
 - high
 
-### Shelling Types
-A gunlance's shelling type may be one of the following values, followed by a level indicator in the form "Lv#" (e.g. "Normal Lv2").
-
-- Normal
-- Long
-- Wide
-
 ### Special Ammo Types
 A light or heavy bowgun's special ammo type may be one of the following values.
 
@@ -444,6 +437,30 @@ The value of the `type` field is split into two categories: standard and damagin
 - exhaust
 - para
 - poison
+
+### Shelling Type
+```json
+{
+  "shelling": {
+    "type": "normal",
+    "level": 1
+  }
+}
+```
+
+> A sample `shelling` field.
+
+Gunlances use their `shelling` field to provide information on what shelling type the weapon supports.
+
+Field | Type | Description
+type | `ShellingType` | The weapon's shelling type (see below)
+level | Integer | The weapon's shelling level
+
+Possible values for the `type` field are listed below.
+
+- long
+- normal
+- wide
 
 ### Ammo Capacities
 ```json
