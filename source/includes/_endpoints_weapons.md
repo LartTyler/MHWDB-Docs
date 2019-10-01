@@ -362,13 +362,6 @@ A weapon's elderseal type may be one of the following values:
 - average
 - high
 
-### Special Ammo Types
-A light or heavy bowgun's special ammo type may be one of the following values.
-
-- wyvernblast
-- wyvernheart
-- wyvernsnipe
-
 ### Bow Coatings
 ```json
 {
@@ -537,3 +530,19 @@ poison | 2 | | wyvern | 1
 paralysis | 2 | | demon | 1
 sleep | 2 | | armor | 1
 exhaust | 2 | | tranq | 1
+
+### Special Ammo
+```json
+{
+  "specialAmmo": "wyvernheart"
+}
+```
+
+> A sample `specialAmmo` field.
+
+Light and heavy bowguns use their `specialAmmo` field to indicate which special ammo the weapon supports. The
+`specialAmmo` field is a simple string, and will be one of the following values.
+
+- wyvernblast
+- wyvernheart
+- wyvernsnipe
