@@ -16,6 +16,7 @@ A rank type may be one of the following values.
 
 - `low`
 - `high`
+- `master`
 
 ## Element Types
 An element type may be one of the following values.
