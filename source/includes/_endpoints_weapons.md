@@ -391,6 +391,8 @@ A light or heavy bowgun's special ammo type may be one of the following values.
 }
 ```
 
+> A sample `coatings` field.
+
 Bows use their `coatings` field to indicate which bow coatings can be used with the weapon. The `coatings` field is an
 array of strings, where each item is a coating type allowed by the weapon.
 
@@ -413,7 +415,7 @@ Coating types are listed below.
 }
 ```
 
-> A sample `PhialType` object.
+> A sample `phial` field.
 
 Charge Blades and Switch Axes use their `phial` field to provide information on what phial the weapon supports.
 
@@ -499,7 +501,7 @@ Possible values for the `type` field are listed below.
 }
 ```
 
-> An example value for the `ammo` field.
+> A sample `ammo` field.
 
 Light and heavy bowguns use their `ammo` field to specify ammo capacities for their various ammo types. The `ammo` field
 is an array of `AmmoCapacity` objects.
