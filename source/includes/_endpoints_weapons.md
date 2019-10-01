@@ -340,18 +340,6 @@ Name | Type | Description
 affinity | Integer | The affinity of the weapon
 defense | Integer | Some weapons (namely "gunlance" types) augment player defense; such weapons indicate that with this field
 
-
-### Boost Types
-An insect glaive's boost type may be one of the following values.
-
-- sever
-- speed
-- element
-- health
-- stamina
-- blunt
-
-
 ### Bowgun Deviation
 A bowgun's deviation may be one of the following values.
 
@@ -463,6 +451,17 @@ Possible values for the `type` field are listed below.
 - long
 - normal
 - wide
+
+### Boost Type
+Insect glaives use their `boostType` field to indicate which boost the weapon supports. The `boostType` field is a
+simple string, and will be one of the following values.
+
+- sever
+- speed
+- element
+- health
+- stamina
+- blunt
 
 ### Ammo Capacities
 ```json
