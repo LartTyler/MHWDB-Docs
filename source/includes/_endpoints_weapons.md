@@ -223,9 +223,23 @@ slots | Array&lt;[Slot](#slot-objects)&gt; | An array containing slot informatio
 elements | Array&lt;[WeaponElement](#weapon-elements)&gt; | An array containing element damage info for the weapon
 crafting | [WeaponCraftingInfo](#weapon-crafting-info) | Contains crafting information for the weapon
 assets | [WeaponAssets](#weapon-assets) | Contains information about weapon UI assets (such as preview images)
-sharpness | [WeaponSharpness (d)](#weapon-sharpness-deprecated) | ([_deprecated_](#deprecation-schedule)) Contains sharpness information
 durability | Array&lt;[WeaponSharpness](#weapon-sharpness)&gt; | An array of sharpness information, ordered by handicraft level; base sharpness can always be found at index 0
+elderseal | [EldersealType](#elderseal-types) | The elderseal type attributed to the weapon
+damageType | [DamageType](#damage-types)
 attributes | [WeaponAttributes](#weapon-attributes) | See [WeaponAttributes](#weapon-attributes) for more information
+
+Additionally, some weapon types include extra fields that aren't present on all weapons. Such fields are documented
+below.
+
+Weapon Type | Field | Type
+----------- | ----- | ----
+Bow | coatings | [BowCoatings](#bow-coatings)
+Charge Blade and Switch Axe | phial | [PhialType](#phial-type)
+Gunlance | shelling | [ShellingType](#shelling-type)
+Insect Glaive | boostType | [BoostType](#boost-type)
+Light Bowgun and Heavy Bowgun | ammo | [AmmoCapacities](#ammo-capacities)
+ | specialAmmo | [SpecialAmmo](#special-ammo)
+ | deviation | [Deviation](#deviation)
 
 ### Weapon Types
 A weapon's type can be one of the following values:
@@ -316,33 +330,6 @@ Since, for a 100px wide bar, those percentages map 1:1, the resulting bar would 
   <div class="clearfix"></div>
 </div>
 
-### Weapon Sharpness (_deprecated_)
-Since MHW does not disclose actual sharpness values, sharpness is represented as a whole number out of 100, with 100 being the maximum possible sharpness a weapon can have. The total sharpness value is split across several different colors, indicating what percentage of the weapon's max sharpness belongs to each color.
-
-It's easiest to visualize sharpness as a single bar, 100 pixels wide. For example, the long sword "<a href="https://mhw-db.com/weapons/156" target="_blank">Dark Scimitar 3</a>" has 27 red, 8 orange, 15 yellow, 20 green, 10 blue, and 7 white. A bar representing that might look like the bar below.
-
-<div class="sharpness-bar">
-  <div class="red" style="width: 27px"></div>
-  <div class="orange" style="width: 8px;"></div>
-  <div class="yellow" style="width: 15px;"></div>
-  <div class="green" style="width: 20px;"></div>
-  <div class="blue" style="width: 10px;"></div>
-  <div class="white" style="width: 7px;"></div>
-
-  <div class="clearfix"></div>
-</div>
-
-All fields in the sharpness can be found in table below.
-
-Field | Type | Description
------ | ---- | -----------
-red | Integer | The red sharpness value
-orange | Integer | The orange sharpness value
-yellow | Integer | The yellow sharpness value
-green | Integer | The green sharpness value
-blue | Integer | The blue sharpness value
-white | Integer | The white sharpness value
-
 ### Weapon Attributes
 The weapon attributes object is a dictionary of attribute modifiers attached to a weapon. Most of these fields are planned to be slowly phased out over several releases, and instead provided by specialized fields (such as `sharpness`).
 
@@ -350,23 +337,65 @@ Possible attribute keys are listed below.
 
 Name | Type | Description
 ---- | ---- | -----------
-ammoCapacities | [AmmoCapacities](#ammo-capacities) | For "light-bowgun" and "heavy-bowgun" weapons only
 affinity | Integer | The affinity of the weapon
-boostType | [BoostType](#boost-types) | For "insect-glaive" weapons only
-coatings | Array&lt;[Coating](#bow-coatings)&gt; | For "bow" weapons only
-damageType | [DamageType](#damage-types) | The type of damage the weapon deals
 defense | Integer | Some weapons (namely "gunlance" types) augment player defense; such weapons indicate that with this field
-deviation | [Deviation](#bowgun-deviation) | For "light-bowgun" and "heavy-bowgun" weapons only
-elderseal | [Elderseal](#elderseal-types) | The elderseal type attributed to the weapon
-phialType | [PhialType](#phial-types) | For "switch-axe" and "charge-blade" weapons only
-shellingType | [ShellingType](#shelling-types) | For "gunlance" weapons only
-specialAmmo | [SpecialAmmoType](#special-ammo-types) | For "light-bowgun" and "heavy-bowgun" weapons only
 
 ### Ammo Capacities
-Light and heavy bowguns use the `attributes.ammoCapacities` field to specify ammo capacities for their various ammo types. In the `ammoCapacities` object, the key is the name of the ammo type, and the value is an array of capacities for each level of the ammo type.
+```json
+{
+  "ammo": [
+    {
+      "type": "normal",
+      "capacities": [
+        6,
+        4,
+        3
+      ]
+    },
+    {
+      "type": "piercing",
+      "capacities": [
+        5,
+        3,
+        2
+      ]
+    },
+    {
+      "type": "poison",
+      "capacities": [
+        5,
+        1
+      ]
+    },
+    {
+      "type": "slicing",
+      "capacities": [
+        1
+      ]
+    },
+  ]
+}
+```
 
-Ammo Name | Levels |   | Ammo Name | Levels
---------- | :----: | - | --------- | :----:
+> An example value for the `ammo` field.
+
+Light and heavy bowguns use their `ammo` field to specify ammo capacities for their various ammo types. The `ammo` field
+is an array of `AmmoCapacity` objects.
+
+Field | Type | Description
+----- | ---- | -----------
+type | `AmmoType` | The ammo type described by the capacity object (see table below)
+capacities | Array&lt;Integer&gt; | An array of capacities, ordered by level (where index zero is level one)
+
+The table below lists all possible values for the `type` field, alongside the maximum level for the given type. The
+level indicates the number of elements present in the `capacities` field. The first element in the `capacities` array
+indicates the capacity for that type at ammo type level 1, the second element indicates capacity for ammo type level 2,
+and so on.
+
+If a bowgun cannot use a certain ammo type, it will not be included in the `ammo` array.
+
+Type | Levels |   | Type | Levels
+---- | :----: | - | ---- | :----:
 normal | 3 | | flaming | 1
 piercing | 3 | | water | 1
 spread | 3 | | freeze | 1
@@ -389,7 +418,19 @@ An insect glaive's boost type may be one of the following values.
 - blunt
 
 ### Bow Coatings
-A bow's coating may be one of the following values.
+```json
+{
+  "coatings": [
+    "close range",
+    "power"
+  ]
+}
+```
+
+Bows use their `coatings` field to indicate which bow coatings can be used with the weapon. The `coatings` field is an
+array of strings, where each item is a coating type allowed by the weapon.
+
+Coating types are listed below.
 
 - close range
 - paralysis
