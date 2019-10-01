@@ -465,15 +465,15 @@ simple string, and will be one of the following values.
       "capacities": [
         6,
         4,
-        3
+        0
       ]
     },
     {
       "type": "piercing",
       "capacities": [
         5,
-        3,
-        2
+        0,
+        0
       ]
     },
     {
