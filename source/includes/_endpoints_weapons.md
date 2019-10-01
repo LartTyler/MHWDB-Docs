@@ -453,6 +453,14 @@ Possible values for the `type` field are listed below.
 - wide
 
 ### Boost Type
+```json
+{
+  "boostType": "sever"
+}
+```
+
+> A sample `boostType` field.
+
 Insect glaives use their `boostType` field to indicate which boost the weapon supports. The `boostType` field is a
 simple string, and will be one of the following values.
 
