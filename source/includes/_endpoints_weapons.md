@@ -340,14 +340,6 @@ Name | Type | Description
 affinity | Integer | The affinity of the weapon
 defense | Integer | Some weapons (namely "gunlance" types) augment player defense; such weapons indicate that with this field
 
-### Bowgun Deviation
-A bowgun's deviation may be one of the following values.
-
-- none
-- low
-- average
-- high
-
 ### Damage Types
 A weapon's damage type will be one of the following values:
 
@@ -546,3 +538,20 @@ Light and heavy bowguns use their `specialAmmo` field to indicate which special 
 - wyvernblast
 - wyvernheart
 - wyvernsnipe
+
+### Deviation
+```json
+{
+  "deviation": "low"
+}
+```
+
+> A sample `deviation` field.
+
+Light and heavy bowguns use their `deviation` field to indicate the projectile deviation used by the weapon. The
+`deviation` field is a simple string, and will be one of the following values.
+
+- none
+- low
+- average
+- high
