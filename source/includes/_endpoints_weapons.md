@@ -18,37 +18,18 @@ fetch('https://mhw-db.com/weapons')
 [
   {
     "id": 1,
-    "slug": "buster-sword-1",
     "name": "Buster Sword 1",
     "type": "great-sword",
     "rarity": 1,
-    "attack": {
-      "display": 384,
-      "raw": 80
-    },
+    "attack": {...},
+    "elderseal": null,
+    "attributes": {...},
+    "damageType": "sever",
+    "durability": [...],
     "slots": [...],
     "elements": [...],
-    "attributes": {},
-    "crafting": {
-      "craftable": true,
-      "previous": null,
-      "branches": [...],
-      "craftingMaterials": [...],
-      "upgradeMaterials": [...]
-    },
-    "assets": {
-      "icon": "https://assets.mhw-db.com/weapons/great-sword/icons/...",
-      "image": "https://assets.mhw-db.com/weapons/great-sword/..."
-    },
-    "sharpness": {
-      "red": 25,
-      "orange": 12,
-      "yellow": 13,
-      "green": 0,
-      "blue": 0,
-      "white": 0
-    },
-	  "durability": [...]
+    "crafting": {...},
+    "assets": {...}
   }
 ]
 ```
@@ -85,37 +66,18 @@ fetch('https://mhw-db.com/weapons/1')
 ```json
 {
   "id": 1,
-  "slug": "buster-sword-1",
   "name": "Buster Sword 1",
   "type": "great-sword",
   "rarity": 1,
-  "attack": {
-    "display": 384,
-    "raw": 80
-  },
+  "attack": {...},
+  "elderseal": null,
+  "attributes": {...},
+  "damageType": "sever",
+  "durability": [...],
   "slots": [...],
   "elements": [...],
-  "attributes": {},
-  "crafting": {
-    "craftable": true,
-    "previous": null,
-    "branches": [...],
-    "craftingMaterials": [...],
-    "upgradeMaterials": [...]
-  },
-  "assets": {
-    "icon": "https://assets.mhw-db.com/weapons/great-sword/icons/...",
-    "image": "https://assets.mhw-db.com/weapons/great-sword/..."
-  },
-  "sharpness": {
-    "red": 25,
-    "orange": 12,
-    "yellow": 13,
-    "green": 0,
-    "blue": 0,
-    "white": 0
-  },
-  "durability": [...]
+  "crafting": {...},
+  "assets": {...}
 }
 ```
 
@@ -141,7 +103,6 @@ This endpoint returns a single weapon. For field information, see the [Weapon Fi
 ```json
 {
   "id": 94,
-  "slug": "iron-grace-3",
   "name": "Iron Grace 3",
   "type": "long-sword",
   "rarity": 5,
@@ -149,6 +110,22 @@ This endpoint returns a single weapon. For field information, see the [Weapon Fi
     "display": 462,
     "raw": 140
   },
+  "elderseal": null,
+  "attributes": {
+    "damageType": "sever"
+  },
+  "damageType": "sever",
+  "durability": [
+    {
+      "red": 90,
+      "orange": 50,
+      "yellow": 50,
+      "green": 80,
+      "blue": 30,
+      "white": 0
+    },
+    ...
+  ],
   "slots": [
     {
       "rank": 1
@@ -161,7 +138,6 @@ This endpoint returns a single weapon. For field information, see the [Weapon Fi
       "hidden": true
     }
   ],
-  "attributes": {},
   "crafting": {
     "craftable": false,
     "previous": 93,
@@ -176,36 +152,18 @@ This endpoint returns a single weapon. For field information, see the [Weapon Fi
           "id": 119,
           "name": "Carbalite Ore",
           "description": "Ore obtained from mining outcrops. Still ...",
-          "rarity": 0,
-          "carryLimit": 0,
-          "sellPrice": 0,
-          "buyPrice": 0
-        }
+          "rarity": 6,
+          "carryLimit": 99,
+          "value": 680
+        },
+        ...
       }
     ]
   },
   "assets": {
     "icon": "https://assets.mhw-db.com/weapons/long-sword/icons/...",
     "image": "https://assets.mhw-db.com/weapons/long-sword/..."
-  },
-  "sharpness": {
-    "red": 22,
-    "orange": 13,
-    "yellow": 12,
-    "green": 20,
-    "blue": 8,
-    "white": 0
-  },
-  "durability": [
-    {
-      "red": 90,
-      "orange": 50,
-      "yellow": 50,
-      "green": 80,
-      "blue": 30,
-      "white": 0
-    }
-  ]
+  }
 }
 ```
 
@@ -225,7 +183,7 @@ crafting | [WeaponCraftingInfo](#weapon-crafting-info) | Contains crafting infor
 assets | [WeaponAssets](#weapon-assets) | Contains information about weapon UI assets (such as preview images)
 durability | Array&lt;[WeaponSharpness](#weapon-sharpness)&gt; | An array of sharpness information, ordered by handicraft level; base sharpness can always be found at index 0
 elderseal | [EldersealType](#elderseal-types) | The elderseal type attributed to the weapon
-damageType | [DamageType](#damage-types)
+damageType | [DamageType](#damage-types) | The primary damage type dealt by the weapon
 attributes | [WeaponAttributes](#weapon-attributes) | See [WeaponAttributes](#weapon-attributes) for more information
 
 Additionally, some weapon types include extra fields that aren't present on all weapons. Such fields are documented
