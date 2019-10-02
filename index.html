@@ -3319,37 +3319,18 @@ to a value (usually an integer). All possible modifier fields can be found in th
 <pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"buster-sword-1"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Buster Sword 1"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"great-sword"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"attack"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"display"</span><span class="p">:</span><span class="w"> </span><span class="mi">384</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"raw"</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="w">
-    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"attack"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">},</span><span class="w">
+    </span><span class="s2">"elderseal"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">},</span><span class="w">
+    </span><span class="s2">"damageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sever"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"durability"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
     </span><span class="s2">"slots"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
     </span><span class="s2">"elements"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
-    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
-    </span><span class="s2">"crafting"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"craftable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"previous"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"branches"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
-      </span><span class="s2">"craftingMaterials"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
-      </span><span class="s2">"upgradeMaterials"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://assets.mhw-db.com/weapons/great-sword/icons/..."</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://assets.mhw-db.com/weapons/great-sword/..."</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"sharpness"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"red"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"orange"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"yellow"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"green"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"blue"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"white"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-      </span><span class="s2">"durability"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w">
+    </span><span class="s2">"crafting"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">},</span><span class="w">
+    </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
@@ -3389,37 +3370,18 @@ to a value (usually an integer). All possible modifier fields can be found in th
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"buster-sword-1"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Buster Sword 1"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"great-sword"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"attack"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"display"</span><span class="p">:</span><span class="w"> </span><span class="mi">384</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"raw"</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="w">
-  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"attack"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">},</span><span class="w">
+  </span><span class="s2">"elderseal"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">},</span><span class="w">
+  </span><span class="s2">"damageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sever"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"durability"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
   </span><span class="s2">"slots"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
   </span><span class="s2">"elements"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
-  </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
-  </span><span class="s2">"crafting"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"craftable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"previous"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"branches"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
-    </span><span class="s2">"craftingMaterials"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
-    </span><span class="s2">"upgradeMaterials"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://assets.mhw-db.com/weapons/great-sword/icons/..."</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://assets.mhw-db.com/weapons/great-sword/..."</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"sharpness"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"red"</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"orange"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"yellow"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"green"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"blue"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"white"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"durability"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span><span class="w">
+  </span><span class="s2">"crafting"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">},</span><span class="w">
+  </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <p>This endpoint retrieves a weapon by it&#39;s ID or slug.</p>
@@ -3457,7 +3419,6 @@ to a value (usually an integer). All possible modifier fields can be found in th
 <p>This endpoint returns a single weapon. For field information, see the <a href="#weapon-fields">Weapon Fields</a> section.</p>
 <h2 id='weapon-fields'>Weapon Fields</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">94</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iron-grace-3"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Iron Grace 3"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"long-sword"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
@@ -3465,6 +3426,22 @@ to a value (usually an integer). All possible modifier fields can be found in th
     </span><span class="s2">"display"</span><span class="p">:</span><span class="w"> </span><span class="mi">462</span><span class="p">,</span><span class="w">
     </span><span class="s2">"raw"</span><span class="p">:</span><span class="w"> </span><span class="mi">140</span><span class="w">
   </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"elderseal"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"damageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sever"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"damageType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sever"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"durability"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"red"</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"orange"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"yellow"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"green"</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"blue"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"white"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+  </span><span class="p">],</span><span class="w">
   </span><span class="s2">"slots"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
       </span><span class="s2">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
@@ -3477,7 +3454,6 @@ to a value (usually an integer). All possible modifier fields can be found in th
       </span><span class="s2">"hidden"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
-  </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
   </span><span class="s2">"crafting"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"craftable"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
     </span><span class="s2">"previous"</span><span class="p">:</span><span class="w"> </span><span class="mi">93</span><span class="p">,</span><span class="w">
@@ -3492,36 +3468,18 @@ to a value (usually an integer). All possible modifier fields can be found in th
           </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">119</span><span class="p">,</span><span class="w">
           </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Carbalite Ore"</span><span class="p">,</span><span class="w">
           </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ore obtained from mining outcrops. Still ..."</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"carryLimit"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"sellPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"buyPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-        </span><span class="p">}</span><span class="w">
+          </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"carryLimit"</span><span class="p">:</span><span class="w"> </span><span class="mi">99</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">680</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="err">...</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="s2">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="s2">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://assets.mhw-db.com/weapons/long-sword/icons/..."</span><span class="p">,</span><span class="w">
     </span><span class="s2">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://assets.mhw-db.com/weapons/long-sword/..."</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"sharpness"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"red"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"orange"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"yellow"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"green"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"blue"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"white"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"durability"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"red"</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"orange"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"yellow"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"green"</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"blue"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"white"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
@@ -3586,19 +3544,71 @@ to a value (usually an integer). All possible modifier fields can be found in th
 <td>Contains information about weapon UI assets (such as preview images)</td>
 </tr>
 <tr>
-<td>sharpness</td>
-<td><a href="#weapon-sharpness-deprecated">WeaponSharpness (d)</a></td>
-<td>(<a href="#deprecation-schedule"><em>deprecated</em></a>) Contains sharpness information</td>
-</tr>
-<tr>
 <td>durability</td>
 <td>Array&lt;<a href="#weapon-sharpness">WeaponSharpness</a>&gt;</td>
 <td>An array of sharpness information, ordered by handicraft level; base sharpness can always be found at index 0</td>
 </tr>
 <tr>
+<td>elderseal</td>
+<td><a href="#elderseal-types">EldersealType</a></td>
+<td>The elderseal type attributed to the weapon</td>
+</tr>
+<tr>
+<td>damageType</td>
+<td><a href="#damage-types">DamageType</a></td>
+<td>The primary damage type dealt by the weapon</td>
+</tr>
+<tr>
 <td>attributes</td>
 <td><a href="#weapon-attributes">WeaponAttributes</a></td>
 <td>See <a href="#weapon-attributes">WeaponAttributes</a> for more information</td>
+</tr>
+</tbody></table>
+
+<p>Additionally, some weapon types include extra fields that aren&#39;t present on all weapons. Such fields are documented
+below.</p>
+
+<table><thead>
+<tr>
+<th>Weapon Type</th>
+<th>Field</th>
+<th>Type</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Bow</td>
+<td>coatings</td>
+<td><a href="#bow-coatings">BowCoatings</a></td>
+</tr>
+<tr>
+<td>Charge Blade and Switch Axe</td>
+<td>phial</td>
+<td><a href="#phial-type">PhialType</a></td>
+</tr>
+<tr>
+<td>Gunlance</td>
+<td>shelling</td>
+<td><a href="#shelling-type">ShellingType</a></td>
+</tr>
+<tr>
+<td>Insect Glaive</td>
+<td>boostType</td>
+<td><a href="#boost-type">BoostType</a></td>
+</tr>
+<tr>
+<td>Light Bowgun and Heavy Bowgun</td>
+<td>ammo</td>
+<td><a href="#ammo-capacities">AmmoCapacities</a></td>
+</tr>
+<tr>
+<td></td>
+<td>specialAmmo</td>
+<td><a href="#special-ammo">SpecialAmmo</a></td>
+</tr>
+<tr>
+<td></td>
+<td>deviation</td>
+<td><a href="#deviation">Deviation</a></td>
 </tr>
 </tbody></table>
 <h3 id='weapon-types'>Weapon Types</h3>
@@ -3812,62 +3822,6 @@ Red: &lfloor;30 / 400 * 100&rfloor; = 7
 
   <div class="clearfix"></div>
 </div>
-<h3 id='weapon-sharpness-deprecated'>Weapon Sharpness (<em>deprecated</em>)</h3>
-<p>Since MHW does not disclose actual sharpness values, sharpness is represented as a whole number out of 100, with 100 being the maximum possible sharpness a weapon can have. The total sharpness value is split across several different colors, indicating what percentage of the weapon&#39;s max sharpness belongs to each color.</p>
-
-<p>It&#39;s easiest to visualize sharpness as a single bar, 100 pixels wide. For example, the long sword &quot;<a href="https://mhw-db.com/weapons/156" target="_blank">Dark Scimitar 3</a>&quot; has 27 red, 8 orange, 15 yellow, 20 green, 10 blue, and 7 white. A bar representing that might look like the bar below.</p>
-
-<div class="sharpness-bar">
-  <div class="red" style="width: 27px"></div>
-  <div class="orange" style="width: 8px;"></div>
-  <div class="yellow" style="width: 15px;"></div>
-  <div class="green" style="width: 20px;"></div>
-  <div class="blue" style="width: 10px;"></div>
-  <div class="white" style="width: 7px;"></div>
-
-  <div class="clearfix"></div>
-</div>
-
-<p>All fields in the sharpness can be found in table below.</p>
-
-<table><thead>
-<tr>
-<th>Field</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>red</td>
-<td>Integer</td>
-<td>The red sharpness value</td>
-</tr>
-<tr>
-<td>orange</td>
-<td>Integer</td>
-<td>The orange sharpness value</td>
-</tr>
-<tr>
-<td>yellow</td>
-<td>Integer</td>
-<td>The yellow sharpness value</td>
-</tr>
-<tr>
-<td>green</td>
-<td>Integer</td>
-<td>The green sharpness value</td>
-</tr>
-<tr>
-<td>blue</td>
-<td>Integer</td>
-<td>The blue sharpness value</td>
-</tr>
-<tr>
-<td>white</td>
-<td>Integer</td>
-<td>The white sharpness value</td>
-</tr>
-</tbody></table>
 <h3 id='weapon-attributes'>Weapon Attributes</h3>
 <p>The weapon attributes object is a dictionary of attribute modifiers attached to a weapon. Most of these fields are planned to be slowly phased out over several releases, and instead provided by specialized fields (such as <code>sharpness</code>).</p>
 
@@ -3881,70 +3835,223 @@ Red: &lfloor;30 / 400 * 100&rfloor; = 7
 </tr>
 </thead><tbody>
 <tr>
-<td>ammoCapacities</td>
-<td><a href="#ammo-capacities">AmmoCapacities</a></td>
-<td>For &quot;light-bowgun&quot; and &quot;heavy-bowgun&quot; weapons only</td>
-</tr>
-<tr>
 <td>affinity</td>
 <td>Integer</td>
 <td>The affinity of the weapon</td>
-</tr>
-<tr>
-<td>boostType</td>
-<td><a href="#boost-types">BoostType</a></td>
-<td>For &quot;insect-glaive&quot; weapons only</td>
-</tr>
-<tr>
-<td>coatings</td>
-<td>Array&lt;<a href="#bow-coatings">Coating</a>&gt;</td>
-<td>For &quot;bow&quot; weapons only</td>
-</tr>
-<tr>
-<td>damageType</td>
-<td><a href="#damage-types">DamageType</a></td>
-<td>The type of damage the weapon deals</td>
 </tr>
 <tr>
 <td>defense</td>
 <td>Integer</td>
 <td>Some weapons (namely &quot;gunlance&quot; types) augment player defense; such weapons indicate that with this field</td>
 </tr>
-<tr>
-<td>deviation</td>
-<td><a href="#bowgun-deviation">Deviation</a></td>
-<td>For &quot;light-bowgun&quot; and &quot;heavy-bowgun&quot; weapons only</td>
-</tr>
-<tr>
-<td>elderseal</td>
-<td><a href="#elderseal-types">Elderseal</a></td>
-<td>The elderseal type attributed to the weapon</td>
-</tr>
-<tr>
-<td>phialType</td>
-<td><a href="#phial-types">PhialType</a></td>
-<td>For &quot;switch-axe&quot; and &quot;charge-blade&quot; weapons only</td>
-</tr>
-<tr>
-<td>shellingType</td>
-<td><a href="#shelling-types">ShellingType</a></td>
-<td>For &quot;gunlance&quot; weapons only</td>
-</tr>
-<tr>
-<td>specialAmmo</td>
-<td><a href="#special-ammo-types">SpecialAmmoType</a></td>
-<td>For &quot;light-bowgun&quot; and &quot;heavy-bowgun&quot; weapons only</td>
-</tr>
 </tbody></table>
-<h3 id='ammo-capacities'>Ammo Capacities</h3>
-<p>Light and heavy bowguns use the <code>attributes.ammoCapacities</code> field to specify ammo capacities for their various ammo types. In the <code>ammoCapacities</code> object, the key is the name of the ammo type, and the value is an array of capacities for each level of the ammo type.</p>
+<h3 id='damage-types'>Damage Types</h3>
+<p>A weapon&#39;s damage type will be one of the following values:</p>
+
+<ul>
+<li>blunt</li>
+<li>piercing</li>
+<li>slashing</li>
+</ul>
+<h3 id='elderseal-types'>Elderseal Types</h3>
+<p>A weapon&#39;s elderseal type may be one of the following values:</p>
+
+<ul>
+<li>low</li>
+<li>average</li>
+<li>high</li>
+</ul>
+<h3 id='bow-coatings'>Bow Coatings</h3><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"coatings"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="s2">"close range"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"power"</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>A sample <code>coatings</code> field.</p>
+</blockquote>
+
+<p>Bows use their <code>coatings</code> field to indicate which bow coatings can be used with the weapon. The <code>coatings</code> field is an
+array of strings, where each item is a coating type allowed by the weapon.</p>
+
+<p>Coating types are listed below.</p>
+
+<ul>
+<li>close range</li>
+<li>paralysis</li>
+<li>poison</li>
+<li>sleep</li>
+<li>blast</li>
+<li>power</li>
+</ul>
+<h3 id='phial-type'>Phial Type</h3><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"phial"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"impact"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"damage"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>A sample <code>phial</code> field.</p>
+</blockquote>
+
+<p>Charge Blades and Switch Axes use their <code>phial</code> field to provide information on what phial the weapon supports.</p>
 
 <table><thead>
 <tr>
-<th>Ammo Name</th>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>type</td>
+<td><code>PhialType</code></td>
+<td>The phial&#39;s type (see below)</td>
+</tr>
+<tr>
+<td>damage</td>
+<td>Integer</td>
+<td>If non-null, indicates the damage of the phial element</td>
+</tr>
+</tbody></table>
+
+<p>The value of the <code>type</code> field is split into two categories: standard and damaging.</p>
+
+<p>&quot;Standard&quot; types will always have a <code>null</code> value for <code>damage</code>. Such types are listed below.</p>
+
+<ul>
+<li>impact</li>
+<li>element</li>
+<li>power</li>
+<li>power element</li>
+</ul>
+
+<p>&quot;Damaging&quot; types will always have a numeric value for <code>damage</code>, and are listed below.</p>
+
+<ul>
+<li>dragon</li>
+<li>exhaust</li>
+<li>para</li>
+<li>poison</li>
+</ul>
+<h3 id='shelling-type'>Shelling Type</h3><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"shelling"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"normal"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"level"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>A sample <code>shelling</code> field.</p>
+</blockquote>
+
+<p>Gunlances use their <code>shelling</code> field to provide information on what shelling type the weapon supports.</p>
+
+<p>Field | Type | Description
+type | <code>ShellingType</code> | The weapon&#39;s shelling type (see below)
+level | Integer | The weapon&#39;s shelling level</p>
+
+<p>Possible values for the <code>type</code> field are listed below.</p>
+
+<ul>
+<li>long</li>
+<li>normal</li>
+<li>wide</li>
+</ul>
+<h3 id='boost-type'>Boost Type</h3><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"boostType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sever"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>A sample <code>boostType</code> field.</p>
+</blockquote>
+
+<p>Insect glaives use their <code>boostType</code> field to indicate which boost the weapon supports. The <code>boostType</code> field is a
+simple string, and will be one of the following values.</p>
+
+<ul>
+<li>sever</li>
+<li>speed</li>
+<li>element</li>
+<li>health</li>
+<li>stamina</li>
+<li>blunt</li>
+</ul>
+<h3 id='ammo-capacities'>Ammo Capacities</h3><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"ammo"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"normal"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"capacities"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="mi">6</span><span class="p">,</span><span class="w">
+        </span><span class="mi">4</span><span class="p">,</span><span class="w">
+        </span><span class="mi">0</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"piercing"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"capacities"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="mi">0</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"poison"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"capacities"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="mi">1</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"slicing"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"capacities"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="mi">1</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>A sample <code>ammo</code> field.</p>
+</blockquote>
+
+<p>Light and heavy bowguns use their <code>ammo</code> field to specify ammo capacities for their various ammo types. The <code>ammo</code> field
+is an array of <code>AmmoCapacity</code> objects.</p>
+
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>type</td>
+<td><code>AmmoType</code></td>
+<td>The ammo type described by the capacity object (see table below)</td>
+</tr>
+<tr>
+<td>capacities</td>
+<td>Array&lt;Integer&gt;</td>
+<td>An array of capacities, ordered by level (where index zero is level one)</td>
+</tr>
+</tbody></table>
+
+<p>The table below lists all possible values for the <code>type</code> field, alongside the maximum level for the given type. The
+level indicates the number of elements present in the <code>capacities</code> field. The first element in the <code>capacities</code> array
+indicates the capacity for that type at ammo type level 1, the second element indicates capacity for ammo type level 2,
+and so on.</p>
+
+<p>If a bowgun cannot use a certain ammo type, it will not be included in the <code>ammo</code> array.</p>
+
+<table><thead>
+<tr>
+<th>Type</th>
 <th style="text-align: center">Levels</th>
 <th></th>
-<th>Ammo Name</th>
+<th>Type</th>
 <th style="text-align: center">Levels</th>
 </tr>
 </thead><tbody>
@@ -4019,86 +4126,38 @@ Red: &lfloor;30 / 400 * 100&rfloor; = 7
 <td style="text-align: center">1</td>
 </tr>
 </tbody></table>
-<h3 id='boost-types'>Boost Types</h3>
-<p>An insect glaive&#39;s boost type may be one of the following values.</p>
+<h3 id='special-ammo'>Special Ammo</h3><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"specialAmmo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wyvernheart"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>A sample <code>specialAmmo</code> field.</p>
+</blockquote>
+
+<p>Light and heavy bowguns use their <code>specialAmmo</code> field to indicate which special ammo the weapon supports. The
+<code>specialAmmo</code> field is a simple string, and will be one of the following values.</p>
 
 <ul>
-<li>sever</li>
-<li>speed</li>
-<li>element</li>
-<li>health</li>
-<li>stamina</li>
-<li>blunt</li>
+<li>wyvernblast</li>
+<li>wyvernheart</li>
+<li>wyvernsnipe</li>
 </ul>
-<h3 id='bow-coatings'>Bow Coatings</h3>
-<p>A bow&#39;s coating may be one of the following values.</p>
+<h3 id='deviation'>Deviation</h3><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"deviation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"low"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>A sample <code>deviation</code> field.</p>
+</blockquote>
 
-<ul>
-<li>close range</li>
-<li>paralysis</li>
-<li>poison</li>
-<li>sleep</li>
-<li>blast</li>
-<li>power</li>
-</ul>
-<h3 id='bowgun-deviation'>Bowgun Deviation</h3>
-<p>A bowgun&#39;s deviation may be one of the following values.</p>
+<p>Light and heavy bowguns use their <code>deviation</code> field to indicate the projectile deviation used by the weapon. The
+<code>deviation</code> field is a simple string, and will be one of the following values.</p>
 
 <ul>
 <li>none</li>
 <li>low</li>
 <li>average</li>
 <li>high</li>
-</ul>
-<h3 id='damage-types'>Damage Types</h3>
-<p>A weapon&#39;s damage type will be one of the following values:</p>
-
-<ul>
-<li>blunt</li>
-<li>piercing</li>
-<li>slashing</li>
-</ul>
-<h3 id='elderseal-types'>Elderseal Types</h3>
-<p>A weapon&#39;s elderseal type may be one of the following values:</p>
-
-<ul>
-<li>low</li>
-<li>average</li>
-<li>high</li>
-</ul>
-<h3 id='phial-types'>Phial Types</h3>
-<p>A phial type is represented in one of two forms. The first of which is a simple form, which may be one of the following values.</p>
-
-<ul>
-<li>impact</li>
-<li>element</li>
-<li>power</li>
-<li>power element</li>
-</ul>
-
-<p>The second is a dynamic form, for phial types that also include a strength. Such phial types may be one of the following values, followed by a number that indicates their strength (e.g. &quot;dragon 300&quot;).</p>
-
-<ul>
-<li>dragon</li>
-<li>exhaust</li>
-<li>para</li>
-<li>poison</li>
-</ul>
-<h3 id='shelling-types'>Shelling Types</h3>
-<p>A gunlance&#39;s shelling type may be one of the following values, followed by a level indicator in the form &quot;Lv#&quot; (e.g. &quot;Normal Lv2&quot;).</p>
-
-<ul>
-<li>Normal</li>
-<li>Long</li>
-<li>Wide</li>
-</ul>
-<h3 id='special-ammo-types'>Special Ammo Types</h3>
-<p>A light or heavy bowgun&#39;s special ammo type may be one of the following values.</p>
-
-<ul>
-<li>wyvernblast</li>
-<li>wyvernheart</li>
-<li>wyvernsnipe</li>
 </ul>
 <h1 id='data-types'>Data Types</h1><h2 id='scalar-data-types'>Scalar Data Types</h2>
 <table><thead>
@@ -4146,6 +4205,7 @@ Red: &lfloor;30 / 400 * 100&rfloor; = 7
 <ul>
 <li><code>low</code></li>
 <li><code>high</code></li>
+<li><code>master</code></li>
 </ul>
 <h2 id='element-types'>Element Types</h2>
 <p>An element type may be one of the following values.</p>
@@ -4382,22 +4442,70 @@ Red: &lfloor;30 / 400 * 100&rfloor; = 7
 <p>Below you can find a list of deprecated API features, as well as the information on when those features will be removed
 from the API. Since we follow semantic versioning for the API, only major releases will include breaking changes.</p>
 
-<p>Please note that the removal date marks when the feature MAY be removed from the API. The feature won&#39;t be removed
-until the next release after the removal date, whenever that may fall.</p>
+<p>Please note that the &quot;Planned Removal&quot; column indicates the date or API version that will fully remove the feature from
+the API. Please ensure that any code using a deprecated feature is updated as soon as possible.</p>
 
 <table><thead>
 <tr>
 <th>Feature</th>
 <th>Replaced By</th>
 <th style="text-align: center">Deprecated In</th>
-<th style="text-align: center">Removal Date</th>
+<th style="text-align: center">Planned Removal</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>No features pending removal.</td>
-<td>-</td>
-<td style="text-align: center">-</td>
-<td style="text-align: center">-</td>
+<td><code>Weapon.attributes.damageType</code> field</td>
+<td><a href="#weapon-fields"><code>Weapon.damageType</code></a></td>
+<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.16.0">1.16.0</a></td>
+<td style="text-align: center">v1.17.0</td>
+</tr>
+<tr>
+<td><code>Weapon.attributes.elderseal</code> field</td>
+<td><a href="#weapon-fields"><code>Weapon.elderseal</code></a></td>
+<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.16.0">1.16.0</a></td>
+<td style="text-align: center">v1.17.0</td>
+</tr>
+<tr>
+<td><code>Weapon.attributes.phialType</code> field</td>
+<td><a href="#phial-type"><code>Weapon.phialType</code></a></td>
+<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.16.0">1.16.0</a></td>
+<td style="text-align: center">v1.17.0</td>
+</tr>
+<tr>
+<td><code>Weapon.attributes.ammoCapacities</code> field</td>
+<td><a href="#ammo-capacities"><code>Weapon.ammo</code></a></td>
+<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.16.0">1.16.0</a></td>
+<td style="text-align: center">v1.17.0</td>
+</tr>
+<tr>
+<td><code>Weapon.attributes.coatings</code> field</td>
+<td><a href="#bow-coatings"><code>Weapon.coatings</code></a></td>
+<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.16.0">1.16.0</a></td>
+<td style="text-align: center">v1.17.0</td>
+</tr>
+<tr>
+<td><code>Weapon.attributes.specialAmmo</code> field</td>
+<td><a href="#special-ammo"><code>Weapon.specialAmmo</code></a></td>
+<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.16.0">1.16.0</a></td>
+<td style="text-align: center">v1.17.0</td>
+</tr>
+<tr>
+<td><code>Weapon.attributes.deviation</code> field</td>
+<td><a href="#deviation"><code>Weapon.deviation</code></a></td>
+<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.16.0">1.16.0</a></td>
+<td style="text-align: center">v1.17.0</td>
+</tr>
+<tr>
+<td><code>Weapon.attributes.boostType</code> field</td>
+<td><a href="#boost-type"><code>Weapon.boostType</code></a></td>
+<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.16.0">1.16.0</a></td>
+<td style="text-align: center">v1.17.0</td>
+</tr>
+<tr>
+<td><code>Weapon.attributes.shellingType</code> field</td>
+<td><a href="#shelling-type"><code>Weapon.shelling</code></a></td>
+<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.16.0">1.16.0</a></td>
+<td style="text-align: center">v1.17.0</td>
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>
