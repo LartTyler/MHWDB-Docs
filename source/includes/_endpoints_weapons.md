@@ -18,37 +18,18 @@ fetch('https://mhw-db.com/weapons')
 [
   {
     "id": 1,
-    "slug": "buster-sword-1",
     "name": "Buster Sword 1",
     "type": "great-sword",
     "rarity": 1,
-    "attack": {
-      "display": 384,
-      "raw": 80
-    },
+    "attack": {...},
+    "elderseal": null,
+    "attributes": {...},
+    "damageType": "sever",
+    "durability": [...],
     "slots": [...],
     "elements": [...],
-    "attributes": {},
-    "crafting": {
-      "craftable": true,
-      "previous": null,
-      "branches": [...],
-      "craftingMaterials": [...],
-      "upgradeMaterials": [...]
-    },
-    "assets": {
-      "icon": "https://assets.mhw-db.com/weapons/great-sword/icons/...",
-      "image": "https://assets.mhw-db.com/weapons/great-sword/..."
-    },
-    "sharpness": {
-      "red": 25,
-      "orange": 12,
-      "yellow": 13,
-      "green": 0,
-      "blue": 0,
-      "white": 0
-    },
-	  "durability": [...]
+    "crafting": {...},
+    "assets": {...}
   }
 ]
 ```
@@ -85,37 +66,18 @@ fetch('https://mhw-db.com/weapons/1')
 ```json
 {
   "id": 1,
-  "slug": "buster-sword-1",
   "name": "Buster Sword 1",
   "type": "great-sword",
   "rarity": 1,
-  "attack": {
-    "display": 384,
-    "raw": 80
-  },
+  "attack": {...},
+  "elderseal": null,
+  "attributes": {...},
+  "damageType": "sever",
+  "durability": [...],
   "slots": [...],
   "elements": [...],
-  "attributes": {},
-  "crafting": {
-    "craftable": true,
-    "previous": null,
-    "branches": [...],
-    "craftingMaterials": [...],
-    "upgradeMaterials": [...]
-  },
-  "assets": {
-    "icon": "https://assets.mhw-db.com/weapons/great-sword/icons/...",
-    "image": "https://assets.mhw-db.com/weapons/great-sword/..."
-  },
-  "sharpness": {
-    "red": 25,
-    "orange": 12,
-    "yellow": 13,
-    "green": 0,
-    "blue": 0,
-    "white": 0
-  },
-  "durability": [...]
+  "crafting": {...},
+  "assets": {...}
 }
 ```
 
@@ -141,7 +103,6 @@ This endpoint returns a single weapon. For field information, see the [Weapon Fi
 ```json
 {
   "id": 94,
-  "slug": "iron-grace-3",
   "name": "Iron Grace 3",
   "type": "long-sword",
   "rarity": 5,
@@ -149,6 +110,22 @@ This endpoint returns a single weapon. For field information, see the [Weapon Fi
     "display": 462,
     "raw": 140
   },
+  "elderseal": null,
+  "attributes": {
+    "damageType": "sever"
+  },
+  "damageType": "sever",
+  "durability": [
+    {
+      "red": 90,
+      "orange": 50,
+      "yellow": 50,
+      "green": 80,
+      "blue": 30,
+      "white": 0
+    },
+    ...
+  ],
   "slots": [
     {
       "rank": 1
@@ -161,7 +138,6 @@ This endpoint returns a single weapon. For field information, see the [Weapon Fi
       "hidden": true
     }
   ],
-  "attributes": {},
   "crafting": {
     "craftable": false,
     "previous": 93,
@@ -176,36 +152,18 @@ This endpoint returns a single weapon. For field information, see the [Weapon Fi
           "id": 119,
           "name": "Carbalite Ore",
           "description": "Ore obtained from mining outcrops. Still ...",
-          "rarity": 0,
-          "carryLimit": 0,
-          "sellPrice": 0,
-          "buyPrice": 0
-        }
+          "rarity": 6,
+          "carryLimit": 99,
+          "value": 680
+        },
+        ...
       }
     ]
   },
   "assets": {
     "icon": "https://assets.mhw-db.com/weapons/long-sword/icons/...",
     "image": "https://assets.mhw-db.com/weapons/long-sword/..."
-  },
-  "sharpness": {
-    "red": 22,
-    "orange": 13,
-    "yellow": 12,
-    "green": 20,
-    "blue": 8,
-    "white": 0
-  },
-  "durability": [
-    {
-      "red": 90,
-      "orange": 50,
-      "yellow": 50,
-      "green": 80,
-      "blue": 30,
-      "white": 0
-    }
-  ]
+  }
 }
 ```
 
@@ -223,9 +181,23 @@ slots | Array&lt;[Slot](#slot-objects)&gt; | An array containing slot informatio
 elements | Array&lt;[WeaponElement](#weapon-elements)&gt; | An array containing element damage info for the weapon
 crafting | [WeaponCraftingInfo](#weapon-crafting-info) | Contains crafting information for the weapon
 assets | [WeaponAssets](#weapon-assets) | Contains information about weapon UI assets (such as preview images)
-sharpness | [WeaponSharpness (d)](#weapon-sharpness-deprecated) | ([_deprecated_](#deprecation-schedule)) Contains sharpness information
 durability | Array&lt;[WeaponSharpness](#weapon-sharpness)&gt; | An array of sharpness information, ordered by handicraft level; base sharpness can always be found at index 0
+elderseal | [EldersealType](#elderseal-types) | The elderseal type attributed to the weapon
+damageType | [DamageType](#damage-types) | The primary damage type dealt by the weapon
 attributes | [WeaponAttributes](#weapon-attributes) | See [WeaponAttributes](#weapon-attributes) for more information
+
+Additionally, some weapon types include extra fields that aren't present on all weapons. Such fields are documented
+below.
+
+Weapon Type | Field | Type
+----------- | ----- | ----
+Bow | coatings | [BowCoatings](#bow-coatings)
+Charge Blade and Switch Axe | phial | [PhialType](#phial-type)
+Gunlance | shelling | [ShellingType](#shelling-type)
+Insect Glaive | boostType | [BoostType](#boost-type)
+Light Bowgun and Heavy Bowgun | ammo | [AmmoCapacities](#ammo-capacities)
+ | specialAmmo | [SpecialAmmo](#special-ammo)
+ | deviation | [Deviation](#deviation)
 
 ### Weapon Types
 A weapon's type can be one of the following values:
@@ -316,33 +288,6 @@ Since, for a 100px wide bar, those percentages map 1:1, the resulting bar would 
   <div class="clearfix"></div>
 </div>
 
-### Weapon Sharpness (_deprecated_)
-Since MHW does not disclose actual sharpness values, sharpness is represented as a whole number out of 100, with 100 being the maximum possible sharpness a weapon can have. The total sharpness value is split across several different colors, indicating what percentage of the weapon's max sharpness belongs to each color.
-
-It's easiest to visualize sharpness as a single bar, 100 pixels wide. For example, the long sword "<a href="https://mhw-db.com/weapons/156" target="_blank">Dark Scimitar 3</a>" has 27 red, 8 orange, 15 yellow, 20 green, 10 blue, and 7 white. A bar representing that might look like the bar below.
-
-<div class="sharpness-bar">
-  <div class="red" style="width: 27px"></div>
-  <div class="orange" style="width: 8px;"></div>
-  <div class="yellow" style="width: 15px;"></div>
-  <div class="green" style="width: 20px;"></div>
-  <div class="blue" style="width: 10px;"></div>
-  <div class="white" style="width: 7px;"></div>
-
-  <div class="clearfix"></div>
-</div>
-
-All fields in the sharpness can be found in table below.
-
-Field | Type | Description
------ | ---- | -----------
-red | Integer | The red sharpness value
-orange | Integer | The orange sharpness value
-yellow | Integer | The yellow sharpness value
-green | Integer | The green sharpness value
-blue | Integer | The blue sharpness value
-white | Integer | The white sharpness value
-
 ### Weapon Attributes
 The weapon attributes object is a dictionary of attribute modifiers attached to a weapon. Most of these fields are planned to be slowly phased out over several releases, and instead provided by specialized fields (such as `sharpness`).
 
@@ -350,61 +295,8 @@ Possible attribute keys are listed below.
 
 Name | Type | Description
 ---- | ---- | -----------
-ammoCapacities | [AmmoCapacities](#ammo-capacities) | For "light-bowgun" and "heavy-bowgun" weapons only
 affinity | Integer | The affinity of the weapon
-boostType | [BoostType](#boost-types) | For "insect-glaive" weapons only
-coatings | Array&lt;[Coating](#bow-coatings)&gt; | For "bow" weapons only
-damageType | [DamageType](#damage-types) | The type of damage the weapon deals
 defense | Integer | Some weapons (namely "gunlance" types) augment player defense; such weapons indicate that with this field
-deviation | [Deviation](#bowgun-deviation) | For "light-bowgun" and "heavy-bowgun" weapons only
-elderseal | [Elderseal](#elderseal-types) | The elderseal type attributed to the weapon
-phialType | [PhialType](#phial-types) | For "switch-axe" and "charge-blade" weapons only
-shellingType | [ShellingType](#shelling-types) | For "gunlance" weapons only
-specialAmmo | [SpecialAmmoType](#special-ammo-types) | For "light-bowgun" and "heavy-bowgun" weapons only
-
-### Ammo Capacities
-Light and heavy bowguns use the `attributes.ammoCapacities` field to specify ammo capacities for their various ammo types. In the `ammoCapacities` object, the key is the name of the ammo type, and the value is an array of capacities for each level of the ammo type.
-
-Ammo Name | Levels |   | Ammo Name | Levels
---------- | :----: | - | --------- | :----:
-normal | 3 | | flaming | 1
-piercing | 3 | | water | 1
-spread | 3 | | freeze | 1
-sticky | 3 | | thunder | 1
-cluster | 3 | | dragon | 1
-recover | 2 | | slicing | 1
-poison | 2 | | wyvern | 1
-paralysis | 2 | | demon | 1
-sleep | 2 | | armor | 1
-exhaust | 2 | | tranq | 1
-
-### Boost Types
-An insect glaive's boost type may be one of the following values.
-
-- sever
-- speed
-- element
-- health
-- stamina
-- blunt
-
-### Bow Coatings
-A bow's coating may be one of the following values.
-
-- close range
-- paralysis
-- poison
-- sleep
-- blast
-- power
-
-### Bowgun Deviation
-A bowgun's deviation may be one of the following values.
-
-- none
-- low
-- average
-- high
 
 ### Damage Types
 A weapon's damage type will be one of the following values:
@@ -420,31 +312,204 @@ A weapon's elderseal type may be one of the following values:
 - average
 - high
 
-### Phial Types
-A phial type is represented in one of two forms. The first of which is a simple form, which may be one of the following values.
+### Bow Coatings
+```json
+{
+  "coatings": [
+    "close range",
+    "power"
+  ]
+}
+```
+
+> A sample `coatings` field.
+
+Bows use their `coatings` field to indicate which bow coatings can be used with the weapon. The `coatings` field is an
+array of strings, where each item is a coating type allowed by the weapon.
+
+Coating types are listed below.
+
+- close range
+- paralysis
+- poison
+- sleep
+- blast
+- power
+
+### Phial Type
+```json
+{
+  "phial": {
+    "type": "impact",
+    "damage": null
+  }
+}
+```
+
+> A sample `phial` field.
+
+Charge Blades and Switch Axes use their `phial` field to provide information on what phial the weapon supports.
+
+Field | Type | Description
+----- | ---- | -----------
+type | `PhialType` | The phial's type (see below)
+damage | Integer | If non-null, indicates the damage of the phial element
+
+The value of the `type` field is split into two categories: standard and damaging.
+
+"Standard" types will always have a `null` value for `damage`. Such types are listed below.
 
 - impact
 - element
 - power
 - power element
 
-The second is a dynamic form, for phial types that also include a strength. Such phial types may be one of the following values, followed by a number that indicates their strength (e.g. "dragon 300").
+"Damaging" types will always have a numeric value for `damage`, and are listed below.
 
 - dragon
 - exhaust
 - para
 - poison
 
-### Shelling Types
-A gunlance's shelling type may be one of the following values, followed by a level indicator in the form "Lv#" (e.g. "Normal Lv2").
+### Shelling Type
+```json
+{
+  "shelling": {
+    "type": "normal",
+    "level": 1
+  }
+}
+```
 
-- Normal
-- Long
-- Wide
+> A sample `shelling` field.
 
-### Special Ammo Types
-A light or heavy bowgun's special ammo type may be one of the following values.
+Gunlances use their `shelling` field to provide information on what shelling type the weapon supports.
+
+Field | Type | Description
+type | `ShellingType` | The weapon's shelling type (see below)
+level | Integer | The weapon's shelling level
+
+Possible values for the `type` field are listed below.
+
+- long
+- normal
+- wide
+
+### Boost Type
+```json
+{
+  "boostType": "sever"
+}
+```
+
+> A sample `boostType` field.
+
+Insect glaives use their `boostType` field to indicate which boost the weapon supports. The `boostType` field is a
+simple string, and will be one of the following values.
+
+- sever
+- speed
+- element
+- health
+- stamina
+- blunt
+
+### Ammo Capacities
+```json
+{
+  "ammo": [
+    {
+      "type": "normal",
+      "capacities": [
+        6,
+        4,
+        0
+      ]
+    },
+    {
+      "type": "piercing",
+      "capacities": [
+        5,
+        0,
+        0
+      ]
+    },
+    {
+      "type": "poison",
+      "capacities": [
+        5,
+        1
+      ]
+    },
+    {
+      "type": "slicing",
+      "capacities": [
+        1
+      ]
+    },
+  ]
+}
+```
+
+> A sample `ammo` field.
+
+Light and heavy bowguns use their `ammo` field to specify ammo capacities for their various ammo types. The `ammo` field
+is an array of `AmmoCapacity` objects.
+
+Field | Type | Description
+----- | ---- | -----------
+type | `AmmoType` | The ammo type described by the capacity object (see table below)
+capacities | Array&lt;Integer&gt; | An array of capacities, ordered by level (where index zero is level one)
+
+The table below lists all possible values for the `type` field, alongside the maximum level for the given type. The
+level indicates the number of elements present in the `capacities` field. The first element in the `capacities` array
+indicates the capacity for that type at ammo type level 1, the second element indicates capacity for ammo type level 2,
+and so on.
+
+If a bowgun cannot use a certain ammo type, it will not be included in the `ammo` array.
+
+Type | Levels |   | Type | Levels
+---- | :----: | - | ---- | :----:
+normal | 3 | | flaming | 1
+piercing | 3 | | water | 1
+spread | 3 | | freeze | 1
+sticky | 3 | | thunder | 1
+cluster | 3 | | dragon | 1
+recover | 2 | | slicing | 1
+poison | 2 | | wyvern | 1
+paralysis | 2 | | demon | 1
+sleep | 2 | | armor | 1
+exhaust | 2 | | tranq | 1
+
+### Special Ammo
+```json
+{
+  "specialAmmo": "wyvernheart"
+}
+```
+
+> A sample `specialAmmo` field.
+
+Light and heavy bowguns use their `specialAmmo` field to indicate which special ammo the weapon supports. The
+`specialAmmo` field is a simple string, and will be one of the following values.
 
 - wyvernblast
 - wyvernheart
 - wyvernsnipe
+
+### Deviation
+```json
+{
+  "deviation": "low"
+}
+```
+
+> A sample `deviation` field.
+
+Light and heavy bowguns use their `deviation` field to indicate the projectile deviation used by the weapon. The
+`deviation` field is a simple string, and will be one of the following values.
+
+- none
+- low
+- average
+- high
