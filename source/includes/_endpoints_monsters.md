@@ -225,6 +225,7 @@ A monster's species is one of the following values.
 - `bird wyvern`
 - `brute wyvern`
 - `elder dragon`
+- `fanged beast`
 - `fanged wyvern`
 - `fish`
 - `flying wyvern`
