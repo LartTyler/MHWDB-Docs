@@ -1868,6 +1868,7 @@ represented as ranks under a <a href="#charm-fields">Charm</a> object, which gro
     </span><span class="s2">"platform"</span><span class="p">:</span><span class="w"> </span><span class="s2">"console"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"exclusive"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"event quest"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"expansion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"base"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"You and your entire party will have..."</span><span class="p">,</span><span class="w">
     </span><span class="s2">"requirements"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HR 50 or higher"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"questRank"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
@@ -1878,8 +1879,7 @@ represented as ranks under a <a href="#charm-fields">Charm</a> object, which gro
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
-<p>This endpoint retrieves all ongoing and scheduled in-game events, pulled from the official Capcom events pages
-(<a href="http://game.capcom.com/world/steam/us/schedule.html">PC</a> and <a href="http://game.capcom.com/world/us/schedule.html">console</a>).</p>
+<p>This endpoint retrieves all ongoing and scheduled in-game events, pulled from the official Capcom event pages.</p>
 
 <p>Events are updated once per day, at midnight UTC. During the daily update, newly scheduled events will be added to the
 system, while events that have ended will be removed.</p>
@@ -1922,6 +1922,7 @@ system, while events that have ended will be removed.</p>
   </span><span class="s2">"platform"</span><span class="p">:</span><span class="w"> </span><span class="s2">"console"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"exclusive"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"event quest"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"expansion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"base"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"You and your entire party will have..."</span><span class="p">,</span><span class="w">
   </span><span class="s2">"requirements"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HR 50 or higher"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"questRank"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
@@ -1970,6 +1971,7 @@ system, while events that have ended will be removed.</p>
   </span><span class="s2">"platform"</span><span class="p">:</span><span class="w"> </span><span class="s2">"console"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"exclusive"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
   </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"event quest"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"expansion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"base"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"You and your entire party will have..."</span><span class="p">,</span><span class="w">
   </span><span class="s2">"requirements"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HR 50 or higher"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"questRank"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w">
@@ -2021,6 +2023,11 @@ system, while events that have ended will be removed.</p>
 <td>The event&#39;s type</td>
 </tr>
 <tr>
+<td>expansion</td>
+<td><a href="#expansion-types">Expansion</a></td>
+<td>The expansion that&#39;s required in order to access the event</td>
+</tr>
+<tr>
 <td>description</td>
 <td>String</td>
 <td>A text description of the event</td>
@@ -2056,18 +2063,26 @@ system, while events that have ended will be removed.</p>
 <td>The location in which the event takes place</td>
 </tr>
 </tbody></table>
+<h3 id='expansion-types'>Expansion Types</h3>
+<p>An event&#39;s <code>expansion</code> field may be one of the following values.</p>
+
+<ul>
+<li><code>base</code></li>
+<li><code>iceborne</code></li>
+</ul>
 <h3 id='event-types'>Event Types</h3>
-<p>An event&#39;s type may be one of the following values.</p>
+<p>An event&#39;s <code>type</code> field may be one of the following values.</p>
 
 <ul>
 <li><code>kulve taroth siege</code></li>
+<li><code>safi&#39;jiiva siege</code></li>
 <li><code>event quest</code></li>
 <li><code>challenge quest</code></li>
 </ul>
 
 <p>Event types correspond to the section on the event page under which the event is listed.</p>
 <h3 id='event-platforms'>Event Platforms</h3>
-<p>An event&#39;s platform may be one of the following values.</p>
+<p>An event&#39;s <code>platform</code> field may be one of the following values.</p>
 
 <ul>
 <li><code>pc</code></li>
@@ -2705,6 +2720,7 @@ will contain one of the following values.</p>
 <li><code>bird wyvern</code></li>
 <li><code>brute wyvern</code></li>
 <li><code>elder dragon</code></li>
+<li><code>fanged beast</code></li>
 <li><code>fanged wyvern</code></li>
 <li><code>fish</code></li>
 <li><code>flying wyvern</code></li>
@@ -4370,8 +4386,10 @@ and so on.</p>
 
 <p>Any field in the API that is an ID of another object or a collection of API objects (for example, the <code>skill</code> field on <a href="https://github.com/LartTyler/MHWDB-Docs/wiki/Decorations">Decorations</a> or the <code>skills</code> field on <a href="https://github.com/LartTyler/MHWDB-Docs/wiki/Charms">Charms</a>) can be searched as if it were an object, as is show in the example to the right.</p>
 <h2 id='related-object-arrays'>Related Object Arrays</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"crafting.branches.length"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"$gte"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="s2">"crafting.branches"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"$size"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"$gte"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -4379,14 +4397,16 @@ and so on.</p>
 <p>Applied to <code>/weapons</code>, returns any weapon that has at least one item it can be upgraded into.</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"crafting.branches.length"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+  </span><span class="s2">"crafting.branches"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"$size"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+  </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
 <p>Applied to <code>/weapons</code>, returns any weapon that can&#39;t be upgraded any further (i.e. is the final weapon in it&#39;s tree).</p>
 </blockquote>
 
-<p>Any field whose values is an array of related objects (such as <code>Armor.skills</code> or <code>Charm.ranks</code>) can be filtered by it&#39;s length by adding <code>.length</code> after the field name in your search. This will work for ANY array of objects in the API, and supports filtering using any operator.</p>
+<p>Any field whose values is an array of related objects (such as <code>Armor.skills</code> or <code>Charm.ranks</code>) can be filtered by it&#39;s length by using the <code>$size</code>operator on the field. This will work for ANY array of objects in the API, and supports filtering using more complicated operators, such as <code>$in</code> or <code>$gte</code>.</p>
 
 <p>For examples, please see the example query documents to the right.</p>
 <h2 id='operators'>Operators</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
@@ -4440,7 +4460,7 @@ and so on.</p>
 <p>Field paths should be the dot-notation identifier of a field. For example, weapons have a <code>crafting</code> field, which in turn contains a <code>craftingMaterials</code> field, which contains a <code>quantity</code> field. It&#39;s dot-notation form would be <code>crafting.craftingMaterials.quantity</code>. When projecting fields, any unrecognized field name will be silently ignored.</p>
 <h1 id='deprecation-schedule'>Deprecation Schedule</h1>
 <p>Below you can find a list of deprecated API features, as well as the information on when those features will be removed
-from the API. Since we follow semantic versioning for the API, only major releases will include breaking changes.</p>
+from the API.</p>
 
 <p>Please note that the &quot;Planned Removal&quot; column indicates the date or API version that will fully remove the feature from
 the API. Please ensure that any code using a deprecated feature is updated as soon as possible.</p>
@@ -4454,58 +4474,10 @@ the API. Please ensure that any code using a deprecated feature is updated as so
 </tr>
 </thead><tbody>
 <tr>
-<td><code>Weapon.attributes.damageType</code> field</td>
-<td><a href="#weapon-fields"><code>Weapon.damageType</code></a></td>
-<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.16.0">1.16.0</a></td>
-<td style="text-align: center">v1.17.0</td>
-</tr>
-<tr>
-<td><code>Weapon.attributes.elderseal</code> field</td>
-<td><a href="#weapon-fields"><code>Weapon.elderseal</code></a></td>
-<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.16.0">1.16.0</a></td>
-<td style="text-align: center">v1.17.0</td>
-</tr>
-<tr>
-<td><code>Weapon.attributes.phialType</code> field</td>
-<td><a href="#phial-type"><code>Weapon.phialType</code></a></td>
-<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.16.0">1.16.0</a></td>
-<td style="text-align: center">v1.17.0</td>
-</tr>
-<tr>
-<td><code>Weapon.attributes.ammoCapacities</code> field</td>
-<td><a href="#ammo-capacities"><code>Weapon.ammo</code></a></td>
-<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.16.0">1.16.0</a></td>
-<td style="text-align: center">v1.17.0</td>
-</tr>
-<tr>
-<td><code>Weapon.attributes.coatings</code> field</td>
-<td><a href="#bow-coatings"><code>Weapon.coatings</code></a></td>
-<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.16.0">1.16.0</a></td>
-<td style="text-align: center">v1.17.0</td>
-</tr>
-<tr>
-<td><code>Weapon.attributes.specialAmmo</code> field</td>
-<td><a href="#special-ammo"><code>Weapon.specialAmmo</code></a></td>
-<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.16.0">1.16.0</a></td>
-<td style="text-align: center">v1.17.0</td>
-</tr>
-<tr>
-<td><code>Weapon.attributes.deviation</code> field</td>
-<td><a href="#deviation"><code>Weapon.deviation</code></a></td>
-<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.16.0">1.16.0</a></td>
-<td style="text-align: center">v1.17.0</td>
-</tr>
-<tr>
-<td><code>Weapon.attributes.boostType</code> field</td>
-<td><a href="#boost-type"><code>Weapon.boostType</code></a></td>
-<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.16.0">1.16.0</a></td>
-<td style="text-align: center">v1.17.0</td>
-</tr>
-<tr>
-<td><code>Weapon.attributes.shellingType</code> field</td>
-<td><a href="#shelling-type"><code>Weapon.shelling</code></a></td>
-<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.16.0">1.16.0</a></td>
-<td style="text-align: center">v1.17.0</td>
+<td>All <code>.length</code> fields</td>
+<td>The <a href="#related-object-arrays"><code>$size</code> operator</a></td>
+<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.17.0">1.17.0</a></td>
+<td style="text-align: center">v1.18.0</td>
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>
