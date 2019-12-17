@@ -22,8 +22,10 @@ Any field in the API that is an ID of another object or a collection of API obje
 ## Related Object Arrays
 ```json
 {
-  "crafting.branches.length": {
-    "$gte": 1
+  "crafting.branches": {
+    "$size": {
+      "$gte": 1
+    }
   }
 }
 ```
@@ -32,13 +34,15 @@ Any field in the API that is an ID of another object or a collection of API obje
 
 ```json
 {
-  "crafting.branches.length": 0
+  "crafting.branches": {
+    "$size": 0
+  }
 }
 ```
 
 > Applied to `/weapons`, returns any weapon that can't be upgraded any further (i.e. is the final weapon in it's tree).
 
-Any field whose values is an array of related objects (such as `Armor.skills` or `Charm.ranks`) can be filtered by it's length by adding `.length` after the field name in your search. This will work for ANY array of objects in the API, and supports filtering using any operator.
+Any field whose values is an array of related objects (such as `Armor.skills` or `Charm.ranks`) can be filtered by it's length by using the `$size`operator on the field. This will work for ANY array of objects in the API, and supports filtering using more complicated operators, such as `$in` or `$gte`.
 
 For examples, please see the example query documents to the right.
 
