@@ -21,6 +21,7 @@ fetch('https://mhw-db.com/events')
     "platform": "console",
     "exclusive": null,
     "type": "event quest",
+    "expansion": "base",
     "description": "You and your entire party will have...",
     "requirements": "HR 50 or higher",
     "questRank": 9,
@@ -32,8 +33,7 @@ fetch('https://mhw-db.com/events')
 ]
 ```
 
-This endpoint retrieves all ongoing and scheduled in-game events, pulled from the official Capcom events pages
-([PC](http://game.capcom.com/world/steam/us/schedule.html) and [console](http://game.capcom.com/world/us/schedule.html)).
+This endpoint retrieves all ongoing and scheduled in-game events, pulled from the official Capcom event pages.
 
 Events are updated once per day, at midnight UTC. During the daily update, newly scheduled events will be added to the
 system, while events that have ended will be removed.
@@ -71,6 +71,7 @@ fetch('https://mhw-db.com/events/1')
   "platform": "console",
   "exclusive": null,
   "type": "event quest",
+  "expansion": "base",
   "description": "You and your entire party will have...",
   "requirements": "HR 50 or higher",
   "questRank": 9,
@@ -107,6 +108,7 @@ This endpoint returns a single event. For field information, see the [Event Fiel
   "platform": "console",
   "exclusive": null,
   "type": "event quest",
+  "expansion": "base",
   "description": "You and your entire party will have...",
   "requirements": "HR 50 or higher",
   "questRank": 9,
@@ -131,6 +133,7 @@ name | String | The event's title
 platform | [EventPlatform](#event-platforms) | The platform that the event is running on (if an event is running on more than one platform, each platform will have it's own event object in the API)
 exclusive | [EventExclusivity](#event-exclusivity-types) | For consoles, a value other than `null` indicates that the event is only running on a specific console
 type | [EventType](#event-types) | The event's type
+expansion | [Expansion](#expansion-types) | The expansion that's required in order to access the event
 description | String | A text description of the event
 requires | String | A text description of the event's entry requirements
 questRank | Integer | The rank of the quest
@@ -139,17 +142,24 @@ startTimestamp | DateTime | A timestamp indicating when the event started
 endTimestamp | DateTime | A timestamp indicating when the event will end
 location | [Location](#location-fields) | The location in which the event takes place
 
+### Expansion Types
+An event's `expansion` field may be one of the following values.
+
+- `base`
+- `iceborne`
+
 ### Event Types
-An event's type may be one of the following values.
+An event's `type` field may be one of the following values.
 
 - `kulve taroth siege`
+- `safi'jiiva siege`
 - `event quest`
 - `challenge quest`
 
 Event types correspond to the section on the event page under which the event is listed.
 
 ### Event Platforms
-An event's platform may be one of the following values.
+An event's `platform` field may be one of the following values.
 
 - `pc`
 - `console`
