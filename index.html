@@ -221,6 +221,14 @@
       <div id="toc" class="toc-list-h1">
           <li>
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#accessing-the-api" class="toc-h2 toc-link" data-title="Accessing The Api">Accessing the API</a>
+                  </li>
+                  <li>
+                    <a href="#localization" class="toc-h2 toc-link" data-title="Localization">Localization</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#ailments" class="toc-h1 toc-link" data-title="Ailments">Ailments</a>
@@ -454,6 +462,8 @@
         <ul class="toc-footer">
             <li><a href="https://github.com/LartTyler/MHWDB-API">View the Project On GitHub</a></li>
             <li><a href="https://github.com/LartTyler/MHWDB-Docs/issues">Report a Bug / Request a Feature</a></li>
+            <li><a href="https://discord.gg/6GEHHQh">Join Us On Discord</a></li>
+            <li><a href="https://contrib.mhw-db.com">Browse the API</a></li>
             <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
         </ul>
     </div>
@@ -462,6 +472,55 @@
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
 <p>Welcome to the API docs for <a href="https://mhw-db.com">https://mhw-db.com</a>.</p>
+
+<p>We are currently looking for help with data entry and validation. We also always welcome feedback and suggestions.
+Interesting in contributing to the project? <a href="https://discord.gg/6GEHHQh">Join us on Discord!</a></p>
+<h2 id='accessing-the-api'>Accessing the API</h2>
+<p>All data in the API can be accessed using the base URL <code>https://mhw-db.com</code>. You may optionally include a language tag
+as the prefix to any route in the API, in order to retrieve results that have been translated to a specific language.
+For a list of supported language tags, see the section on <a href="#localization">Localization</a> below.</p>
+
+<p>Example code and URLs in the rest of this documentation will not include any language tag prefixes for the sake of
+readability.</p>
+<h2 id='localization'>Localization</h2>
+<p>Currently, the API supports the following languages.</p>
+
+<table><thead>
+<tr>
+<th>Language</th>
+<th>Tag</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>English</td>
+<td>&mdash;</td>
+</tr>
+<tr>
+<td>French</td>
+<td><code>fr</code></td>
+</tr>
+<tr>
+<td>German</td>
+<td><code>de</code></td>
+</tr>
+<tr>
+<td>Chinese (simplified)</td>
+<td><code>zh</code></td>
+</tr>
+<tr>
+<td>Chinese (traditional)</td>
+<td><code>zh-Hant</code></td>
+</tr>
+</tbody></table>
+
+<p>The default language is English, and does not require a language tag prefix on any route. To switch to any other
+language, simply prefix the route with the tag, e.g. <code>https://mhw-db.com/zh-Hant/weapons/1</code>.</p>
+
+<p><strong>Please be aware</strong> that not all supported languages will contain localized data, and may return <code>null</code> values for
+string fields. Localization requires manual data entry, and we&#39;re working through getting localized names into the API
+as quickly as possible. If you would like to help with localization, please reach out to me at
+<a href="mailto:tyler@lartonoix.com">tyler@lartonoix.com</a>, or contact us via the <a href="https://discord.gg/6GEHHQh">Discord server</a>
+linked in the sidebar.</p>
 <h1 id='ailments'>Ailments</h1><h2 id='get-all-ailments'>Get All Ailments</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://mhw-db.com/ailments"</span>
 </code></pre><pre class="highlight javascript tab-javascript"><code><span class="nx">fetch</span><span class="p">(</span><span class="s1">'https://mhw-db.com/ailments'</span><span class="p">)</span>
     <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
@@ -1447,7 +1506,6 @@ slowly phased out over several releases, and instead provided by specialized fie
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Poison Charm"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"ranks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Poison Charm 1"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"level"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
         </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
         </span><span class="s2">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
@@ -1500,7 +1558,6 @@ slowly phased out over several releases, and instead provided by specialized fie
   </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Poison Charm"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"ranks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Poison Charm 1"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"level"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
       </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
       </span><span class="s2">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
@@ -1551,7 +1608,6 @@ slowly phased out over several releases, and instead provided by specialized fie
   </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Poison Charm"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"ranks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Poison Charm 1"</span><span class="p">,</span><span class="w">
       </span><span class="s2">"level"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
       </span><span class="s2">"rarity"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
       </span><span class="s2">"skills"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -1629,11 +1685,6 @@ represented as ranks under a <a href="#charm-fields">Charm</a> object, which gro
 <th>Description</th>
 </tr>
 </thead><tbody>
-<tr>
-<td>name</td>
-<td>String</td>
-<td>The name of the charm rank (includes level)</td>
-</tr>
 <tr>
 <td>level</td>
 <td>Integer</td>
@@ -3454,7 +3505,8 @@ to a value (usually an integer). All possible modifier fields can be found in th
       </span><span class="s2">"yellow"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w">
       </span><span class="s2">"green"</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w">
       </span><span class="s2">"blue"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"white"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+      </span><span class="s2">"white"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"purple"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="err">...</span><span class="w">
   </span><span class="p">],</span><span class="w">
@@ -3806,6 +3858,11 @@ body part being too hard for the weapon or sharpness level).</p>
 <td>Integer</td>
 <td>The number of normal hits the weapon can make at white sharpness</td>
 </tr>
+<tr>
+<td>purple</td>
+<td>Integer</td>
+<td>The number of normal hits the weapon can make at purple sharpness</td>
+</tr>
 </tbody></table>
 
 <p>In previous versions, these docs provided a simple method for visually representing sharpness values, since they were
@@ -3814,8 +3871,8 @@ same result by taking the new sharpness values and using the following formula t
 value, then flooring the result: <code>&lfloor;sharpness / 400 * 100&rfloor;</code>.</p>
 
 <p>So, for example, the long sword &quot;<a href="https://mhw-db.com/weapons/156" target="_blank">Dark Scimitar 3</a>&quot; has a
-base durability of 110 red, 30 orange, 60 yellow, 80 green, 40 blue, and 30 white. This converts to the old system as
-follows.</p>
+base durability of 110 red, 30 orange, 60 yellow, 80 green, 40 blue, 30 white, and 0 purple. This converts to the old
+system as follows.</p>
 
 <p><code>
 Red: &lfloor;110 / 400 * 100&rfloor; = 27<br>
@@ -3823,10 +3880,11 @@ Orange: &lfloor;30 / 400 * 100&rfloor; = 7<br>
 Yellow: &lfloor;60 / 400 * 100&rfloor; = 15<br>
 Green: &lfloor;80 / 400 * 100&rfloor; = 20<br>
 Blue: &lfloor;40 / 400 * 100&rfloor; = 10<br>
-Red: &lfloor;30 / 400 * 100&rfloor; = 7
+White: &lfloor;30 / 400 * 100&rfloor; = 7<br>
+Purple: &lfloor;0 / 400 * 100&rfloor; = 0
 </code></p>
 
-<p>Since, for a 100px wide bar, those percentages map 1:1, the resulting bar would look something like the bar below.</p>
+<p>The resulting bar would look something like the bar below.</p>
 
 <div class="sharpness-bar">
   <div class="red" style="width: 27px"></div>
@@ -3835,6 +3893,7 @@ Red: &lfloor;30 / 400 * 100&rfloor; = 7
   <div class="green" style="width: 20px;"></div>
   <div class="blue" style="width: 10px;"></div>
   <div class="white" style="width: 7px;"></div>
+  <div class="purple" style="width: 0px;"></div>
 
   <div class="clearfix"></div>
 </div>
@@ -4474,10 +4533,10 @@ the API. Please ensure that any code using a deprecated feature is updated as so
 </tr>
 </thead><tbody>
 <tr>
-<td>All <code>.length</code> fields</td>
-<td>The <a href="#related-object-arrays"><code>$size</code> operator</a></td>
-<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.17.0">1.17.0</a></td>
-<td style="text-align: center">v1.18.0</td>
+<td><code>CharmRank.name</code></td>
+<td>N/A</td>
+<td style="text-align: center"><a href="https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.18.0">1.18.0</a></td>
+<td style="text-align: center">v1.19.0</td>
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>
