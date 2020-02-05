@@ -7,4 +7,4 @@ the API. Please ensure that any code using a deprecated feature is updated as so
 
 Feature | Replaced By | Deprecated In | Planned Removal
 ------- | ----------- | :-----------: | :-------------:
-All `.length` fields | The [`$size` operator](#related-object-arrays) | [1.17.0](https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.17.0) | v1.18.0
+`CharmRank.name` | N/A | [1.18.0](https://github.com/LartTyler/MHWDB-Docs/releases/tag/1.18.0) | v1.19.0

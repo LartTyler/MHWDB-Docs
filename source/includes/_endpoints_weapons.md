@@ -122,7 +122,8 @@ This endpoint returns a single weapon. For field information, see the [Weapon Fi
       "yellow": 50,
       "green": 80,
       "blue": 30,
-      "white": 0
+      "white": 0,
+      "purple": 0
     },
     ...
   ],
@@ -256,6 +257,7 @@ yellow | Integer | The number of normal hits the weapon can make at yellow sharp
 green | Integer | The number of normal hits the weapon can make at green sharpness
 blue | Integer | The number of normal hits the weapon can make at blue sharpness
 white | Integer | The number of normal hits the weapon can make at white sharpness
+purple | Integer | The number of normal hits the weapon can make at purple sharpness
 
 In previous versions, these docs provided a simple method for visually representing sharpness values, since they were
 represented as percetages (which could be mapped 1:1 to pixels for a 100px wide sharpness bar). You can achieve the
@@ -263,8 +265,8 @@ same result by taking the new sharpness values and using the following formula t
 value, then flooring the result: <code>&lfloor;sharpness / 400 * 100&rfloor;</code>.
 
 So, for example, the long sword "<a href="https://mhw-db.com/weapons/156" target="_blank">Dark Scimitar 3</a>" has a
-base durability of 110 red, 30 orange, 60 yellow, 80 green, 40 blue, and 30 white. This converts to the old system as
-follows.
+base durability of 110 red, 30 orange, 60 yellow, 80 green, 40 blue, 30 white, and 0 purple. This converts to the old
+system as follows.
 
 <code>
 Red: &lfloor;110 / 400 * 100&rfloor; = 27<br>
@@ -272,10 +274,11 @@ Orange: &lfloor;30 / 400 * 100&rfloor; = 7<br>
 Yellow: &lfloor;60 / 400 * 100&rfloor; = 15<br>
 Green: &lfloor;80 / 400 * 100&rfloor; = 20<br>
 Blue: &lfloor;40 / 400 * 100&rfloor; = 10<br>
-White: &lfloor;30 / 400 * 100&rfloor; = 7
+White: &lfloor;30 / 400 * 100&rfloor; = 7<br>
+Purple: &lfloor;0 / 400 * 100&rfloor; = 0
 </code>
 
-Since, for a 100px wide bar, those percentages map 1:1, the resulting bar would look something like the bar below.
+The resulting bar would look something like the bar below.
 
 <div class="sharpness-bar">
   <div class="red" style="width: 27px"></div>
@@ -284,6 +287,7 @@ Since, for a 100px wide bar, those percentages map 1:1, the resulting bar would 
   <div class="green" style="width: 20px;"></div>
   <div class="blue" style="width: 10px;"></div>
   <div class="white" style="width: 7px;"></div>
+  <div class="purple" style="width: 0px;"></div>
 
   <div class="clearfix"></div>
 </div>

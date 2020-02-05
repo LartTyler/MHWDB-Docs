@@ -24,7 +24,6 @@ fetch('https://mhw-db.com/charms')
     "name": "Poison Charm",
     "ranks": [
       {
-        "name": "Poison Charm 1",
         "level": 1,
         "rarity": 3,
         "skills": [...],
@@ -74,7 +73,6 @@ fetch('https://mhw-db.com/charms/234')
   "name": "Poison Charm",
   "ranks": [
     {
-      "name": "Poison Charm 1",
       "level": 1,
       "rarity": 3,
       "skills": [...],
@@ -113,7 +111,6 @@ This endpoint returns a single charm and all of it's ranks. For field informatio
   "name": "Poison Charm",
   "ranks": [
     {
-      "name": "Poison Charm 1",
       "level": 1,
       "rarity": 3,
       "skills": [
@@ -164,7 +161,6 @@ represented as ranks under a [Charm](#charm-fields) object, which groups them to
 
 Field | Type | Description
 ----- | ---- | -----------
-name | String | The name of the charm rank (includes level)
 level | Integer | The level of the charm rank
 rarity | Integer | The rarity of the charm rank
 skills | Array&lt;[SkillRank](#skillrank-fields)&gt; | An array of skill ranks provided by the charm
