@@ -274,7 +274,7 @@ Orange: &lfloor;30 / 400 * 100&rfloor; = 7<br>
 Yellow: &lfloor;60 / 400 * 100&rfloor; = 15<br>
 Green: &lfloor;80 / 400 * 100&rfloor; = 20<br>
 Blue: &lfloor;40 / 400 * 100&rfloor; = 10<br>
-Red: &lfloor;30 / 400 * 100&rfloor; = 7<br>
+White: &lfloor;30 / 400 * 100&rfloor; = 7<br>
 Purple: &lfloor;0 / 400 * 100&rfloor; = 0
 </code>
 
