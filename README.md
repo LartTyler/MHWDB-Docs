@@ -1,5 +1,8 @@
 # Monster Hunter World API
-Hey there! Welcome to the docs repository for the Monster Hunter World API. To view the docs, please visit the [GitHub Pages](https://docs.mhw-db.com/) site. If you're interested in contributing to the project, feel free to take a look at [the source code](https://github.com/LartTyler/MHWDB-API). If you have any comments, suggestions, or just wanna say hey, join the project's
-[Gitter](https://gitter.im/mhw-db/general) chat!
+Hey there! Welcome to the docs repository for the Monster Hunter World API. To view the docs, please visit the
+[GitHub Pages](https://docs.mhw-db.com/) site. If you're interested in contributing to the project, feel free to take a
+look at [the source code](https://github.com/LartTyler/MHWDB-API). If you have any comments, suggestions, or just wanna
+say hey, join the project's [Discord server](https://discord.gg/6GEHHQh)!
 
-Also, a huge thanks to everyone that's submitted issues and feedback, it's been a great help! It's really awesome seeing people making use of the project, and I'm excited to see what kinds of applications people end up building with it.
+Also, a huge thanks to everyone that's submitted issues and feedback, it's been a great help! It's really awesome seeing
+people making use of the project, and I'm excited to see what kinds of applications people end up building with it.
