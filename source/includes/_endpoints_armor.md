@@ -18,7 +18,6 @@ fetch('https://mhw-db.com/armor')
 [
   {
     "id": 1,
-    "slug": "leather-headgear",
     "name": "Leather Headgear",
     "type": "head",
     "rank": "low",
@@ -87,7 +86,6 @@ fetch('https://mhw-db.com/armor/1')
 ```json
 {
   "id": 1,
-  "slug": "leather-headgear",
   "name": "Leather Headgear",
   "type": "head",
   "rank": "low",
@@ -123,15 +121,15 @@ fetch('https://mhw-db.com/armor/1')
 }
 ```
 
-This endpoint retrieves an armor piece by it's ID or slug.
+This endpoint retrieves an armor piece by it's ID.
 
 ### HTTP Request
-`GET https://mhw-db.com/armor/<idOrSlug>`
+`GET https://mhw-db.com/armor/<id>`
 
 ### Path Parameters
 Parameter | Type | Description
 --------- | ---- | -----------
-idOrSlug | Integer &#124; String | The ID or slug of the armor piece to retrieve
+id | Integer | The ID of the armor piece to retrieve
 
 ### Query Parameters
 Parameter | Required | Description
@@ -145,7 +143,6 @@ This endpoint returns a single armor piece. For field information, see the [Armo
 ```json
 {
   "id": 159,
-  "slug": "leather-headgear-beta",
   "name": "Leather Headgear Beta",
   "type": "head",
   "rank": "high",
@@ -171,7 +168,6 @@ This endpoint returns a single armor piece. For field information, see the [Armo
   "skills": [
     {
       "id": 207,
-      "slug": "hunger-resistance-rank-1",
       "level": 1,
       "description": "Extends the time until ...",
       "modifiers": [],
@@ -219,7 +215,6 @@ This endpoint returns a single armor piece. For field information, see the [Armo
 Field | Type | Description
 ----- | ---- | -----------
 id | Integer | The ID of the armor piece
-slug | String | A human readable unique identifier
 name | String | The name of the armor piece
 type | [ArmorType](#armor-types) | The slot the armor piece fits in
 rank | [Rank](#rank-types) | The rank of the armor piece

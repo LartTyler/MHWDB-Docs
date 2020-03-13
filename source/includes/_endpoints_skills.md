@@ -18,13 +18,11 @@ fetch('https://mhw-db.com/skills')
 [
   {
     "id": 1,
-    "slug": "poison-resistance",
     "name": "Poison Resistance",
     "description": "Grants protection against the effects of poison.",
     "ranks": [
       {
         "id": 1,
-        "slug": "poison-resistance-rank-1",
         "skill": 1,
         "level": 1,
         "description": "Reduces the duration of poison by 30%.",
@@ -68,13 +66,11 @@ fetch('https://mhw-db.com/skills/1')
 ```json
 {
   "id": 1,
-  "slug": "poison-resistance",
   "name": "Poison Resistance",
   "description": "Grants protection against the effects of poison.",
   "ranks": [
     {
       "id": 1,
-      "slug": "poison-resistance-rank-1",
       "skill": 1,
       "level": 1,
       "description": "Reduces the duration of poison by 30%.",
@@ -87,12 +83,12 @@ fetch('https://mhw-db.com/skills/1')
 This endpoint retrieves a specific skill and it's ranks.
 
 ### HTTP Request
-`GET https://mhw-db.com/skills/<idOrSlug>`
+`GET https://mhw-db.com/skills/<id>`
 
 ### Path Parameters
 Parameter | Type | Description
 --------- | ---- | -----------
-idOrSlug | Integer &#124; String | The ID or slug of the skill to retrieve
+id | Integer | The ID of the skill to retrieve
 
 ### Query Parameters
 Parameter | Required | Description
@@ -106,13 +102,11 @@ This endpoint returns a single skill and all of it's ranks. For field informatio
 ```json
 {
   "id": 15,
-  "slug": "attack-boost",
   "name": "Attack Boost",
   "description": "Increases attack power. Also ...",
   "ranks": [
     {
       "id": 39,
-      "slug": "attack-boost-rank-1",
       "skill": 15,
       "level": 1,
       "description": "Attack +3",
@@ -129,7 +123,6 @@ This endpoint returns a single skill and all of it's ranks. For field informatio
 Field | Type | Description
 ----- | ---- | --------- | -----------
 id | Integer | The skill's ID
-slug | String | A human readable unique identifier
 name | String | The name of the skill
 description | String | A short description of the skill
 ranks | Array&lt;[SkillRank](#skillrank-fields)&gt; | An array of available ranks for the skill
@@ -138,7 +131,6 @@ ranks | Array&lt;[SkillRank](#skillrank-fields)&gt; | An array of available rank
 Field | Type | Description
 ----- | ---- | -----------
 id | Integer | The ID of the skill rank
-slug | String | A human readable unique identifier
 level | Integer | The numeric level of the skill rank (starting at 1)
 description | String | A text description of the skill rank
 skill | Integer | The ID of the skill that the rank belongs to
