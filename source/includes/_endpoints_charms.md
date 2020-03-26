@@ -20,7 +20,6 @@ fetch('https://mhw-db.com/charms')
 [
   {
     "id": 234,
-    "slug": "poison-charm",
     "name": "Poison Charm",
     "ranks": [
       {
@@ -69,7 +68,6 @@ fetch('https://mhw-db.com/charms/234')
 ```json
 {
   "id": 234,
-  "slug": "poison-charm",
   "name": "Poison Charm",
   "ranks": [
     {
@@ -88,12 +86,12 @@ fetch('https://mhw-db.com/charms/234')
 This endpoint retrieves a specific charm and it's ranks.
 
 ### HTTP Request
-`GET https://mhw-db.com/charms/<idOrSlug>`
+`GET https://mhw-db.com/charms/<id>`
 
 ### Path Parameters
 Parameter | Type | Description
 --------- | ---- | -----------
-idOrSlug | Integer &#124; String | The ID or slug of the charm to retrieve
+id | Integer | The ID of the charm to retrieve
 
 ### Query Parameters
 Parameter | Required | Description
@@ -107,7 +105,6 @@ This endpoint returns a single charm and all of it's ranks. For field informatio
 ```json
 {
   "id": 234,
-  "slug": "poison-charm",
   "name": "Poison Charm",
   "ranks": [
     {
@@ -116,7 +113,6 @@ This endpoint returns a single charm and all of it's ranks. For field informatio
       "skills": [
         {
           "id": 1,
-          "slug": "poison-resistance-rank-1",
           "level": 1,
           "description": "Reduces the duration of poison by 30%.",
           "skill": 1,
@@ -151,7 +147,6 @@ This endpoint returns a single charm and all of it's ranks. For field informatio
 Field | Type | Description
 ----- | ---- | -----------
 id | Integer | The ID of the charm
-slug | String | A human readable unique identifier
 name | String | The name of the charm
 ranks | Array&lt;[CharmRank](#charmrank-fields)&gt; | An array of the different ranks of the charm
 

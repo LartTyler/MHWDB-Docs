@@ -18,13 +18,11 @@ fetch('https://mhw-db.com/decorations')
 [
   {
     "id": 1,
-    "slug": "antidote-jewel-1",
     "name": "Antidote Jewel 1",
     "rarity": 5,
     "skills": [
       {
         "id": 1,
-        "slug": "poison-resistance-rank-1",
         "description": "Reduces the duration of poison by 30%.",
         "level": 1,
         "skill": 1,
@@ -68,13 +66,11 @@ fetch('https://mhw-db.com/decorations/1')
 ```json
 {
   "id": 1,
-  "slug": "antidote-jewel-1",
   "name": "Antidote Jewel 1",
   "rarity": 5,
   "skills": [
     {
       "id": 1,
-      "slug": "poison-resistance-rank-1",
       "description": "Reduces the duration of poison by 30%.",
       "level": 1,
       "skill": 1,
@@ -90,12 +86,12 @@ This endpoint retrieves a specific decoration.
 
 
 ### HTTP Request
-`GET https://mhw-db.com/decorations/<idOrSlug>`
+`GET https://mhw-db.com/decorations/<id>`
 
 ### Path Parameters
 Parameter | Type | Description
 --------- | ---- | -----------
-idOrSlug | Integer &#124; String | The ID or slug of the decoration to retrieve
+id | Integer | The ID of the decoration to retrieve
 
 ### Query Parameters
 Parameter | Required | Description
@@ -109,13 +105,11 @@ This endpoint returns a single decoration. For field information, see the [Decor
 ```json
 {
   "id": 1,
-  "slug": "antidote-jewel-1",
   "name": "Antidote Jewel 1",
   "rarity": 5,
   "skills": [
     {
       "id": 1,
-      "slug": "poison-resistance-rank-1",
       "description": "Reduces the duration of poison by 30%.",
       "level": 1,
       "skill": 1,
@@ -132,7 +126,6 @@ This endpoint returns a single decoration. For field information, see the [Decor
 Field | Type | Description
 ----- | ---- | -----------
 id | Integer | The ID of the decoration
-slug | String | A humand readable unique identifier
 name | String | The name of the decoration
 rarity | Integer | The rarity of the decoration
 slot | Integer | The slot that the decoration fits into

@@ -23,7 +23,6 @@ fetch('https://mhw-db.com/armor/sets')
     "pieces": [
       {
         "id": 1,
-        "slug": "leather-headgear",
         "name": "Leather Headgear",
         "type": "head",
         "rank": "low",
@@ -79,7 +78,6 @@ fetch('https://mhw-db.com/armor/sets/20')
   "pieces": [
     {
       "id": 84,
-      "slug": "anja-helm",
       "name": "Anja Helm",
       "type": "head",
       "rank": "low",
@@ -101,7 +99,6 @@ fetch('https://mhw-db.com/armor/sets/20')
         "pieces": 3,
         "skill": {
           "id": 311,
-          "slug": "adrenaline-rank-1",
           "level": 1,
           "description": "Temporarily reduces stamina ...",
           "modifiers": [...],
@@ -141,7 +138,6 @@ This endpoint returns a single armor set. For field information, see the [ArmorS
   "pieces": [
     {
       "id": 84,
-      "slug": "anja-helm",
       "name": "Anja Helm",
       "type": "head",
       "rank": "low",
@@ -157,7 +153,6 @@ This endpoint returns a single armor set. For field information, see the [ArmorS
       "skills": [
         {
           "id": 80,
-          "slug": "fire-attack-rank-1",
           "level": 1,
           "description": "Fire attack +30",
           "modifiers": {
@@ -181,7 +176,6 @@ This endpoint returns a single armor set. For field information, see the [ArmorS
         "pieces": 3,
         "skill": {
           "id": 311,
-          "slug": "adrenaline-rank-1",
           "level": 1,
           "description": "Temporarily reduces stamina depletion ...",
           "modifiers": [],

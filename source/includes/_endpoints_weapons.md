@@ -81,15 +81,15 @@ fetch('https://mhw-db.com/weapons/1')
 }
 ```
 
-This endpoint retrieves a weapon by it's ID or slug.
+This endpoint retrieves a weapon by it's ID.
 
 ### HTTP Request
-`GET https://mhw-db.com/weapons/<idOrSlug>`
+`GET https://mhw-db.com/weapons/<id>`
 
 ### Path Parameters
 Parameter | Type | Description
 --------- | ---- | -----------
-idOrSlug | Integer &#124; String | The ID or slug of the weapon to retrieve
+id | Integer | The ID of the weapon to retrieve
 
 ### Query Parameters
 Parameter | Required | Description
@@ -173,7 +173,6 @@ This endpoint returns a single weapon. For field information, see the [Weapon Fi
 Field | Type | Description
 ----- | ---- | -----------
 id | Integer | The ID of the weapon
-slug | String | A human readable unique identifier
 name | String | The name of the weapon
 type | [WeaponType](#weapon-types) | The weapon's type
 rarity | Integer | The rarity of the weapon
