@@ -10,7 +10,7 @@ toc_footers:
   - <a href="https://github.com/LartTyler/MHWDB-Docs/issues">Report a Bug / Request a Feature</a>
   - <a href="https://discord.gg/6GEHHQh">Join Us On Discord</a>
   - <a href="https://contrib.mhw-db.com">Browse the API</a>
-  - <a href='https://github.com/lord/slate'>Documentation Powered by Slate</a>
+  - <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support us on Ko-fi', '#72a4f2', 'E1E41BOLDX');kofiwidget2.draw();</script> 
 
 includes:
   - endpoints_ailments
@@ -35,6 +35,18 @@ search: true
 ---
 
 # Introduction
+<aside class="notice">
+We recently launched an API for Monster Hunter Wilds! Check out the API docs at
+<a href="https://docs.wilds.mhdb.io">https://docs.wilds.mhdb.io</a>, and <a href="">join us on Discord</a> to let us
+know what you think!
+</aside>
+
+<aside class="notice">
+This project has entered maintenance mode, and will not be receiving further updates. There are
+<strong>no plans to discontinue the API</strong>. I will be working on a replacement in the future that will provide
+<em>all</em> information from World, and until that's ready this API will remain accessible.
+</aside>
+
 Welcome to the API docs for [https://mhw-db.com](https://mhw-db.com).
 
 We are currently looking for help with data entry and validation. We also always welcome feedback and suggestions.
